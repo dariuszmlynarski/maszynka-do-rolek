@@ -46,7 +46,7 @@ export function domyslnyEkran(typ: TypEkranu, poprzedni?: Ekran): Ekran {
     case "porownanie":
       return { typ, lewo: { naglowek: "Źle", punkty: ["..."] }, prawo: { naglowek: "Dobrze", punkty: ["..."] } };
     case "cta":
-      return { typ, naglowek, przycisk: "dmprosper.pl", dopisek: "link w opisie" };
+      return { typ, naglowek, przycisk: "dariuszmlynarski.pl", dopisek: "link w opisie" };
     case "3d":
       return { typ, ksztalt: "kostki", naglowek, dopisek: "" };
     case "kod":
@@ -73,7 +73,7 @@ export function domyslnyEkran(typ: TypEkranu, poprzedni?: Ekran): Ekran {
       return {
         typ,
         naglowek,
-        adres: "dmprosper.pl",
+        adres: "dariuszmlynarski.pl",
         tytulStrony: "Tytuł artykułu",
         opis: "",
         przycisk: "Czytaj dalej",

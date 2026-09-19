@@ -109,4 +109,4 @@ export const POSWIATA_TLA =
 /** Podpis marki u góry kadru. */
 export const PODPIS_MARKI = "DARIUSZ MŁYNARSKI";
 /** Adres w przyciskach CTA i makietach przeglądarki. */
-export const DOMENA = "dmprosper.pl";
+export const DOMENA = "dariuszmlynarski.pl";

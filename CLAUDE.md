@@ -48,7 +48,7 @@ Zasady dobrego scenariusza:
 - Zero długich myślników. Zero słów: szok, rewolucja, gamechanger. Liczby w mowie lektora słownie, na ekranie cyframi.
 - Najwyżej jedna trzecia zdań krótsza niż 6 słów, inaczej lektor brzmi jak robot.
 - Linie w scenie `kod`: maks. 38 znaków i 4 linie.
-- Ostatnia scena zawsze `cta` (przycisk `dmprosper.pl`, dopisek „link w opisie" lub podobny).
+- Ostatnia scena zawsze `cta` (przycisk `dariuszmlynarski.pl`, dopisek „link w opisie" lub podobny).
 - Mieszaj typy scen. W jednej rolce maks. jedna scena `3d` i jedna `kod`.
 - Liczby pokazuj typem `liczba`. Kontrasty typem `porownanie`. Wyliczenia typem `lista` (3–4 punkty).
 - `akcent` w scenie `tytul` musi być dosłownym fragmentem `naglowek`.
@@ -75,10 +75,10 @@ Zasady dobrego scenariusza:
     { "id": "s5", "lektor": "...", "ekran": { "typ": "porownanie", "lewo": { "naglowek": "Źle", "punkty": ["..."] }, "prawo": { "naglowek": "Dobrze", "punkty": ["..."] } } },
     { "id": "s6", "lektor": "...", "ekran": { "typ": "3d", "ksztalt": "kostki", "naglowek": "...", "dopisek": "..." } },
     { "id": "s7", "lektor": "...", "ekran": { "typ": "kod", "tytul": "terminal", "naglowek": "...", "linie": ["linia 1", "linia 2"] } },
-    { "id": "s8", "lektor": "...", "ekran": { "typ": "cta", "naglowek": "...", "przycisk": "dmprosper.pl", "dopisek": "link w opisie" } },
+    { "id": "s8", "lektor": "...", "ekran": { "typ": "cta", "naglowek": "...", "przycisk": "dariuszmlynarski.pl", "dopisek": "link w opisie" } },
     { "id": "s9", "lektor": "...", "ekran": { "typ": "telefon", "naglowek": "...", "tytulEkranu": "...", "powiadomienie": { "tytul": "...", "tekst": "..." }, "wiersze": [{ "ikona": "📩", "tytul": "...", "podtytul": "..." }], "przycisk": "..." } },
     { "id": "s10", "lektor": "...", "ekran": { "typ": "czat", "rozmowca": "Klient", "wiadomosci": [{ "tekst": "..." }, { "odNas": true, "tekst": "..." }] } },
-    { "id": "s11", "lektor": "...", "ekran": { "typ": "przegladarka", "adres": "dmprosper.pl/...", "tytulStrony": "...", "opis": "...", "obrazTekst": "...", "przycisk": "Czytaj przepis" } },
+    { "id": "s11", "lektor": "...", "ekran": { "typ": "przegladarka", "adres": "dariuszmlynarski.pl/...", "tytulStrony": "...", "opis": "...", "obrazTekst": "...", "przycisk": "Czytaj przepis" } },
     { "id": "s12", "lektor": "...", "ekran": { "typ": "formularz", "tytul": "...", "pola": [{ "etykieta": "E-mail", "wartosc": "anna@firma.pl" }], "przycisk": "Zapisz się", "potwierdzenie": "Miejsce zarezerwowane" } }
   ]
 }

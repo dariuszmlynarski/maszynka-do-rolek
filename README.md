@@ -2,7 +2,7 @@
 
 Lokalna aplikacja, która z linku albo pomysłu robi gotową rolkę (pion 1080×1920, 30 kl/s) na Reels, TikToka i Shorts. Scenariusz pisze Claude Code, lektora czyta ElevenLabs sklonowanym głosem Dariusza, wideo składa Remotion. Wszystko dzieje się lokalnie.
 
-> **Fork** [`AIBiz-Automatyzacje/maszynka-do-shortsow`](https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow) (Kacper Trzepieciński, Akademia Automatyzacji). Silnik, format scenariusza i typy scen pochodzą z oryginału. Nasze jest to, co widać i słychać: ciemna paleta marki DM, Archivo Black / Inter / Montserrat, ton głosu Dariusza, domena `dmprosper.pl`.
+> **Fork** [`AIBiz-Automatyzacje/maszynka-do-shortsow`](https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow) (Kacper Trzepieciński, Akademia Automatyzacji). Silnik, format scenariusza i typy scen pochodzą z oryginału. Nasze jest to, co widać i słychać: ciemna paleta marki DM, Archivo Black / Inter / Montserrat, ton głosu Dariusza, domena `dariuszmlynarski.pl`.
 
 W fabryce wideo DM to **ścieżka A3 — rolka bez twarzy**: zero kamery, zero awatara, zero CapCuta. Mapa fabryki: `~/.claude/commands/video-factory.md`, skill prowadzący: `/video-maszynka`.
 
@@ -60,4 +60,4 @@ Cała warstwa wizualna siedzi w `src/marka.ts` (paleta, czcionki, cienie, podpis
 ---
 
 Oryginał: [Akademia Automatyzacji](https://akademiaautomatyzacji.com) · Kacper Trzepieciński
-Fork i przemalowanie: Dariusz Młynarski · [dmprosper.pl](https://dmprosper.pl)
+Fork i przemalowanie: Dariusz Młynarski · [dariuszmlynarski.pl](https://dariuszmlynarski.pl)

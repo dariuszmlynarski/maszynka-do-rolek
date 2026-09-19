@@ -611,7 +611,7 @@ const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zro
         </div>
         <div className="pole">
           <label>Link do artykułu albo pomysł na rolkę</label>
-          <textarea value={zrodlo} onChange={(e) => setZrodlo(e.target.value)} placeholder="https://dmprosper.pl/... albo: 3 błędy, które robi każdy w n8n" />
+          <textarea value={zrodlo} onChange={(e) => setZrodlo(e.target.value)} placeholder="https://dariuszmlynarski.pl/... albo: 3 błędy, które robi każdy w n8n" />
         </div>
         <div className="pole">
           <label>Docelowa długość</label>
