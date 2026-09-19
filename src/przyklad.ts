@@ -1,4 +1,5 @@
 import type { Scenariusz } from "./typy";
+import { CTA_PRZYCISK } from "./marka";
 
 /** Przykładowy scenariusz — pokazuje wszystkie typy scen. */
 export const PRZYKLAD: Scenariusz = {
@@ -58,7 +59,7 @@ export const PRZYKLAD: Scenariusz = {
     {
       id: "s7",
       lektor: "Link znajdziesz w opisie. Do zobaczenia!",
-      ekran: { typ: "cta", naglowek: "Sprawdź ofertę", przycisk: "dariuszmlynarski.pl", dopisek: "link w opisie" },
+      ekran: { typ: "cta", naglowek: "Zacznij od jednego kroku", przycisk: CTA_PRZYCISK },
     },
   ],
 };

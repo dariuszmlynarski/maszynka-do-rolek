@@ -108,5 +108,7 @@ export const POSWIATA_TLA =
 
 /** Podpis marki u góry kadru. */
 export const PODPIS_MARKI = "DARIUSZ MŁYNARSKI";
-/** Adres w przyciskach CTA i makietach przeglądarki. */
+/** Adres w makietach przeglądarki i w CTA, gdy rolka odsyła pod konkretny URL. */
 export const DOMENA = "dariuszmlynarski.pl";
+/** Domyślne wezwanie na ostatniej scenie — rolki kierują na profil, nie na stronę. */
+export const CTA_PRZYCISK = "Obserwuj po więcej";

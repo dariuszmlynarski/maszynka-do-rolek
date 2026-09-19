@@ -68,7 +68,7 @@ const SPECYFIKACJA_EKRANOW = `
 { "typ": "porownanie", "lewo": { "naglowek": "Bez tego", "punkty": ["..."] }, "prawo": { "naglowek": "Z tym", "punkty": ["..."] } }
 { "typ": "3d", "ksztalt": "kostki|kula|torus|pierscienie|kartki", "naglowek": "...", "etykieta": "...", "dopisek": "..." }
 { "typ": "kod", "tytul": "terminal", "naglowek": "...", "linie": ["...", "..."] }
-{ "typ": "cta", "naglowek": "...", "przycisk": "dariuszmlynarski.pl", "dopisek": "link w opisie" }
+{ "typ": "cta", "naglowek": "...", "przycisk": "Obserwuj po więcej" }
 { "typ": "telefon", "naglowek": "...", "tytulEkranu": "...", "powiadomienie": { "tytul": "...", "tekst": "..." }, "wiersze": [{ "ikona": "📩", "tytul": "...", "podtytul": "..." }], "przycisk": "..." }
 { "typ": "czat", "naglowek": "...", "rozmowca": "Klient", "wiadomosci": [{ "tekst": "..." }, { "odNas": true, "tekst": "..." }] }
 { "typ": "przegladarka", "naglowek": "...", "adres": "dariuszmlynarski.pl", "tytulStrony": "...", "opis": "...", "obrazTekst": "podpis w miejscu grafiki", "przycisk": "..." }
@@ -131,7 +131,7 @@ CO WIDAĆ NA EKRANIE
 - Najwyżej jedna scena „3d" i jedna „kod" w całej rolce. „kod" tylko wtedy, gdy naprawdę chodzi o komendę albo prompt; linie po maksymalnie 38 znaków, najwyżej 4 linie.
 - Scena 1 to typ „tytul" z polem „akcent" będącym dosłownym fragmentem pola „naglowek".
 - Scena „tytul": pole „naglowek" maks. 14 znaków, czyli mniej więcej dwa słowa. Dłuższy łamie się na dwie linie i zakreślenie akcentu rozpada się na pół — puentę przenieś do pola „dopisek".
-- Ostatnia scena to zawsze typ „cta" z przyciskiem „dariuszmlynarski.pl".
+- Ostatnia scena to zawsze typ „cta" z przyciskiem „Obserwuj po więcej". Adres w przycisku dajesz tylko wtedy, gdy rolka realnie odsyła pod konkretny URL; domyślnie kierujemy na profil, nie na stronę.
 - W polu „ikona" jedno proste emoji.
 
 TYPY EKRANÓW (pole "ekran")${SPECYFIKACJA_EKRANOW}
