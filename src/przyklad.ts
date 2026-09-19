@@ -41,7 +41,7 @@ export const PRZYKLAD: Scenariusz = {
       ekran: {
         typ: "porownanie",
         lewo: { naglowek: "Bez systemu", punkty: ["Godziny na YouTube", "Chaos w narzędziach", "Zero efektów"] },
-        prawo: { naglowek: "Z Akademią", punkty: ["Gotowe przepisy", "Kursy krok po kroku", "Społeczność, która pomaga"] },
+        prawo: { naglowek: "Z systemem", punkty: ["Gotowe przepisy", "Kursy krok po kroku", "Społeczność, która pomaga"] },
       },
     },
     {
@@ -57,8 +57,8 @@ export const PRZYKLAD: Scenariusz = {
     },
     {
       id: "s7",
-      lektor: "Link znajdziesz w opisie. Do zobaczenia w Akademii!",
-      ekran: { typ: "cta", naglowek: "Sprawdź ofertę", przycisk: "akademiaautomatyzacji.com", dopisek: "link w opisie" },
+      lektor: "Link znajdziesz w opisie. Do zobaczenia!",
+      ekran: { typ: "cta", naglowek: "Sprawdź ofertę", przycisk: "dmprosper.pl", dopisek: "link w opisie" },
     },
   ],
 };

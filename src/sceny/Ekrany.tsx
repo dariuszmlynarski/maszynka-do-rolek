@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import type { Ekran } from "../typy";
-import { CIEN_NAKLEJKI, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
+import { CIEN_NAKLEJKI, CIEN_UNIESIONY, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
 import { Dopisek, Karta, Kicker, Lacznik, Stempel, Tresc, Zakreslenie, useKotwice, useSway } from "./wspolne";
 import { E, od, pop, postep, puls, stempel, wjazd, wjazdZBoku } from "../ruch";
 import { useVideoConfig as useConfig } from "remotion";
@@ -113,8 +113,8 @@ const PunktListy: React.FC<{
   const skala = pulsuje && frame > opoznienie + 12 ? puls(frame, fps, 0.02, 1.7 + numer * 0.23) : 1;
 
   const kolorRamki = stan === "blad" ? KOLOR.red : stan === "ok" ? KOLOR.green : wyrozniony ? KOLOR.accent : KOLOR.line;
-  const kolorTla = stan === "blad" ? "#FDF1EF" : stan === "ok" ? "#EEF7F0" : wyrozniony ? KOLOR.accentSoft : KOLOR.card;
-  const kolorIkony = stan === "blad" ? "rgba(217,48,37,.12)" : stan === "ok" ? "rgba(47,158,68,.12)" : wyrozniony ? "rgba(255,255,255,.7)" : KOLOR.accentSoft;
+  const kolorTla = stan === "blad" ? KOLOR.redSoft : stan === "ok" ? KOLOR.greenSoft : wyrozniony ? KOLOR.accentSoft : KOLOR.card;
+  const kolorIkony = stan === "blad" ? "rgba(255,90,78,.18)" : stan === "ok" ? "rgba(63,174,90,.18)" : wyrozniony ? "rgba(255,255,255,.12)" : KOLOR.accentSoft;
   const kolorTekstu = stan === "blad" ? KOLOR.red : KOLOR.ink;
 
   return (
@@ -153,7 +153,7 @@ const PunktListy: React.FC<{
             flexShrink: 0,
             border: `3px solid ${stan === "ok" ? KOLOR.green : KOLOR.red}`,
             color: stan === "ok" ? KOLOR.green : KOLOR.red,
-            backgroundColor: "rgba(255,255,255,.7)",
+            backgroundColor: "rgba(32,32,32,.75)",
             borderRadius: 12,
             padding: "8px 18px",
             fontSize: 28,
@@ -367,7 +367,7 @@ export const EkranKod: React.FC<{ ekran: Ek<"kod"> }> = ({ ekran }) => {
             style={{
               backgroundColor: KOLOR.ink,
               borderRadius: PROMIEN,
-              boxShadow: "0 6px 10px rgba(20,20,20,.06), 0 36px 90px rgba(20,20,20,.12)",
+              boxShadow: CIEN_UNIESIONY,
               overflow: "hidden",
               fontFamily: CZCIONKA.kod,
               transform: kolysanie,

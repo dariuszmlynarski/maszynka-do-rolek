@@ -1,30 +1,63 @@
-# Styl marki — akademiaautomatyzacji.com
-(pobrane ze strony 2026-09-11)
+# Styl marki — Dariusz Młynarski / DMProsper
+
+> Źródło prawdy: `3-DM/Content/Brand/Identyfikacja-Wizualna.md` w sejfie dmOS.
+> Ten plik jest przełożeniem tamtych reguł na kadr pionowy. Gdy się rozjadą, wygrywa sejf.
 
 ## Kolory
-- paper (tło):        #FAF8F4
-- paper-2 (tło 2):    #F4F1EA
-- card (karta):       #FFFFFF
-- ink (tekst główny): #141414
-- ink-soft:           #3D3A34
-- muted (wyciszony):  #6E6A61
-- line (obramowania): #E5E1D8
-- line-strong:        #D8D3C6
-- accent (pomarańcz): #E8590C
-- accent-soft:        #FBEADF
-- green:              #2F9E44
 
-## Czcionki (Google Fonts)
-- Inter 400/500/600/700 — tekst, przyciski
-- Archivo Black — wielkie nagłówki (np. "NARZĘDZI AI")
-- Caveat 500/600/700 — odręczne dopiski (np. "które dają przewagę i możliwości")
+| Rola w kadrze | Kolor | Hex |
+|---|---|---|
+| Tło kadru (baza) | Ciemna czekolada | `#1E110A` |
+| Tło głębsze | Prawie czarny | `#120A05` |
+| Karty i kafelki | Ciemny szary | `#202020` |
+| Tekst główny | Biały | `#FFFFFF` |
+| Tekst przygaszony | Jasny beż | `#E8E2DC` |
+| Tekst wyciszony | Szarobeżowy | `#9C938A` |
+| Obramowania | Ciepły ciemny | `#3A2E24` / `#574636` |
+| **Akcent główny** | **Pomarańczowy** | **`#FC5400`** |
+| Wypełnienie akcentowe | Przygaszony pomarańcz | `#3A1B08` |
+| Poświata tła | Ciepła czekolada | `#965A30` |
+| Powodzenie | Zieleń | `#3FAE5A` |
+| Błąd | Czerwień | `#FF5A4E` |
+
+Pomarańcz `#FC5400` jest kolorem dominującym marki: akcenty, przyciski, zakreślenia, kreski kickerów.
+
+🔴 **Jasnych teł nie stosujemy.** „Pastelowe kolory" i „jasne tła" stoją na czarnej liście identyfikacji. Oryginał maszynki był jasny (kremowy papier) — ten fork jest ciemny i taki zostaje.
+
+Zieleń marki to `#1a5c2a`, ale na ciemnym tle znika, więc w kadrze używamy jaśniejszego `#3FAE5A`. Ten sam powód dotyczy czerwieni.
+
+## Czcionki
+
+| Zastosowanie | Font |
+|---|---|
+| Nagłówki scen | **Archivo Black** |
+| Treść, etykiety, kafelki | **Inter** (600–800) |
+| Napisy na wideo | **Montserrat** |
+| Dopiski i drobne etykiety | Montserrat |
+| Kod i terminal | Menlo / SF Mono |
+
+🔴 **Montserrat zostaje przy napisach na wideo** (decyzja 01.09.2026). Nagłówki na ekranie to grafika, nie napisy — tam idzie Archivo Black, tak jak na grafikach social.
+
+Odręcznego kroju (Caveat w oryginale) nie używamy — estetyka DM jest techniczna i płaska, nie notatnikowa.
+
+## Cienie i głębia
+
+Na ciemnym tle czarny cień nie istnieje, więc głębię niesie ciepła poświata `#965A30`:
+
+- Cień karty: `0 3px 8px rgba(0,0,0,.55), 0 16px 52px rgba(150,90,48,.16)`
+- Cień uniesiony: `0 8px 18px rgba(0,0,0,.6), 0 38px 96px rgba(150,90,48,.24)`
+- Cień naklejki (przyciski): `8px 8px 0 rgba(252,84,0,.38)` — przesunięty, bez rozmycia
+
+Tło kadru ma dodatkowo poświatę radialną w górnej połowie, odpowiednik `tlo-czekolada-poswiata.png` z konwencji grafik.
 
 ## Elementy
-- Zaokrąglenie kart i przycisków: 14px
-- Cień karty: 0 1px 2px rgba(20,20,20,.05), 0 6px 18px rgba(20,20,20,.07)
-- Cień uniesiony: 0 2px 4px rgba(20,20,20,.06), 0 14px 34px rgba(20,20,20,.12)
-- Karta: białe tło, 1px obramowanie #E5E1D8
-- Przycisk główny: tło #E8590C, biały tekst; przycisk drugorzędny: obrys
-- Wyróżnienia w tekście: podkreślenie/zakreślenie pomarańczem (highlighter), lekki obrót -3deg
-- Nagłówki mieszają Inter (regular) z Archivo Black (mocny akcent) i Caveat (dopisek)
-- Tło z delikatną siatką rgba(20,20,20,0.05)
+
+- Zaokrąglenie kart: 38 px, kafelków: 26 px
+- Karta: tło `#202020`, obramowanie 2 px `#3A2E24`
+- Przycisk główny: tło `#FC5400`, biały tekst, cień naklejki
+- Zakreślenia: pomarańcz pod tekstem, lekki obrót
+- Tło z kratką `rgba(255,255,255,.055)`, która powoli płynie w górę
+
+## Estetyka
+
+Minimalizm, tech/modern, flat design, klimat terminala i interfejsu. Dużo ciemnej przestrzeni, kompozycja oddycha. Bez przeładowania.

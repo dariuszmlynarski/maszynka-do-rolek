@@ -1,4 +1,4 @@
-/* Maszynka do shortsów — styl dashboardu w barwach akademiaautomatyzacji.com */
+/* Maszynka do rolek — styl dashboardu w barwach dariuszmlynarski.pl */
 :root {
   --paper: #faf8f4;
   --paper-2: #f3f0e8;
@@ -8,7 +8,7 @@
   --muted: #6e6a61;
   --line: #e5e1d8;
   --line-strong: #d3cec2;
-  --accent: #e8590c;
+  --accent: #FC5400;
   --accent-dark: #c94c08;
   --accent-soft: #fbeadf;
   --green: #2f9e44;

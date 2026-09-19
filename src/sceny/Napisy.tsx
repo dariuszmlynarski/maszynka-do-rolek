@@ -82,7 +82,7 @@ export const Napisy: React.FC<{ slowa?: Slowo[]; lektor: string }> = ({ slowa, l
           boxShadow: CIEN_KARTY,
           padding: "22px 30px",
           maxWidth: 880,
-          fontFamily: CZCIONKA.tekst,
+          fontFamily: CZCIONKA.napisy,
           fontWeight: 800,
           fontSize: 48,
           lineHeight: 1.22,

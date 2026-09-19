@@ -2,21 +2,25 @@ import React, { createContext, useContext } from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import {
   CIEN_KARTY,
+  CIEN_UNIESIONY,
   CZCIONKA,
   KOLOR,
   MARGINES,
   PISMO,
   PROMIEN,
   PROMIEN_MALY,
+  PODPIS_MARKI,
+  POSWIATA_TLA,
   SAFE,
   SIATKA_DRYF_PX_S,
+  SIATKA_KOLOR,
   SIATKA_PX,
 } from "../marka";
 import { E, postep, sway as swayTransform } from "../ruch";
 import type { Slowo } from "../typy";
 import { kotwice } from "../kotwice";
 
-/** Kremowe tło z kratką, która powoli płynie w górę. Ekran nigdy nie stoi martwy. */
+/** Czekoladowe tło z kratką, która powoli płynie w górę. Ekran nigdy nie stoi martwy. */
 export const Tlo: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -25,14 +29,19 @@ export const Tlo: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     <AbsoluteFill
       style={{
         backgroundColor: KOLOR.paper,
-        backgroundImage:
-          "linear-gradient(rgba(20,20,20,0.05) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(20,20,20,0.05) 1.5px, transparent 1.5px)",
-        backgroundSize: `${SIATKA_PX}px ${SIATKA_PX}px`,
-        backgroundPosition: `0px ${-dryf}px`,
         fontFamily: CZCIONKA.tekst,
         color: KOLOR.ink,
       }}
     >
+      {/* Kratka osobno, żeby poświata mogła leżeć nad nią bez przesuwania się razem z dryfem. */}
+      <AbsoluteFill
+        style={{
+          backgroundImage: `linear-gradient(${SIATKA_KOLOR} 1.5px, transparent 1.5px), linear-gradient(90deg, ${SIATKA_KOLOR} 1.5px, transparent 1.5px)`,
+          backgroundSize: `${SIATKA_PX}px ${SIATKA_PX}px`,
+          backgroundPosition: `0px ${-dryf}px`,
+        }}
+      />
+      <AbsoluteFill style={{ backgroundImage: POSWIATA_TLA }} />
       {children}
     </AbsoluteFill>
   );
@@ -115,7 +124,7 @@ export const Karta: React.FC<{ style?: React.CSSProperties; uniesiona?: boolean;
       backgroundColor: KOLOR.card,
       border: `2px solid ${KOLOR.line}`,
       borderRadius: PROMIEN,
-      boxShadow: uniesiona ? "0 6px 10px rgba(20,20,20,.06), 0 36px 90px rgba(20,20,20,.12)" : CIEN_KARTY,
+      boxShadow: uniesiona ? CIEN_UNIESIONY : CIEN_KARTY,
       padding: 44,
       ...style,
     }}
@@ -161,7 +170,7 @@ export const Stempel: React.FC<{ children: React.ReactNode; zielony?: boolean; s
       display: "inline-block",
       border: `4px solid ${zielony ? KOLOR.green : KOLOR.accent}`,
       color: zielony ? KOLOR.green : KOLOR.accent,
-      backgroundColor: "rgba(255,255,255,.7)",
+      backgroundColor: "rgba(32,32,32,.75)",
       borderRadius: 14,
       padding: "14px 28px",
       fontSize: 34,
@@ -224,7 +233,7 @@ export const Zakreslenie: React.FC<{
                 right: "-0.14em",
                 top: "-0.04em",
                 bottom: "-0.08em",
-                backgroundColor: mocny ? KOLOR.accent : "rgba(232,89,12,.32)",
+                backgroundColor: mocny ? KOLOR.accent : "rgba(252,84,0,.34)",
                 borderRadius: 8,
                 transformOrigin: "left center",
                 transform: `scaleX(${p})`,
@@ -278,7 +287,7 @@ export const Podpis: React.FC = () => (
       color: KOLOR.muted,
     }}
   >
-    Akademia Automatyzacji
+    {PODPIS_MARKI}
   </div>
 );
 

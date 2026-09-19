@@ -1,10 +1,10 @@
 {
-  "name": "maszynka",
+  "name": "maszynka-do-rolek",
   "version": "1.0.0",
-  "description": "Maszynka do shortsów — Akademia Automatyzacji",
+  "description": "Maszynka do rolek — DMProsper (fork AIBiz-Automatyzacje/maszynka-do-shortsow)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow"
+    "url": "https://github.com/dariuszmlynarski/maszynka-do-rolek"
   },
   "license": "UNLICENSED",
   "private": true,

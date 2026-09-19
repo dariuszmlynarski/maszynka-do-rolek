@@ -1,6 +1,12 @@
-# Maszynka do shortsów — instrukcja dla Claude
+# Maszynka do rolek — instrukcja dla Claude
+
+Fork `AIBiz-Automatyzacje/maszynka-do-shortsow` (Kacper Trzepieciński) przemalowany na markę Dariusza Młynarskiego. Silnik i format scenariusza zostają jak w oryginale; nasze jest to, co widać i słychać: paleta, czcionki, ton głosu, domena.
+
+To jest **ścieżka A3 fabryki wideo DM** — rolka bez twarzy, złożona z animowanej grafiki. Mapa fabryki: `~/.claude/commands/video-factory.md`, skill prowadzący: `/video-maszynka`.
 
 Właściciel jest osobą nietechniczną. Pisz krótko, po polsku, bez żargonu. Nie tłumacz, jak działa kod, chyba że poprosi.
+
+🔴 Marka jest źródłem zewnętrznym: `3-DM/Content/Brand/Identyfikacja-Wizualna.md` i `Tone-of-Voice-Essentials.md` w sejfie dmOS. Gdy reguła z sejfu kłóci się z tym plikiem, wygrywa sejf — a ten plik poprawiasz.
 
 ## Co tu jest
 
@@ -8,7 +14,7 @@ Właściciel jest osobą nietechniczną. Pisz krótko, po polsku, bez żargonu. 
 - `projekty/<id>/scenariusz.json` — jeden folder = jedna rolka. Dashboard czyta je co 4 s, więc zapis pliku od razu pojawia się w przeglądarce.
 - `projekty/<id>/audio/` — lektor z ElevenLabs (generuje dashboard, nie Claude).
 - `projekty/<id>/rolka_<data>_<godzina>.mp4` — gotowe rolki; każdy render tworzy nowy plik, dashboard pokazuje je w Galerii.
-- `docs/styl-marki.md` — kolory i czcionki strony akademiaautomatyzacji.com.
+- `docs/styl-marki.md` — paleta i czcionki marki DM przełożone na kadr pionowy.
 - `docs/jak-uzywac.md` — instrukcja dla właściciela.
 
 Uruchomienie: `npm install --legacy-peer-deps` (raz), potem `npm start` (albo dwuklik na `Uruchom maszynkę.command`). Gdy użytkownik prosi „pobierz i uruchom”: sklonuj repo, zainstaluj, odpal `npm start` w tle i otwórz http://localhost:5757 w przeglądarce. Dashboard: http://localhost:5757, serwer: http://localhost:4545.
@@ -34,12 +40,15 @@ Zasady dobrego scenariusza:
 - Pierwsza scena to hak: mocne zdanie, które zatrzymuje kciuk. Typ `tytul` z `akcent`.
 - Jedna myśl na scenę. 5–9 słów na ekranie, maks. 25 słów lektora na scenę.
 - Lektor mówi naturalnie, po polsku, jak do jednej osoby („Ty"). Bez „w dzisiejszym filmie".
+- Ton to Dariusz: mądry kolega, nie guru. „Szczerze namawiam", „warto", anegdota z własnego życia (także porażka), metafora z życia codziennego (samochód, basen, pogoda). Kolokwializm mile widziany, wulgaryzm najwyżej jeden i nigdy w haku.
+- 🔴 Zero tików AI: triada negacji („Nie tysiąc. Nie sto."), „To nie X. To Y.", „Wyobraź sobie…", nadużyta reguła trójki, izolowane jednowyrazowce jako puenta, „Podsumowując". Dariusz wyłapuje je natychmiast.
+- Przy zdrowiu i formie: „tworzysz zdrowie", nie „budujesz".
 - Tempo: 170 słów na minutę. Budżet liczy `budzetSlow()` z `src/czas.ts`: 30 s ≈ 72 słowa, 45 s ≈ 108, 60 s ≈ 145, 90 s ≈ 217.
 - Struktura: hak, setup, rozwinięcie z co najmniej jednym zwrotem „ale”, puenta, zdanie szczerości, zakończenie bez pożegnania.
 - Zero długich myślników. Zero słów: szok, rewolucja, gamechanger. Liczby w mowie lektora słownie, na ekranie cyframi.
 - Najwyżej jedna trzecia zdań krótsza niż 6 słów, inaczej lektor brzmi jak robot.
 - Linie w scenie `kod`: maks. 38 znaków i 4 linie.
-- Ostatnia scena zawsze `cta` (przycisk `akademiaautomatyzacji.com`, dopisek „link w opisie" lub podobny).
+- Ostatnia scena zawsze `cta` (przycisk `dmprosper.pl`, dopisek „link w opisie" lub podobny).
 - Mieszaj typy scen. W jednej rolce maks. jedna scena `3d` i jedna `kod`.
 - Liczby pokazuj typem `liczba`. Kontrasty typem `porownanie`. Wyliczenia typem `lista` (3–4 punkty).
 - `akcent` w scenie `tytul` musi być dosłownym fragmentem `naglowek`.
@@ -65,10 +74,10 @@ Zasady dobrego scenariusza:
     { "id": "s5", "lektor": "...", "ekran": { "typ": "porownanie", "lewo": { "naglowek": "Źle", "punkty": ["..."] }, "prawo": { "naglowek": "Dobrze", "punkty": ["..."] } } },
     { "id": "s6", "lektor": "...", "ekran": { "typ": "3d", "ksztalt": "kostki", "naglowek": "...", "dopisek": "..." } },
     { "id": "s7", "lektor": "...", "ekran": { "typ": "kod", "tytul": "terminal", "naglowek": "...", "linie": ["linia 1", "linia 2"] } },
-    { "id": "s8", "lektor": "...", "ekran": { "typ": "cta", "naglowek": "...", "przycisk": "akademiaautomatyzacji.com", "dopisek": "link w opisie" } },
+    { "id": "s8", "lektor": "...", "ekran": { "typ": "cta", "naglowek": "...", "przycisk": "dmprosper.pl", "dopisek": "link w opisie" } },
     { "id": "s9", "lektor": "...", "ekran": { "typ": "telefon", "naglowek": "...", "tytulEkranu": "...", "powiadomienie": { "tytul": "...", "tekst": "..." }, "wiersze": [{ "ikona": "📩", "tytul": "...", "podtytul": "..." }], "przycisk": "..." } },
     { "id": "s10", "lektor": "...", "ekran": { "typ": "czat", "rozmowca": "Klient", "wiadomosci": [{ "tekst": "..." }, { "odNas": true, "tekst": "..." }] } },
-    { "id": "s11", "lektor": "...", "ekran": { "typ": "przegladarka", "adres": "akademiaautomatyzacji.com/...", "tytulStrony": "...", "opis": "...", "obrazTekst": "...", "przycisk": "Czytaj przepis" } },
+    { "id": "s11", "lektor": "...", "ekran": { "typ": "przegladarka", "adres": "dmprosper.pl/...", "tytulStrony": "...", "opis": "...", "obrazTekst": "...", "przycisk": "Czytaj przepis" } },
     { "id": "s12", "lektor": "...", "ekran": { "typ": "formularz", "tytul": "...", "pola": [{ "etykieta": "E-mail", "wartosc": "anna@firma.pl" }], "przycisk": "Zapisz się", "potwierdzenie": "Miejsce zarezerwowane" } }
   ]
 }

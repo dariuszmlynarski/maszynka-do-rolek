@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import type { Ekran } from "../typy";
-import { CIEN_NAKLEJKI, CIEN_UNIESIONY, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
+import { CIEN_NAKLEJKI, CIEN_NAKLEJKI_WCISNIETY, CIEN_UNIESIONY, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
 import { Dopisek, Karta, Kicker, Tresc, useKotwice, useSway } from "./wspolne";
 import { E, pop, postep, puls, wjazd } from "../ruch";
 
@@ -62,7 +62,7 @@ const Kursor: React.FC<{ x: number; y: number; klik: number }> = ({ x, y, klik }
         />
       )}
       <svg width="46" height="56" viewBox="0 0 24 30" style={{ filter: "drop-shadow(0 4px 8px rgba(20,20,20,.35))" }}>
-        <path d="M3 2 L3 22 L8.5 17 L12 25.5 L15.5 24 L12 15.5 L19 15.5 Z" fill={KOLOR.ink} stroke="#fff" strokeWidth="1.7" />
+        <path d="M3 2 L3 22 L8.5 17 L12 25.5 L15.5 24 L12 15.5 L19 15.5 Z" fill={KOLOR.ink} stroke={KOLOR.paper} strokeWidth="1.7" />
       </svg>
     </div>
   );
@@ -218,7 +218,7 @@ export const EkranTelefon: React.FC<{ ekran: Ek<"telefon"> }> = ({ ekran }) => {
                       borderRadius: 999,
                       fontSize: 32,
                       fontWeight: 700,
-                      boxShadow: "0 6px 16px rgba(232,89,12,.3)",
+                      boxShadow: "0 6px 16px rgba(252,84,0,.35)",
                     }}
                   >
                     {ekran.przycisk}
@@ -233,9 +233,9 @@ export const EkranTelefon: React.FC<{ ekran: Ek<"telefon"> }> = ({ ekran }) => {
                     top: 78,
                     left: 18,
                     right: 18,
-                    backgroundColor: "rgba(255,255,255,.96)",
+                    backgroundColor: "rgba(32,32,32,.96)",
                     borderRadius: 26,
-                    boxShadow: "0 10px 30px rgba(20,20,20,.18)",
+                    boxShadow: "0 10px 30px rgba(0,0,0,.5)",
                     padding: "18px 20px",
                     transform: `translateY(${(1 - pow) * -180}px)`,
                     opacity: pow,
@@ -308,7 +308,7 @@ export const EkranCzat: React.FC<{ ekran: Ek<"czat"> }> = ({ ekran }) => {
                       padding: "20px 26px",
                       fontSize: 34,
                       lineHeight: 1.35,
-                      boxShadow: "0 2px 5px rgba(20,20,20,.08)",
+                      boxShadow: "0 2px 5px rgba(0,0,0,.35)",
                       transform: `scale(${0.85 + 0.15 * p})`,
                       opacity: Math.min(1, p * 1.6),
                       transformOrigin: w.odNas ? "right bottom" : "left bottom",
@@ -487,7 +487,7 @@ export const EkranFormularz: React.FC<{ ekran: Ek<"formularz"> }> = ({ ekran }) 
               fontWeight: 800,
               padding: "24px 48px",
               borderRadius: PROMIEN_MALY,
-              boxShadow: wcisniety ? "2px 2px 0 rgba(232,89,12,.25)" : CIEN_NAKLEJKI,
+              boxShadow: wcisniety ? CIEN_NAKLEJKI_WCISNIETY : CIEN_NAKLEJKI,
               transform: wcisniety ? "scale(0.96) translate(3px, 3px)" : "scale(1)",
             }}
           >

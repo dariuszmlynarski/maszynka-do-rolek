@@ -1,8 +1,10 @@
-# Maszynka do shortsów
+# Maszynka do rolek — DMProsper
 
-Lokalna aplikacja, która z linku albo pomysłu robi gotową rolkę (pion 1080×1920, 30 kl/s) na Reels, TikToka i Shorts. Scenariusz pisze Claude Code, lektora czyta ElevenLabs Twoim sklonowanym głosem, wideo składa Remotion. Wszystko dzieje się na Twoim komputerze.
+Lokalna aplikacja, która z linku albo pomysłu robi gotową rolkę (pion 1080×1920, 30 kl/s) na Reels, TikToka i Shorts. Scenariusz pisze Claude Code, lektora czyta ElevenLabs sklonowanym głosem Dariusza, wideo składa Remotion. Wszystko dzieje się lokalnie.
 
-Zbudowana na żywo podczas live'a Akademii Automatyzacji „Claude Code od zera" (17.09.2026). Kod jest otwarty: pobierz, odpal, przerób pod siebie.
+> **Fork** [`AIBiz-Automatyzacje/maszynka-do-shortsow`](https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow) (Kacper Trzepieciński, Akademia Automatyzacji). Silnik, format scenariusza i typy scen pochodzą z oryginału. Nasze jest to, co widać i słychać: ciemna paleta marki DM, Archivo Black / Inter / Montserrat, ton głosu Dariusza, domena `dmprosper.pl`.
+
+W fabryce wideo DM to **ścieżka A3 — rolka bez twarzy**: zero kamery, zero awatara, zero CapCuta. Mapa fabryki: `~/.claude/commands/video-factory.md`, skill prowadzący: `/video-maszynka`.
 
 ## Co potrzebujesz
 
@@ -16,14 +18,14 @@ Zbudowana na żywo podczas live'a Akademii Automatyzacji „Claude Code od zera"
 Najprościej: otwórz Claude Code, wklej link do tego repo i napisz:
 
 ```
-Pobierz ten projekt i uruchom go: https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow
+Pobierz ten projekt i uruchom go: https://github.com/dariuszmlynarski/maszynka-do-rolek
 ```
 
 Claude sam sklonuje kod, zainstaluje biblioteki i otworzy dashboard w przeglądarce (http://localhost:5757). Potem kliknij **Ustawienia głosu**, wklej klucz ElevenLabs i wybierz swój głos.
 
 Ręcznie, bez Claude'a:
 
-1. `git clone https://github.com/AIBiz-Automatyzacje/maszynka-do-shortsow.git` albo „Code → Download ZIP".
+1. `git clone https://github.com/dariuszmlynarski/maszynka-do-rolek.git` albo „Code → Download ZIP".
 2. Kliknij dwa razy **Uruchom maszynkę.command** (macOS; za pierwszym razem prawy klik → „Otwórz"). Na Windowsie: `npm install --legacy-peer-deps && npm start`.
 3. W przeglądarce otworzy się http://localhost:5757. Okno Terminala zostaw otwarte.
 
@@ -40,7 +42,7 @@ W skrócie: **+ Nowa rolka** → wklej link → **Utwórz i napisz scenariusz** 
 | `dashboard/` | panel w przeglądarce (React + Vite) |
 | `server/` | lokalny serwer: scenariusze (Claude Code), lektor (ElevenLabs), render |
 | `src/` | kompozycja wideo w Remotion, typy scen, napisy, marka |
-| `docs/` | instrukcja obsługi i styl marki |
+| `docs/` | instrukcja obsługi i styl marki DM |
 | `projekty/` | Twoje rolki (nie trafiają do repo) |
 | `dane/` | ustawienia i klucz ElevenLabs (nie trafiają do repo) |
 | `CLAUDE.md` | instrukcja dla Claude Code: jak pisać scenariusze w tym projekcie |
@@ -49,6 +51,13 @@ W skrócie: **+ Nowa rolka** → wklej link → **Utwórz i napisz scenariusz** 
 
 Dashboard `5757`, serwer `4545`. Zmiana portu serwera: `PORT` w pliku `.env` (wzór w `.env.example`).
 
+## Podmiana marki
+
+Cała warstwa wizualna siedzi w `src/marka.ts` (paleta, czcionki, cienie, podpis, domena) i `docs/styl-marki.md`. Ton głosu lektora żyje w **dwóch miejscach naraz**: `CLAUDE.md` oraz funkcja `zasady()` w `server/scenarzysta.ts` — zmieniasz jedno, zmieniasz drugie.
+
+Źródłem prawdy dla marki jest sejf dmOS: `3-DM/Content/Brand/Identyfikacja-Wizualna.md` i `Tone-of-Voice-Essentials.md`.
+
 ---
 
-[Akademia Automatyzacji](https://akademiaautomatyzacji.com) · Kacper Trzepieciński
+Oryginał: [Akademia Automatyzacji](https://akademiaautomatyzacji.com) · Kacper Trzepieciński
+Fork i przemalowanie: Dariusz Młynarski · [dmprosper.pl](https://dmprosper.pl)

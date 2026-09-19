@@ -46,7 +46,7 @@ export function domyslnyEkran(typ: TypEkranu, poprzedni?: Ekran): Ekran {
     case "porownanie":
       return { typ, lewo: { naglowek: "Źle", punkty: ["..."] }, prawo: { naglowek: "Dobrze", punkty: ["..."] } };
     case "cta":
-      return { typ, naglowek, przycisk: "akademiaautomatyzacji.com", dopisek: "link w opisie" };
+      return { typ, naglowek, przycisk: "dmprosper.pl", dopisek: "link w opisie" };
     case "3d":
       return { typ, ksztalt: "kostki", naglowek, dopisek: "" };
     case "kod":
@@ -73,7 +73,7 @@ export function domyslnyEkran(typ: TypEkranu, poprzedni?: Ekran): Ekran {
       return {
         typ,
         naglowek,
-        adres: "akademiaautomatyzacji.com",
+        adres: "dmprosper.pl",
         tytulStrony: "Tytuł artykułu",
         opis: "",
         przycisk: "Czytaj dalej",
@@ -260,7 +260,7 @@ const FormularzEkranu: React.FC<{ ekran: Ekran; onZmiana: (e: Ekran) => void }> 
           <Pole label="Nagłówek" value={ekran.naglowek} onChange={(v) => onZmiana({ ...ekran, naglowek: v })} />
           <div className="wiersz dwa">
             <Pole label="Słowa do wyróżnienia (fragment nagłówka)" value={ekran.akcent} onChange={(v) => onZmiana({ ...ekran, akcent: v })} placeholder="np. NARZĘDZI AI" />
-            <Pole label="Mała etykieta nad tytułem" value={ekran.etykieta} onChange={(v) => onZmiana({ ...ekran, etykieta: v })} placeholder="np. Akademia Automatyzacji" />
+            <Pole label="Mała etykieta nad tytułem" value={ekran.etykieta} onChange={(v) => onZmiana({ ...ekran, etykieta: v })} placeholder="np. AI dla nietechnicznych" />
           </div>
           <Pole label="Odręczny dopisek" value={ekran.dopisek} onChange={(v) => onZmiana({ ...ekran, dopisek: v })} placeholder="np. które dają przewagę" />
         </>

@@ -9,7 +9,8 @@ import { wjazd } from "../ruch";
 
 type E3D = Extract<Ekran, { typ: "3d" }>;
 
-const KOLORY_3D = [KOLOR.accent, KOLOR.card, KOLOR.paper2, KOLOR.accent, KOLOR.green, KOLOR.card];
+// Na ciemnym tle bryły muszą być JAŚNIEJSZE od tła, inaczej są czarnymi sylwetkami.
+const KOLORY_3D = [KOLOR.accent, KOLOR.lineStrong, KOLOR.poswiata, KOLOR.accent, KOLOR.green, KOLOR.card];
 
 /** Obrys krawędzi. Bez niego bryły wyglądają jak generyczny render, a nie jak rysunek techniczny. */
 const Obrys: React.FC<{ geometria: THREE.BufferGeometry; kolor?: string }> = ({ geometria, kolor = KOLOR.ink }) => {
@@ -58,7 +59,7 @@ const Kartki: React.FC<{ frame: number }> = ({ frame }) => {
       Array.from({ length: 6 }, (_, i) => ({
         x: ((i % 2) - 0.5) * 3.4,
         y: (1 - Math.floor(i / 2)) * 2.3,
-        kolor: i === 2 ? KOLOR.accent : KOLOR.card,
+        kolor: i === 2 ? KOLOR.accent : KOLOR.lineStrong,
         faza: i * 0.9,
       })),
     [],

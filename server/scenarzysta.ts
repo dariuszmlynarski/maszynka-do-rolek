@@ -68,10 +68,10 @@ const SPECYFIKACJA_EKRANOW = `
 { "typ": "porownanie", "lewo": { "naglowek": "Bez tego", "punkty": ["..."] }, "prawo": { "naglowek": "Z tym", "punkty": ["..."] } }
 { "typ": "3d", "ksztalt": "kostki|kula|torus|pierscienie|kartki", "naglowek": "...", "etykieta": "...", "dopisek": "..." }
 { "typ": "kod", "tytul": "terminal", "naglowek": "...", "linie": ["...", "..."] }
-{ "typ": "cta", "naglowek": "...", "przycisk": "akademiaautomatyzacji.com", "dopisek": "link w opisie" }
+{ "typ": "cta", "naglowek": "...", "przycisk": "dmprosper.pl", "dopisek": "link w opisie" }
 { "typ": "telefon", "naglowek": "...", "tytulEkranu": "...", "powiadomienie": { "tytul": "...", "tekst": "..." }, "wiersze": [{ "ikona": "📩", "tytul": "...", "podtytul": "..." }], "przycisk": "..." }
 { "typ": "czat", "naglowek": "...", "rozmowca": "Klient", "wiadomosci": [{ "tekst": "..." }, { "odNas": true, "tekst": "..." }] }
-{ "typ": "przegladarka", "naglowek": "...", "adres": "akademiaautomatyzacji.com", "tytulStrony": "...", "opis": "...", "obrazTekst": "podpis w miejscu grafiki", "przycisk": "..." }
+{ "typ": "przegladarka", "naglowek": "...", "adres": "dmprosper.pl", "tytulStrony": "...", "opis": "...", "obrazTekst": "podpis w miejscu grafiki", "przycisk": "..." }
 { "typ": "formularz", "naglowek": "...", "tytul": "...", "pola": [{ "etykieta": "E-mail", "wartosc": "anna@firma.pl" }], "przycisk": "Zapisz się", "potwierdzenie": "Miejsce zarezerwowane" }
 
 Silnik robi sam, bez podawania w JSON: wjazdy elementów w rytm lektora, kołysanie kart, uderzenie kamery na wejściu sceny, pisanie tekstu litera po literze w terminalu i formularzu, kursor klikający przycisk w formularzu, licznik nabijający wielką liczbę, zakreślanie pola "akcent" pomarańczem.
@@ -81,7 +81,7 @@ function zasady(dlugosc: number) {
   const slowa = budzetSlow(dlugosc);
   const sceny = Math.max(3, Math.min(12, Math.round(dlugosc / 8)));
   return `
-Piszesz scenariusz pionowej rolki (Reels, TikTok, YouTube Shorts) dla marki Akademia Automatyzacji: kursy Claude Code, n8n i Make oraz społeczność. Odbiorca to osoba nietechniczna albo półtechniczna, która chce automatyzować swoją pracę.
+Piszesz scenariusz pionowej rolki (Reels, TikTok, YouTube Shorts) dla Dariusza Młynarskiego (DMProsper). Trzy filary marki: AI dla nietechnicznych, biznes i przywództwo, zdrowy styl życia po czterdziestce. Odbiorca to dorosły praktyk, nie programista: chce konkretnej korzyści, nie wykładu. Dariusz jest mądrym kolegą, który to przerobił na sobie — nie guru ze sceny.
 
 BUDŻET (trzymaj się ściśle)
 Długość docelowa ${dlugosc} s. Łącznie NIE WIĘCEJ niż ${slowa} słów lektora — policz je. Scen: ${sceny} (±1). Lepiej krócej niż dłużej; rolka dłuższa od celu to błąd.
@@ -94,21 +94,24 @@ STRUKTURA (w tej kolejności)
 5. SZCZERA UWAGA, 1 zdanie. Koszt, ograniczenie albo czego to nie załatwia. Obowiązkowe.
 6. ZAKOŃCZENIE, 1–2 zdania. Jedno zadanie dla widza. Zero pożegnań. Ostatnie zdanie ma płynnie przechodzić w hak, żeby rolka dobrze się zapętlała.
 
-JAK PISZE KACPER (ton głosu marki)
-- Mówisz wprost do jednej osoby. Przy instrukcji „Wy" (Wam, Wasz), przy korzyści „Ty". Czas teraźniejszy, strona czynna.
-- Naturalne zwroty: „No i teraz tak", „I już tłumaczę dlaczego", „Zaraz Wam pokażę", „Czyli lecimy dalej", „I to tyle", „No i super".
-- Słowo „sobie" przy czasownikach: „przejdźmy sobie", „zapiszemy sobie".
-- Nowy termin tłumacz od razu przez „czyli" albo „to po prostu…", z jedną metaforą z biura albo z domu.
-- Zdrobnienia są mile widziane: apka, prompcik, raporcik.
-- Mów też o własnych błędach i o kosztach. Szczerość buduje zaufanie.
+JAK PISZE DARIUSZ (ton głosu marki)
+- Mówisz wprost do jednej osoby, per „Ty". Czas teraźniejszy, strona czynna. Nigdy o sobie w trzeciej osobie.
+- Rekomendujesz po swojemu: „szczerze namawiam", „gorąco zachęcam", „warto", „jestem przekonany". Nie rozkazujesz i nie prosisz.
+- Anegdota z własnego życia bije teorię, także porażka. Konkret: co robiłeś, co wyszło, ile to kosztowało.
+- Metafory wyłącznie z życia codziennego: prowadzenie samochodu, nauka pływania, pogoda, sklep, restart komputera. Nigdy abstrakcyjne.
+- Kolokwializm jest na miejscu: „rusz dupę", „bieżączka", „kombajn", „na luzie". Wulgaryzm najwyżej jeden na rolkę i nigdy w haku.
+- Przy zdrowiu i formie mówisz „tworzysz", nie „budujesz": „tworzysz zdrowie albo tworzysz chorobę". To sprawczość, nie loteria.
+- Polski zamiast anglicyzmów, gdy odpowiednik istnieje: „pułap tlenowy" nie „VO2max", „skład pożywienia" nie „makro".
+- Treść ma mieć siłę. Gdy wybierasz między zdaniem mocnym a bezpiecznym, bierzesz mocne.
 
-JAK NIE PISAĆ
-- Zero słów: szok, rewolucja, gamechanger, przełom. Zero wykrzykników w seriach.
-- Zero presji czasowej i sztucznego niedoboru.
-- Zero długich myślników. Używaj kropki, przecinka, dwukropka albo krótkiego myślnika.
-- Zero korpomowy i strony biernej. Zero ramy kursowej („witajcie w kolejnej lekcji").
-- Zero odwołań do tego, czego nie widać („tutaj po lewej").
-- Liczby w mowie lektora zapisuj słownie („ponad tysiąc dwieście"), na ekranie mogą być cyframi.
+JAK NIE PISAĆ — tiki AI (Dariusz wyłapuje je natychmiast)
+- Triada negacji i eskalacja: „kosztowało dolara. Nie tysiąc. Nie sto." Pisz wprost: „kosztowało dolara".
+- Powtarzane „To nie X. To Y." oraz „X nie mówi A. Mówi B.".
+- Nadużyta reguła trójki, antyteza w każdym zdaniu, „nie tylko… ale także", „z jednej strony… z drugiej".
+- Puste otwarcia: „Wyobraź sobie…", „W świecie, w którym…", „Brzmi jak X? A jednak.", „I to jest właśnie sedno.", „A teraz najważniejsze.".
+- Izolowane jednowyrazowce jako sztuczna puenta („Zawsze.", „Nigdy.").
+- „Podsumowując", puste zachęty („Dasz radę!"), generalizacje bez pokrycia („badania pokazują").
+Krótka puenta, realny kontrast, pytanie retoryczne i anegdota ZOSTAJĄ — chodzi o mechaniczne tiki, nie o rytm. Gdy łapiesz się na symetrii, przepisz płasko, jak mądry kolega.
 
 RYTM WYPOWIEDZI (od tego zależy, czy lektor brzmi jak człowiek)
 - Najwyżej jedna trzecia zdań może być krótsza niż sześć słów. Seria krótkich zdań brzmi jak robot.
@@ -127,7 +130,7 @@ CO WIDAĆ NA EKRANIE
 - W liście kafelków możesz oznaczyć kafelek jako błąd ("stan": "blad", czerwony) albo powodzenie ("stan": "ok", zielony) i dodać pieczątkę ("etykieta": "error"). Kafelki łączy się strzałką ("polaczenie": "strzalka") i można kazać im pulsować ("pulsujace": true).
 - Najwyżej jedna scena „3d" i jedna „kod" w całej rolce. „kod" tylko wtedy, gdy naprawdę chodzi o komendę albo prompt; linie po maksymalnie 38 znaków, najwyżej 4 linie.
 - Scena 1 to typ „tytul" z polem „akcent" będącym dosłownym fragmentem pola „naglowek".
-- Ostatnia scena to zawsze typ „cta" z przyciskiem „akademiaautomatyzacji.com".
+- Ostatnia scena to zawsze typ „cta" z przyciskiem „dmprosper.pl".
 - W polu „ikona" jedno proste emoji.
 
 TYPY EKRANÓW (pole "ekran")${SPECYFIKACJA_EKRANOW}
@@ -279,7 +282,7 @@ export async function poprawScene(projekt: Scenariusz, scenaId: string, zapisz: 
     const scena = projekt.sceny.find((s) => s.id === scenaId);
     if (!scena) throw new Error("Nie ma takiej sceny.");
     if (!scena.opis?.trim()) throw new Error("Opis sceny jest pusty.");
-    const prompt = `Przebudowujesz JEDNĄ scenę pionowej rolki dla marki Akademia Automatyzacji (kadr 1080x1920).
+    const prompt = `Przebudowujesz JEDNĄ scenę pionowej rolki dla marki Dariusza Młynarskiego / DMProsper (kadr 1080x1920).
 
 ZADANIE: scena numer ${numer} z ${projekt.sceny.length}. Tekst lektora zostaje DOSŁOWNIE taki sam, zmieniasz wyłącznie to, co widać na ekranie.
 

@@ -1,36 +1,50 @@
-// Styl marki Akademii Automatyzacji przełożony na kadr pionowy.
-// Proporcje ze strony przeskalowane około 2,6 raza: ramka 1 px daje 2 px, zaokrąglenie 14 px daje 38 px.
+// Styl marki Dariusza Młynarskiego przełożony na kadr pionowy.
+// Źródło: 3-DM/Content/Brand/Identyfikacja-Wizualna.md — ciemne tło, pomarańcz #fc5400,
+// Archivo Black w nagłówkach, Inter w treści, Montserrat w napisach na wideo.
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 import { loadFont as loadArchivo } from "@remotion/google-fonts/ArchivoBlack";
-import { loadFont as loadCaveat } from "@remotion/google-fonts/Caveat";
+import { loadFont as loadMontserrat } from "@remotion/google-fonts/Montserrat";
 
 const inter = loadInter("normal", {
   weights: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
 });
 const archivo = loadArchivo("normal", { weights: ["400"], subsets: ["latin", "latin-ext"] });
-const caveat = loadCaveat("normal", { weights: ["500", "600", "700"], subsets: ["latin", "latin-ext"] });
+const montserrat = loadMontserrat("normal", {
+  weights: ["600", "700", "800"],
+  subsets: ["latin", "latin-ext"],
+});
 
 export const CZCIONKA = {
   tekst: inter.fontFamily,
   naglowek: archivo.fontFamily,
-  odreczna: caveat.fontFamily,
+  /** Dopiski i etykiety. U DM nie ma odręcznego kroju — tech/flat, nie notatnik. */
+  odreczna: montserrat.fontFamily,
+  /** Napisy na wideo zostają na Montserracie (decyzja 01.09.2026). */
+  napisy: montserrat.fontFamily,
   kod: "Menlo, 'SF Mono', Consolas, monospace",
 };
 
 export const KOLOR = {
-  paper: "#FAF8F4",
-  paper2: "#F4F1EA",
-  card: "#FFFFFF",
-  ink: "#141414",
-  inkSoft: "#3D3A34",
-  muted: "#6E6A61",
-  line: "#E5E1D8",
-  lineStrong: "#D8D3C6",
-  accent: "#E8590C",
-  accentSoft: "#FBEADF",
-  green: "#2F9E44",
-  red: "#D93025",
+  /** Baza kadru: ciemna czekolada z konwencji grafik DM. */
+  paper: "#1E110A",
+  paper2: "#120A05",
+  card: "#202020",
+  ink: "#FFFFFF",
+  inkSoft: "#E8E2DC",
+  muted: "#9C938A",
+  line: "#3A2E24",
+  lineStrong: "#574636",
+  accent: "#FC5400",
+  /** Wypełnienie akcentowe na ciemnym: przygaszony pomarańcz, nie pastel. */
+  accentSoft: "#3A1B08",
+  /** Marką jest ciemna zieleń #1a5c2a, ale na ciemnym tle znika — tu jaśniejszy wariant. */
+  green: "#3FAE5A",
+  greenSoft: "#10240F",
+  red: "#FF5A4E",
+  redSoft: "#2A0F0C",
+  /** Jądro poświaty z tła grafik DM. */
+  poswiata: "#965A30",
 };
 
 // Kadr
@@ -51,11 +65,16 @@ export const PROMIEN = 38;
 export const PROMIEN_MALY = 26;
 export const RAMKA = 2;
 
-/** Cień dwuwarstwowy: bliski styku i daleki od otoczenia. */
-export const CIEN_KARTY = "0 3px 6px rgba(20,20,20,.05), 0 16px 48px rgba(20,20,20,.07)";
-export const CIEN_UNIESIONY = "0 6px 10px rgba(20,20,20,.06), 0 36px 90px rgba(20,20,20,.12)";
+/**
+ * Cień dwuwarstwowy: bliski styku i daleki od otoczenia. Na ciemnym tle czarny cień
+ * nie istnieje, więc dalszą warstwę niesie ciepła poświata (#965A30) z konwencji grafik.
+ */
+export const CIEN_KARTY = "0 3px 8px rgba(0,0,0,.55), 0 16px 52px rgba(150,90,48,.16)";
+export const CIEN_UNIESIONY = "0 8px 18px rgba(0,0,0,.6), 0 38px 96px rgba(150,90,48,.24)";
 /** Cień przesunięty bez rozmycia, w kolorze akcentu. Sygnatura marki na przyciskach. */
-export const CIEN_NAKLEJKI = "8px 8px 0 rgba(232,89,12,.25)";
+export const CIEN_NAKLEJKI = "8px 8px 0 rgba(252,84,0,.38)";
+/** Ten sam cień wciśnięty — przycisk w makiecie po kliknięciu. */
+export const CIEN_NAKLEJKI_WCISNIETY = "2px 2px 0 rgba(252,84,0,.38)";
 
 /** Skala pisma dla kadru 1080 px. */
 export const PISMO = {
@@ -81,3 +100,13 @@ export const ZAPAS_W_KAFELKU = 30;
 // Tło
 export const SIATKA_PX = 54;
 export const SIATKA_DRYF_PX_S = 16;
+/** Kratka na ciemnym tle musi być jaśniejsza od tła, nie ciemniejsza. */
+export const SIATKA_KOLOR = "rgba(255,255,255,0.055)";
+/** Poświata pod treścią — odpowiednik jądra z `tlo-czekolada-poswiata.png`. */
+export const POSWIATA_TLA =
+  "radial-gradient(120% 70% at 50% 34%, rgba(150,90,48,.34) 0%, rgba(150,90,48,.10) 42%, rgba(0,0,0,0) 72%)";
+
+/** Podpis marki u góry kadru. */
+export const PODPIS_MARKI = "DARIUSZ MŁYNARSKI";
+/** Adres w przyciskach CTA i makietach przeglądarki. */
+export const DOMENA = "dmprosper.pl";
