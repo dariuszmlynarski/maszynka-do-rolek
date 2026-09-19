@@ -237,3 +237,32 @@ h2 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
 
 /* Podpowiedź wymowy pod tekstem lektora */
 .podpowiedz-wymowy { margin: -6px 0 10px; padding-left: 2px; font-style: italic; }
+
+/* --- Wybór z planu social media (sejf dmOS) --- */
+.plan-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.plan-pozycja {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--line, #E5E1D8);
+  border-radius: 10px;
+  background: var(--card, #fff);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: border-color .12s, background .12s;
+}
+.plan-pozycja:hover { border-color: #FC5400; }
+.plan-pozycja.wybrana {
+  border-color: #FC5400;
+  box-shadow: inset 0 0 0 1px #FC5400;
+}
+.plan-tytul { font-weight: 600; }
+.plan-meta { font-size: 12px; opacity: .65; }

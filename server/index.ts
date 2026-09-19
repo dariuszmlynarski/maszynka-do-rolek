@@ -25,6 +25,7 @@ import { dlugoscAudio, wyrownajGlosnosc } from "./audio";
 import { odswiezPaczke, renderuj, stanRenderu, trwaRender } from "./render";
 import { napiszScenariusz, poprawScene, stanPisania, trwaPisanie } from "./scenarzysta";
 import { podsumowanie } from "./kontrola";
+import { rolkiDoNagrania, sejfDostepny } from "./plan";
 
 const PORT = Number(process.env.PORT ?? 4545);
 const app = express();
@@ -85,6 +86,12 @@ app.get("/api/glosy", async (_req, res) => {
   } catch (e) {
     blad(res, e);
   }
+});
+
+// ---- Plan social media (sejf dmOS, tylko odczyt) ----
+app.get("/api/plan", (_req, res) => {
+  if (!sejfDostepny()) return res.json({ dostepny: false, pozycje: [] });
+  res.json({ dostepny: true, pozycje: rolkiDoNagrania() });
 });
 
 // ---- Projekty ----

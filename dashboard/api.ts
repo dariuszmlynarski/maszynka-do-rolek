@@ -53,11 +53,26 @@ async function zapytaj<T>(sciezka: string, init?: RequestInit): Promise<T> {
   return dane as T;
 }
 
+/** Pozycja planu social media oznaczona jako rolka do nagrania. */
+export type PozycjaPlanu = {
+  id: string;
+  tytul: string;
+  filar?: string;
+  format?: string;
+  status?: string;
+  data?: string;
+  dlugosc?: number;
+  tresc: string;
+  sciezka: string;
+};
+
 export const api = {
   status: () => zapytaj<Status>("/api/status"),
   zapiszUstawienia: (u: Partial<Status> & { elevenLabsApiKey?: string }) =>
     zapytaj<{ ok: true }>("/api/ustawienia", { method: "PUT", body: JSON.stringify(u) }),
   glosy: () => zapytaj<Glos[]>("/api/glosy"),
+
+  plan: () => zapytaj<{ dostepny: boolean; pozycje: PozycjaPlanu[] }>("/api/plan"),
 
   projekty: () => zapytaj<Scenariusz[]>("/api/projekty"),
   projekt: (id: string) => zapytaj<Scenariusz>(`/api/projekty/${id}`),

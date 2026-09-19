@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import type { Scena, Scenariusz } from "../src/typy";
 import { czasCalosci, formatujCzas } from "../src/czas";
 import { hashTekstu } from "../src/hash";
-import { api, urlPliku, type Kontrola, type StanPisania, type StanRenderu, type Status } from "./api";
+import { api, urlPliku, type Kontrola, type PozycjaPlanu, type StanPisania, type StanRenderu, type Status } from "./api";
 import { domyslnyEkran, EdytorSceny } from "./EdytorSceny";
 import { Podglad } from "./Podglad";
 import { Ustawienia } from "./Ustawienia";
@@ -561,11 +561,50 @@ const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zro
   const [tytul, setTytul] = useState("");
   const [zrodlo, setZrodlo] = useState("");
   const [dl, setDl] = useState(45);
+  const [plan, setPlan] = useState<PozycjaPlanu[]>([]);
+  const [wybrana, setWybrana] = useState<string | null>(null);
+
+  // Plan social media z sejfu: pozycje z „rolka: Do nagrania”. Gdy sejfu nie ma, sekcja znika.
+  useEffect(() => {
+    api.plan().then((p) => setPlan(p.pozycje)).catch(() => setPlan([]));
+  }, []);
+
+  const wezZPlanu = (p: PozycjaPlanu) => {
+    if (wybrana === p.id) {
+      setWybrana(null);
+      return;
+    }
+    setWybrana(p.id);
+    setTytul(p.tytul.replace(/\s*\(rolka\)\s*$/i, "").trim());
+    setZrodlo(p.tresc);
+    if (p.dlugosc) setDl(p.dlugosc);
+  };
+
   return (
     <div className="dialog-tlo" onClick={onZamknij}>
       <div className="karta dialog" onClick={(e) => e.stopPropagation()}>
         <h1>Nowa rolka</h1>
         <p className="male">Wklej link do artykułu albo opisz pomysł. Claude sam napisze scenariusz na wybraną długość, a Ty go poprawisz.</p>
+        {plan.length > 0 && (
+          <div className="pole">
+            <label>Z planu social media — czeka na nagranie</label>
+            <div className="plan-lista">
+              {plan.map((p) => (
+                <button
+                  key={p.id}
+                  className={`plan-pozycja ${wybrana === p.id ? "wybrana" : ""}`}
+                  onClick={() => wezZPlanu(p)}
+                >
+                  <span className="plan-tytul">{p.tytul.replace(/\s*\(rolka\)\s*$/i, "")}</span>
+                  <span className="plan-meta">
+                    {[p.filar, p.status, p.dlugosc ? `${p.dlugosc} s` : null].filter(Boolean).join(" · ")}
+                  </span>
+                </button>
+              ))}
+            </div>
+            <p className="male">Kliknięcie wciąga treść pozycji jako źródło scenariusza.</p>
+          </div>
+        )}
         <div className="pole">
           <label>Tytuł roboczy</label>
           <input value={tytul} onChange={(e) => setTytul(e.target.value)} placeholder="np. 3 błędy w automatyzacjach" autoFocus />
