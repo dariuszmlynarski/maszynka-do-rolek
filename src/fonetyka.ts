@@ -17,6 +17,15 @@ const SLOWNIK: [RegExp, string][] = [
 
   // Marki i narzędzia
   [/\bn8n\b/gi, "en osiem en"],
+  [/\bClaude\b/gi, "Klod"],
+  [/\bObsidian\b/gi, "Obsidian"],
+  [/\bTodoist\b/gi, "Todoist"],
+  [/\bYNAB\b/g, "Ynab"],
+  [/\bGarmin\b/gi, "Garmin"],
+  [/\bHeyGen\b/gi, "Hej Dżen"],
+  [/\bElevenLabs\b/gi, "Ilewen Labs"],
+  [/\bBrevo\b/gi, "Brewo"],
+  [/\bHostinger\b/gi, "Hostinger"],
   [/\bMake\b/g, "Mejk"],
   [/\bZapier\b/gi, "Zapjer"],
   [/\bAirtable\b/gi, "Erjtejbl"],
