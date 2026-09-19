@@ -217,7 +217,11 @@ export const EkranKarta: React.FC<{ ekran: Ek<"karta"> }> = ({ ekran }) => {
 export const EkranLiczba: React.FC<{ ekran: Ek<"liczba"> }> = ({ ekran }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const wartosc = Math.round(od(frame, 4, Math.round(fps * 1.3), 0, ekran.wartosc, E.outExpo));
+  // Licznik zachowuje tyle miejsc po przecinku, ile ma wartość w scenariuszu.
+  // Zaokrąglanie w dół do całości gubiło sens tam, gdzie liczy się ułamek
+  // (wydolność 40,7 pokazywała się jako 41, a podpis mówił o starcie 39,2).
+  const miejsca = (String(ekran.wartosc).split(".")[1] ?? "").length;
+  const wartosc = Number(od(frame, 4, Math.round(fps * 1.3), 0, ekran.wartosc, E.outExpo).toFixed(miejsca));
   const podpis = wjazd(frame, Math.round(fps * 0.5), 40);
   // Siatkę rysujemy tylko wtedy, gdy da się policzyć sztuki wzrokiem.
   const ile = Math.round(ekran.wartosc);
@@ -235,7 +239,7 @@ export const EkranLiczba: React.FC<{ ekran: Ek<"liczba"> }> = ({ ekran }) => {
         }}
       >
         {ekran.prefiks}
-        {wartosc.toLocaleString("pl-PL")}
+        {wartosc.toLocaleString("pl-PL", { minimumFractionDigits: miejsca, maximumFractionDigits: miejsca })}
         {ekran.sufiks}
       </div>
       <div style={{ ...podpis, fontSize: 48, fontWeight: 600, marginTop: 24, color: KOLOR.inkSoft, maxWidth: 860 }}>
