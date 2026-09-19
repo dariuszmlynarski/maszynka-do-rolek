@@ -17,6 +17,7 @@ import {
   utworzProjekt,
   wczytajProjekt,
   wczytajUstawienia,
+  sprzatnijKosz,
   zapiszProjekt,
   zapiszUstawienia,
 } from "./magazyn";
@@ -305,6 +306,8 @@ app.get("/api/projekty/:id/render", (req, res) => {
 fs.watch(path.join(KATALOG_GLOWNY, "src"), { recursive: true }, () => odswiezPaczke());
 
 app.listen(PORT, "127.0.0.1", () => {
+  const wKoszu = sprzatnijKosz();
+  if (wKoszu) console.log(`Kosz: usunięto ${wKoszu} pozycji starszych niż 7 dni.`);
   console.log(`Serwer maszynki działa: http://localhost:${PORT}`);
   console.log(`Projekty w: ${KATALOG_PROJEKTOW}`);
 });

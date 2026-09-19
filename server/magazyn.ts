@@ -52,6 +52,33 @@ export function slug(tekst: string): string {
 const POPRAWNY_ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
 
 /** Zwraca folder projektu. Odrzuca identyfikatory, które mogłyby wskazać poza folder projektów. */
+/** Kosz: tu lądują usunięte rolki i projekty, zamiast znikać od razu. */
+export const KATALOG_KOSZA = path.join(KATALOG_PROJEKTOW, "_kosz");
+
+/**
+ * Sprząta kosz przy starcie serwera: wyrzuca wszystko starsze niż tydzień.
+ * Bez tego kosz rośnie bez końca — jeden dzień intensywnej pracy zostawił w nim
+ * 23 pliki i 317 MB, bo każdy render poprawkowy trafiał tam po podmianie.
+ * Tydzień wystarczy, żeby zauważyć pomyłkę i cofnąć usunięcie ręcznie.
+ */
+export function sprzatnijKosz(dniRetencji = 7): number {
+  if (!fs.existsSync(KATALOG_KOSZA)) return 0;
+  const prog = Date.now() - dniRetencji * 24 * 60 * 60 * 1000;
+  let usuniete = 0;
+  for (const wpis of fs.readdirSync(KATALOG_KOSZA)) {
+    const sciezka = path.join(KATALOG_KOSZA, wpis);
+    try {
+      if (fs.statSync(sciezka).mtimeMs < prog) {
+        fs.rmSync(sciezka, { recursive: true, force: true });
+        usuniete += 1;
+      }
+    } catch {
+      /* plik zniknął w międzyczasie — nic nie szkodzi */
+    }
+  }
+  return usuniete;
+}
+
 export function katalogProjektu(id: string) {
   if (!POPRAWNY_ID.test(id)) throw new Error("Nieprawidłowa nazwa projektu.");
   const kat = path.resolve(KATALOG_PROJEKTOW, id);
