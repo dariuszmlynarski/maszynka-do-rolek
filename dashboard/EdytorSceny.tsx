@@ -14,6 +14,7 @@ export const NAZWY_TYPOW: Record<TypEkranu, string> = {
   lista: "Lista kafelków",
   karta: "Jedna karta",
   liczba: "Wielka liczba",
+  wykres: "Wykres",
   porownanie: "Porównanie",
   cta: "Zakończenie z przyciskiem",
   "3d": "Element 3D",
@@ -47,6 +48,11 @@ export function domyslnyEkran(typ: TypEkranu, poprzedni?: Ekran): Ekran {
       return { typ, lewo: { naglowek: "Źle", punkty: ["..."] }, prawo: { naglowek: "Dobrze", punkty: ["..."] } };
     case "cta":
       return { typ, naglowek, przycisk: "Obserwuj po więcej" };
+    case "wykres":
+      return { typ, rodzaj: "slupki", naglowek, sufiks: "%", punkty: [
+        { etykieta: "Przed", wartosc: 20 },
+        { etykieta: "Po", wartosc: 60 },
+      ] };
     case "3d":
       return { typ, ksztalt: "kostki", naglowek, dopisek: "" };
     case "kod":

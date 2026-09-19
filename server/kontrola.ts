@@ -29,6 +29,8 @@ function znakiNaEkranie(scena: Scena): number {
       return zlicz(e.lewo.naglowek, ...e.lewo.punkty, e.prawo.naglowek, ...e.prawo.punkty);
     case "cta":
       return zlicz(e.naglowek, e.przycisk, e.dopisek);
+    case "wykres":
+      return zlicz(e.naglowek, e.podpis, ...e.punkty.map((x) => x.etykieta));
     case "3d":
       return zlicz(e.naglowek, e.dopisek, e.etykieta);
     case "kod":

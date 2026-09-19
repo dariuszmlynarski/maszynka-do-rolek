@@ -3,13 +3,13 @@ import { staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import type { Ekran } from "../typy";
 import { CIEN_NAKLEJKI, CIEN_UNIESIONY, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
 import { Dopisek, Karta, Kicker, Lacznik, Stempel, Tresc, Zakreslenie, useKotwice, useSway } from "./wspolne";
-import { E, od, pop, postep, puls, stempel, wjazd, wjazdZBoku } from "../ruch";
+import { E, od, pop, postep, puls, stempel, sway, wjazd, wjazdZBoku } from "../ruch";
 import { useVideoConfig as useConfig } from "remotion";
 
 type Ek<T extends Ekran["typ"]> = Extract<Ekran, { typ: T }>;
 
 /** Duży nagłówek marki: Archivo Black, wersaliki, ciasny interlinia. */
-const NaglowekDuzy: React.FC<{ tekst: string; akcent?: string; opoznienie?: number; rozmiar?: number }> = ({
+export const NaglowekDuzy: React.FC<{ tekst: string; akcent?: string; opoznienie?: number; rozmiar?: number }> = ({
   tekst,
   akcent,
   opoznienie = 0,
@@ -71,7 +71,8 @@ export const EkranLista: React.FC<{ ekran: Ek<"lista"> }> = ({ ekran }) => {
           <NaglowekDuzy tekst={ekran.naglowek} rozmiar={PISMO.naglowekMaly} />
         </div>
       )}
-      <div>
+      {/* Perspektywa na kontenerze — bez niej przechył 3D z `wjazdZBoku` liczy się, ale nic nie widać. */}
+      <div style={{ perspective: 1800 }}>
         {ekran.punkty.map((p, i) => (
           <React.Fragment key={i}>
             {i > 0 && polaczenie !== "brak" && (
@@ -129,6 +130,10 @@ const PunktListy: React.FC<{
   const s = wjazdZBoku(frame, opoznienie, zPrawej);
   // Każdy kafelek pulsuje w innej fazie, żeby ruch nie wyglądał mechanicznie.
   const skala = pulsuje && frame > opoznienie + 12 ? puls(frame, fps, 0.02, 1.7 + numer * 0.23) : 1;
+  // Po wjeździe kafelek nie zastyga: dostaje własne kołysanie, narastające płynnie,
+  // w innym okresie i fazie niż sąsiedzi — lista oddycha zamiast stać jak tabela.
+  const osiadl = postep(frame, opoznienie + 13, opoznienie + 34, E.outCubic);
+  const zycie = osiadl > 0 ? ` ${sway(frame, fps, 1.1 * osiadl, 3.4 + numer * 0.45, numer * 1.3)}` : "";
 
   const kolorRamki = stan === "blad" ? KOLOR.red : stan === "ok" ? KOLOR.green : wyrozniony ? KOLOR.accent : KOLOR.line;
   const kolorTla = stan === "blad" ? KOLOR.redSoft : stan === "ok" ? KOLOR.greenSoft : wyrozniony ? KOLOR.accentSoft : KOLOR.card;
@@ -139,7 +144,7 @@ const PunktListy: React.FC<{
     <Karta
       style={{
         ...s,
-        transform: `${s.transform} scale(${skala})`,
+        transform: `${s.transform}${zycie} scale(${skala})`,
         display: "flex",
         alignItems: "center",
         gap: 24,
@@ -160,6 +165,8 @@ const PunktListy: React.FC<{
           justifyContent: "center",
           fontSize: 46,
           flexShrink: 0,
+          // Ikona dobija chwilę po kafelku, żeby oko miało na czym usiąść.
+          ...pop(frame, opoznienie + 5, 10),
         }}
       >
         <Ikona ikona={ikona} rozmiar={52} />
@@ -199,7 +206,12 @@ export const EkranKarta: React.FC<{ ekran: Ek<"karta"> }> = ({ ekran }) => {
         <div style={s}>
           <Karta uniesiona style={{ padding: 60, transform: kolysanie }}>
             {ekran.etykieta && <Stempel style={{ marginBottom: 30 }}>{ekran.etykieta}</Stempel>}
-            {ekran.ikona && <div style={{ fontSize: 120, lineHeight: 1, marginBottom: 24 }}><Ikona ikona={ekran.ikona} rozmiar={120} /></div>}
+            {ekran.ikona && (
+              // Ikona wjeżdża własnym rzutem po karcie — bez tego cała scena to jeden ruch i stop.
+              <div style={{ fontSize: 120, lineHeight: 1, marginBottom: 24, ...pop(frame, 7, 12) }}>
+                <Ikona ikona={ekran.ikona} rozmiar={120} />
+              </div>
+            )}
             <div style={{ fontSize: PISMO.naglowek, fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
               {ekran.naglowek}
             </div>

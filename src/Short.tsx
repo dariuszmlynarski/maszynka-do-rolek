@@ -11,7 +11,8 @@ import { Tlo, Podpis, KontekstNapisow, KontekstSlow } from "./sceny/wspolne";
 import { punch } from "./ruch";
 import { Napisy } from "./sceny/Napisy";
 import { EkranCta, EkranKarta, EkranKod, EkranLiczba, EkranLista, EkranPorownanie, EkranTytul } from "./sceny/Ekrany";
-import { Ekran3D } from "./sceny/Ekran3D";
+import { Ekran3D, Tlo3D } from "./sceny/Ekran3D";
+import { EkranWykres } from "./sceny/Wykres";
 import { EkranCzat, EkranFormularz, EkranPrzegladarka, EkranTelefon } from "./sceny/Makiety";
 import { CZCIONKA, KOLOR } from "./marka";
 
@@ -30,6 +31,8 @@ const Ekran: React.FC<{ scena: Scena }> = ({ scena }) => {
       return <EkranPorownanie ekran={e} />;
     case "cta":
       return <EkranCta ekran={e} />;
+    case "wykres":
+      return <EkranWykres ekran={e} />;
     case "3d":
       return <Ekran3D ekran={e} />;
     case "kod":
@@ -71,6 +74,7 @@ const SceneWidok: React.FC<{ scena: Scena; bazaUrl: string; napisy: boolean; pie
   );
   return (
     <Tlo>
+      {scena.tlo3d && <Tlo3D ksztalt={scena.tlo3d} />}
       <Podpis />
       <AbsoluteFill style={{ transform: `scale(${skala})`, transformOrigin: "540px 960px" }}>
         {pierwsza ? (

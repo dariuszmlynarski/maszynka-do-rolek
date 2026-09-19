@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
-import type { Ekran } from "../typy";
+import type { Ekran, Ksztalt3D } from "../typy";
 import * as THREE from "three";
 import { KOLOR, PISMO, SAFE } from "../marka";
 import { Dopisek, Kicker } from "./wspolne";
@@ -10,7 +10,9 @@ import { wjazd } from "../ruch";
 type E3D = Extract<Ekran, { typ: "3d" }>;
 
 // Na ciemnym tle bryły muszą być JAŚNIEJSZE od tła, inaczej są czarnymi sylwetkami.
-const KOLORY_3D = [KOLOR.accent, KOLOR.lineStrong, KOLOR.poswiata, KOLOR.accent, KOLOR.green, KOLOR.card];
+// Paleta brył trzyma się marki: pomarańcz i ciepła czekolada. Zieleń i czerń
+// wypadły 19.09 — na renderze wyglądały jak wtręt z innego zestawu.
+const KOLORY_3D = [KOLOR.accent, KOLOR.poswiata, KOLOR.lineStrong, KOLOR.accent, "#8A4A20", KOLOR.poswiata];
 
 /** Obrys krawędzi. Bez niego bryły wyglądają jak generyczny render, a nie jak rysunek techniczny. */
 const Obrys: React.FC<{ geometria: THREE.BufferGeometry; kolor?: string }> = ({ geometria, kolor = KOLOR.ink }) => {
@@ -117,21 +119,51 @@ const Pierscienie: React.FC<{ frame: number }> = ({ frame }) => (
   </group>
 );
 
+function bryla(ksztalt: Ksztalt3D) {
+  return ksztalt === "kula"
+    ? Kula
+    : ksztalt === "torus"
+      ? Torus
+      : ksztalt === "pierscienie"
+        ? Pierscienie
+        : ksztalt === "kartki"
+          ? Kartki
+          : Kostki;
+}
+
+/**
+ * Te same bryły co w scenie „3d", ale przygaszone i odsunięte w głąb — jako tło
+ * pod treścią. Daje scenie głębię, której płaskie karty nie mają, i nie zabiera
+ * miejsca napisom. Opacity trzymamy nisko, bo napisy na ciemnym tle tracą
+ * czytelność szybciej, niż się wydaje.
+ */
+export const Tlo3D: React.FC<{ ksztalt: Ksztalt3D }> = ({ ksztalt }) => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const Ksztalt = bryla(ksztalt);
+  return (
+    <AbsoluteFill style={{ opacity: 0.22, transform: "scale(1.25)", pointerEvents: "none" }}>
+      <ThreeCanvas
+        width={width}
+        height={height}
+        camera={{ position: [0, 0, 34], fov: 38 }}
+        style={{ background: "transparent" }}
+        gl={{ alpha: true, preserveDrawingBuffer: true }}
+      >
+        <ambientLight intensity={1.2} />
+        <directionalLight position={[4, 8, 10]} intensity={0.5} />
+        <Ksztalt frame={frame} />
+      </ThreeCanvas>
+    </AbsoluteFill>
+  );
+};
+
 export const Ekran3D: React.FC<{ ekran: E3D }> = ({ ekran }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const nag = wjazd(frame, 4, 60);
   const dop = wjazd(frame, 16, 40);
-  const Ksztalt =
-    ekran.ksztalt === "kula"
-      ? Kula
-      : ekran.ksztalt === "torus"
-        ? Torus
-        : ekran.ksztalt === "pierscienie"
-          ? Pierscienie
-          : ekran.ksztalt === "kartki"
-            ? Kartki
-            : Kostki;
+  const Ksztalt = bryla(ekran.ksztalt);
 
   return (
     <AbsoluteFill>

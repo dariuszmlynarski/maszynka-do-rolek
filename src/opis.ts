@@ -15,6 +15,11 @@ export function opisEkranu(e: Ekran): string {
       return `Porównanie: „${e.lewo.naglowek}” (${e.lewo.punkty.join(", ")}) kontra „${e.prawo.naglowek}” (${e.prawo.punkty.join(", ")}).`;
     case "cta":
       return `Zakończenie: napis „${e.naglowek}”, pomarańczowy przycisk „${e.przycisk}”${e.dopisek ? `, dopisek „${e.dopisek}”` : ""}.`;
+    case "wykres": {
+      const rodzaj = e.rodzaj === "linia" ? "wykres liniowy" : "wykres słupkowy";
+      const dane = e.punkty.map((x) => `${x.etykieta} ${x.wartosc}${e.sufiks ?? ""}`).join(", ");
+      return `${e.naglowek ? `Nagłówek „${e.naglowek}” i ` : ""}${rodzaj}: ${dane}${e.podpis ? `, podpis „${e.podpis}”` : ""}.`;
+    }
     case "3d": {
       const nazwy: Record<string, string> = {
         kostki: "latające kostki 3D",

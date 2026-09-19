@@ -27,6 +27,8 @@ export type Punkt = {
   etykieta?: string;
 };
 
+export type Ksztalt3D = "kostki" | "kula" | "torus" | "pierscienie" | "kartki";
+
 export type Ekran =
   | { typ: "tytul"; naglowek: string; akcent?: string; dopisek?: string; etykieta?: string }
   | {
@@ -45,10 +47,20 @@ export type Ekran =
       lewo: { naglowek: string; punkty: string[]; zle?: boolean };
       prawo: { naglowek: string; punkty: string[]; zle?: boolean };
     }
+  | {
+      typ: "wykres";
+      /** Słupki do porównań między rzeczami, linia do zmiany jednej rzeczy w czasie. */
+      rodzaj: "slupki" | "linia";
+      naglowek?: string;
+      podpis?: string;
+      /** Jednostka doklejana do wartości na wykresie, np. „%". */
+      sufiks?: string;
+      punkty: { etykieta: string; wartosc: number; wyroznij?: boolean }[];
+    }
   | { typ: "cta"; naglowek: string; przycisk: string; dopisek?: string }
   | {
       typ: "3d";
-      ksztalt: "kostki" | "kula" | "torus" | "pierscienie" | "kartki";
+      ksztalt: Ksztalt3D;
       naglowek: string;
       etykieta?: string;
       dopisek?: string;
@@ -104,6 +116,7 @@ export const TYPY_EKRANOW = [
   "liczba",
   "porownanie",
   "cta",
+  "wykres",
   "3d",
   "kod",
   "telefon",
@@ -126,6 +139,8 @@ export type Scena = {
   przejscie?: Przejscie; // przejście DO następnej sceny (domyślnie fade)
   efekt?: string; // opis efektu dźwiękowego do wygenerowania, np. "krótki whoosh"
   minCzas?: number; // minimalna długość sceny w sekundach
+  /** Bryły 3D przygaszone w tle, pod treścią. Dodaje głębi scenom, które inaczej są płaskie. */
+  tlo3d?: Ksztalt3D;
   audio?: AudioSceny;
   efektAudio?: EfektAudio;
 };
