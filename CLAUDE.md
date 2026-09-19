@@ -54,6 +54,7 @@ Zasady dobrego scenariusza:
 - `akcent` w scenie `tytul` musi być dosłownym fragmentem `naglowek`.
 - Scena 1 (`tytul`): `naglowek` maks. 14 znaków, czyli mniej więcej dwa słowa. Dłuższy łamie się na dwie linie i zakreślenie `akcent` rozpada się na pół — puentę przenieś do `dopisek`.
 - Emoji w `ikona` — jedno, proste.
+- **Logotyp marki zamiast emoji:** `"ikona": "logo:claude"` bierze plik z `public/logo/claude.svg`. Dostępne: `claude`, `todoist`, `ynab`, `obsidian`, `n8n`. Używaj, gdy punkt listy albo karta mówi o konkretnym produkcie — widz rozpozna narzędzie bez czytania podpisu. Nowe logo dokładasz jako SVG w oryginalnych barwach do `public/logo/`.
 
 ## Format scenariusza (JSON)
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentFrame, useVideoConfig } from "remotion";
+import { staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import type { Ekran } from "../typy";
 import { CIEN_NAKLEJKI, CIEN_UNIESIONY, CZCIONKA, KOLOR, PISMO, PROMIEN, PROMIEN_MALY } from "../marka";
 import { Dopisek, Karta, Kicker, Lacznik, Stempel, Tresc, Zakreslenie, useKotwice, useSway } from "./wspolne";
@@ -95,6 +95,24 @@ export const EkranLista: React.FC<{ ekran: Ek<"lista"> }> = ({ ekran }) => {
   );
 };
 
+/**
+ * Ikona kafelka: emoji albo prawdziwy logotyp usługi.
+ * Zapis `logo:claude` bierze plik z `public/logo/claude.svg` — pliki marek leżą tam
+ * w oryginalnych barwach, żeby widz rozpoznał narzędzie bez czytania podpisu.
+ * Emoji zostaje domyślne, bo nie każdy punkt listy jest produktem.
+ */
+const Ikona: React.FC<{ ikona: string; rozmiar: number }> = ({ ikona, rozmiar }) => {
+  if (!ikona.startsWith("logo:")) return <>{ikona}</>;
+  const nazwa = ikona.slice(5).trim();
+  return (
+    <img
+      src={staticFile(`logo/${nazwa}.svg`)}
+      alt=""
+      style={{ width: rozmiar, height: rozmiar, objectFit: "contain", display: "block" }}
+    />
+  );
+};
+
 const PunktListy: React.FC<{
   tekst: string;
   ikona: string;
@@ -144,7 +162,7 @@ const PunktListy: React.FC<{
           flexShrink: 0,
         }}
       >
-        {ikona}
+        <Ikona ikona={ikona} rozmiar={52} />
       </div>
       <div style={{ fontSize: PISMO.tresc + 4, fontWeight: 600, lineHeight: 1.25, color: kolorTekstu, flex: 1 }}>{tekst}</div>
       {etykieta && (
@@ -181,7 +199,7 @@ export const EkranKarta: React.FC<{ ekran: Ek<"karta"> }> = ({ ekran }) => {
         <div style={s}>
           <Karta uniesiona style={{ padding: 60, transform: kolysanie }}>
             {ekran.etykieta && <Stempel style={{ marginBottom: 30 }}>{ekran.etykieta}</Stempel>}
-            {ekran.ikona && <div style={{ fontSize: 120, lineHeight: 1, marginBottom: 24 }}>{ekran.ikona}</div>}
+            {ekran.ikona && <div style={{ fontSize: 120, lineHeight: 1, marginBottom: 24 }}><Ikona ikona={ekran.ikona} rozmiar={120} /></div>}
             <div style={{ fontSize: PISMO.naglowek, fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.01em" }}>
               {ekran.naglowek}
             </div>

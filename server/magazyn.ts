@@ -82,9 +82,22 @@ export function wczytajProjekt(id: string): Scenariusz | null {
   }
 }
 
+/**
+ * Czyści niewidoczne śmieci z tekstu wklejanego do edytora: twarda spacja (U+00A0),
+ * spacja zerowej szerokości, wąska spacja. Wchodzą przy kopiowaniu z Obsidiana albo
+ * przeglądarki i psują dwie rzeczy naraz — ElevenLabs dostaje inny token niż widać,
+ * a porównanie tekstu z zapisanym audio przestaje się zgadzać mimo identycznego wyglądu.
+ */
+function bezNiewidzialnychSpacji(tekst: string): string {
+  return tekst.replace(/[\u00A0\u2007\u202F\u200B\uFEFF]/g, " ");
+}
+
 export function zapiszProjekt(s: Scenariusz): Scenariusz {
   const kat = katalogProjektu(s.id);
   fs.mkdirSync(path.join(kat, "audio"), { recursive: true });
+  for (const scena of s.sceny) {
+    if (typeof scena.lektor === "string") scena.lektor = bezNiewidzialnychSpacji(scena.lektor);
+  }
   s.zmieniono = new Date().toISOString();
   uzupelnijStatus(s);
   fs.writeFileSync(path.join(kat, "scenariusz.json"), JSON.stringify(s, null, 2));
