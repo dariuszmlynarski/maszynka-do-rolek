@@ -130,6 +130,7 @@ CO WIDAĆ NA EKRANIE
 - W liście kafelków możesz oznaczyć kafelek jako błąd ("stan": "blad", czerwony) albo powodzenie ("stan": "ok", zielony) i dodać pieczątkę ("etykieta": "error"). Kafelki łączy się strzałką ("polaczenie": "strzalka") i można kazać im pulsować ("pulsujace": true).
 - Najwyżej jedna scena „3d" i jedna „kod" w całej rolce. „kod" tylko wtedy, gdy naprawdę chodzi o komendę albo prompt; linie po maksymalnie 38 znaków, najwyżej 4 linie.
 - Scena 1 to typ „tytul" z polem „akcent" będącym dosłownym fragmentem pola „naglowek".
+- Scena „tytul": pole „naglowek" maks. 14 znaków, czyli mniej więcej dwa słowa. Dłuższy łamie się na dwie linie i zakreślenie akcentu rozpada się na pół — puentę przenieś do pola „dopisek".
 - Ostatnia scena to zawsze typ „cta" z przyciskiem „dmprosper.pl".
 - W polu „ikona" jedno proste emoji.
 

@@ -52,6 +52,7 @@ Zasady dobrego scenariusza:
 - Mieszaj typy scen. W jednej rolce maks. jedna scena `3d` i jedna `kod`.
 - Liczby pokazuj typem `liczba`. Kontrasty typem `porownanie`. Wyliczenia typem `lista` (3–4 punkty).
 - `akcent` w scenie `tytul` musi być dosłownym fragmentem `naglowek`.
+- Scena 1 (`tytul`): `naglowek` maks. 14 znaków, czyli mniej więcej dwa słowa. Dłuższy łamie się na dwie linie i zakreślenie `akcent` rozpada się na pół — puentę przenieś do `dopisek`.
 - Emoji w `ikona` — jedno, proste.
 
 ## Format scenariusza (JSON)
