@@ -112,6 +112,19 @@ export function fonetyzuj(tekst: string): { dlaLektora: string; fragmenty: Fragm
 
   trafienia.sort((a, b) => a.start - b.start);
 
+  // Interpunkcja przyklejona do podmienionego słowa musi wejść do fragmentu.
+  // Inaczej „AI." daje po stronie lektora token „aj." (kropka w środku), a po stronie
+  // oryginału osobne „." — liczby słów rozjeżdżają się o jeden i mapowanie gubi ogon zdania.
+  for (const t of trafienia) {
+    let koniec = t.koniec;
+    while (koniec < tekst.length && /[^\s\p{L}\p{N}]/u.test(tekst[koniec])) koniec += 1;
+    if (koniec > t.koniec) {
+      const ogon = tekst.slice(t.koniec, koniec);
+      t.zamiennik += ogon;
+      t.koniec = koniec;
+    }
+  }
+
   const fragmenty: Fragment[] = [];
   let pozycja = 0;
   for (const t of trafienia) {

@@ -129,7 +129,7 @@ function przypiszDoOryginalu(wymowione: Slowo[], fragmenty: Fragment[]): Slowo[]
       // Fragment bez podmiany: słowa odpowiadają sobie jeden do jednego.
       for (const slowo of oryginalne) {
         const w = wymowione[i++];
-        if (!w) return wynik.length ? wynik : wymowione;
+        if (!w) return dopchnijOgon(wynik, oryginalne.slice(oryginalne.indexOf(slowo)), wymowione);
         wynik.push({ ...w, tekst: slowo });
       }
       continue;
@@ -138,7 +138,7 @@ function przypiszDoOryginalu(wymowione: Slowo[], fragmenty: Fragment[]): Slowo[]
     // Fragment podmieniony: bierzemy czas całej grupy i dzielimy go między oryginalne słowa.
     const grupa = wymowione.slice(i, i + fonetyczne.length);
     i += fonetyczne.length;
-    if (grupa.length === 0) return wynik.length ? wynik : wymowione;
+    if (grupa.length === 0) return dopchnijOgon(wynik, oryginalne, wymowione);
     const start = grupa[0].start;
     const koniec = grupa[grupa.length - 1].koniec;
     const znakiRazem = oryginalne.reduce((n, s) => n + s.length, 0) || 1;
@@ -153,5 +153,27 @@ function przypiszDoOryginalu(wymowione: Slowo[], fragmenty: Fragment[]): Slowo[]
 
   // Gdyby coś się rozjechało, zostaw resztę bez zmian.
   if (i < wymowione.length) wynik.push(...wymowione.slice(i));
+  return wynik;
+}
+
+/**
+ * Ratunek, gdy czasy z ElevenLabs skończą się przed tekstem: dopisuje pozostałe
+ * słowa, rozkładając je równo do końca nagrania. Napis, który zgubi ostatnie
+ * słowo zdania, jest gorszy niż napis z przybliżonym czasem — a rolka idzie
+ * pod nazwiskiem Dariusza.
+ */
+function dopchnijOgon(wynik: Slowo[], brakujace: string[], wymowione: Slowo[]): Slowo[] {
+  if (!wynik.length) return wymowione;
+  if (!brakujace.length) return wynik;
+  const koniecNagrania = wymowione[wymowione.length - 1]?.koniec ?? wynik[wynik.length - 1].koniec;
+  const od = wynik[wynik.length - 1].koniec;
+  const krok = Math.max(0.12, (koniecNagrania - od) / brakujace.length);
+  brakujace.forEach((slowo, n) => {
+    wynik.push({
+      tekst: slowo,
+      start: +(od + n * krok).toFixed(3),
+      koniec: +(od + (n + 1) * krok).toFixed(3),
+    });
+  });
   return wynik;
 }
