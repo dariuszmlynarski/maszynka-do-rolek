@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Sequence, useCurrentFrame, useVideoConfig } from "remotion";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 import { slide } from "@remotion/transitions/slide";
@@ -47,20 +47,41 @@ const Ekran: React.FC<{ scena: Scena }> = ({ scena }) => {
   }
 };
 
-const SceneWidok: React.FC<{ scena: Scena; bazaUrl: string; napisy: boolean }> = ({ scena, bazaUrl, napisy }) => {
+/**
+ * O tyle klatek wyprzedzamy czas w PIERWSZEJ scenie, żeby jej elementy były już
+ * po animacji wejścia w klatce zerowej. Bez tego rolka otwiera się pustym kadrem —
+ * a to właśnie ta klatka jest miniaturą w feedzie i pierwszym, co widz zobaczy
+ * przed naciśnięciem play. Najdłuższe wejście w scenie tytułowej kończy się
+ * około 31. klatki, więc 45 daje zapas także dla zakreślenia akcentu.
+ */
+const START_BEZ_WJAZDU = 45;
+
+const SceneWidok: React.FC<{ scena: Scena; bazaUrl: string; napisy: boolean; pierwsza?: boolean }> = ({ scena, bazaUrl, napisy, pierwsza }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   // Uderzenie kamery na wejściu sceny: lekkie zbliżenie, które opada.
+  // Zostaje także w pierwszej scenie — to jest ten „huk", nie wjazd z pustego.
   const skala = punch(frame, fps, [0], 0.03);
+  const tresc = (
+    <KontekstNapisow.Provider value={napisy}>
+      <KontekstSlow.Provider value={scena.audio?.slowa}>
+        <Ekran scena={scena} />
+      </KontekstSlow.Provider>
+    </KontekstNapisow.Provider>
+  );
   return (
     <Tlo>
       <Podpis />
       <AbsoluteFill style={{ transform: `scale(${skala})`, transformOrigin: "540px 960px" }}>
-        <KontekstNapisow.Provider value={napisy}>
-          <KontekstSlow.Provider value={scena.audio?.slowa}>
-            <Ekran scena={scena} />
-          </KontekstSlow.Provider>
-        </KontekstNapisow.Provider>
+        {pierwsza ? (
+          // Ujemne `from` przesuwa wyłącznie czas ekranu. Audio i napisy zostają
+          // na swoim miejscu, bo leżą poza tą sekwencją.
+          <Sequence from={-START_BEZ_WJAZDU} layout="none">
+            {tresc}
+          </Sequence>
+        ) : (
+          tresc
+        )}
       </AbsoluteFill>
       {napisy && <Napisy slowa={scena.audio?.slowa} lektor={scena.lektor} />}
       {scena.audio && <Audio src={`${bazaUrl}/${scena.audio.plik}`} />}
@@ -100,7 +121,7 @@ export const Short: React.FC<PropsRolki> = ({ scenariusz, bazaUrl }) => {
     const klatki = klatkiSceny(scena) + (i === ostatnia ? Math.round(OGON_KONCOWY * 30) : 0);
     elementy.push(
       <TransitionSeries.Sequence key={scena.id} durationInFrames={klatki}>
-        <SceneWidok scena={scena} bazaUrl={bazaUrl} napisy={scenariusz.napisy} />
+        <SceneWidok scena={scena} bazaUrl={bazaUrl} napisy={scenariusz.napisy} pierwsza={i === 0} />
       </TransitionSeries.Sequence>,
     );
     if (i < scenariusz.sceny.length - 1 && maPrzejscie(scena)) {
