@@ -37,6 +37,8 @@ Nie pasuje? Popraw tekst i kliknij **Generuj ponownie** przy tej jednej scenie.
 
 Po wygenerowaniu lektora długość rolki po prawej stronie jest już dokładna, a napisy synchronizują się ze słowami.
 
+**Własny głos zamiast ElevenLabs.** Przeczytaj cały scenariusz jednym ciągiem, scena po scenie, i kliknij **Wgraj nagranie** (m4a z Dyktafonu, mp3, wav). Maszynka sama rozpozna słowa, dopasuje je do scen i potnie nagranie na kawałki — każda scena dostaje swój fragment, a napisy idą za Twoim głosem. Przejęzyczenia i „dobra, nagrywam” na początku nie szkodzą. Gdy rolka powstała z pozycji planu, a nagranie leży obok rekordu w sejfie, wystarczy **Głos z rekordu**. Transkrypcja działa na Macu (mlx_whisper), więc głos nie wychodzi z komputera. Chcesz wrócić do klonu: **Wróć do ElevenLabs**.
+
 ### 3. Podgląd
 Podgląd po prawej pokazuje rolkę na żywo. Kliknij scenę na środku, a podgląd do niej przeskoczy. Spacja = odtwarzanie.
 

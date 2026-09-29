@@ -126,7 +126,10 @@ export const EdytorSceny: React.FC<Props> = ({ scena, numer, aktywna, projektId,
   const innaWymowa = wymowa.trim() !== scena.lektor.trim();
   const ustawEkran = (ekran: Ekran) => onZmiana({ ...scena, ekran, opis: opisEkranu(ekran) });
   const stanAudio = !scena.audio ? "brak" : audioAktualne ? "ok" : "nieaktualne";
-  const opisAudio = stanAudio === "brak" ? "Lektor niewygenerowany" : stanAudio === "ok" ? `Lektor gotowy (${formatujCzas(scena.audio!.czas)})` : "Tekst zmieniony — wygeneruj ponownie";
+  const nagranie = scena.audio?.zrodlo === "nagranie";
+  const opisAudio = nagranie
+    ? `Twoje nagranie (${formatujCzas(scena.audio!.czas)})`
+    : stanAudio === "brak" ? "Lektor niewygenerowany" : stanAudio === "ok" ? `Lektor gotowy (${formatujCzas(scena.audio!.czas)})` : "Tekst zmieniony — wygeneruj ponownie";
 
   return (
     <div className={`scena ${aktywna ? "aktywna" : ""}`} onClick={onKlik}>
@@ -161,9 +164,12 @@ export const EdytorSceny: React.FC<Props> = ({ scena, numer, aktywna, projektId,
           <span className={`kropka ${stanAudio}`} />
           <span className="male">{opisAudio}</span>
           {scena.audio && <audio key={scena.audio.plik} controls src={urlPliku(projektId, scena.audio.plik)} />}
-          <button className="btn maly" disabled={zajete || !scena.lektor.trim()} onClick={onLektor}>
-            {stanAudio === "brak" ? <Mic {...I} /> : <RefreshCw {...I} />} {stanAudio === "brak" ? "Generuj lektora" : "Generuj ponownie"}
-          </button>
+          {/* Scena z Twoim nagraniem nie dostaje syntetycznego głosu pojedynczo — zmiana idzie przez całe nagranie. */}
+          {!nagranie && (
+            <button className="btn maly" disabled={zajete || !scena.lektor.trim()} onClick={onLektor}>
+              {stanAudio === "brak" ? <Mic {...I} /> : <RefreshCw {...I} />} {stanAudio === "brak" ? "Generuj lektora" : "Generuj ponownie"}
+            </button>
+          )}
         </div>
 
         <div className="pole opis-pole">

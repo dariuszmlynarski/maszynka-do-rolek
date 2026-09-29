@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import type { Scena, Scenariusz } from "../src/typy";
 import { czasCalosci, formatujCzas } from "../src/czas";
-import { hashTekstu } from "../src/hash";
+import { audioAktualne } from "../src/hash";
 import { api, urlPliku, type Kontrola, type PozycjaPlanu, type StanPisania, type StanRenderu, type Status } from "./api";
 import { domyslnyEkran, EdytorSceny } from "./EdytorSceny";
 import { Podglad } from "./Podglad";
 import { Ustawienia } from "./Ustawienia";
 import { Galeria } from "./Galeria";
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Clapperboard, Film, FolderOpen, Mic, Play, Plus, Sparkles, Trash2, Wand2, XCircle } from "lucide-react";
+import { AlertTriangle, AudioLines, Check, ChevronLeft, ChevronRight, Clapperboard, Film, FolderOpen, Mic, Play, Plus, Sparkles, Trash2, Upload, Wand2, XCircle } from "lucide-react";
 
 const NAZWY_STATUSOW = { scenariusz: "Scenariusz", lektor: "Lektor gotowy", gotowe: "Rolka gotowa" } as const;
 const I = { className: "ikona", strokeWidth: 1.75 } as const;
@@ -146,7 +146,7 @@ export const App: React.FC = () => {
     zmien({ ...aktywny, sceny });
   };
 
-  const wykonaj = async (co: () => Promise<Scenariusz>, sukces?: string) => {
+  const wykonaj = async (co: () => Promise<Scenariusz>, sukces?: string | (() => string)) => {
     if (!aktywny) return;
     window.clearTimeout(timerZapisu.current);
     setZajete(true);
@@ -156,7 +156,8 @@ export const App: React.FC = () => {
       const p = await co();
       brudny.current = false;
       setAktywny(p);
-      setKomunikat(sukces ? { typ: "ok", tekst: sukces } : null);
+      const tekst = typeof sukces === "function" ? sukces() : sukces;
+      setKomunikat(tekst ? { typ: "ok", tekst } : null);
       void odswiezListe();
     } catch (e) {
       setKomunikat({ typ: "blad", tekst: (e as Error).message });
@@ -260,8 +261,27 @@ export const App: React.FC = () => {
     return () => window.clearTimeout(t);
   }, [aktywny]);
 
-  const audioAktualne = (s: Scena) => !!s.audio && s.audio.hash === hashTekstu(s.lektor);
+  // Nagranie w folderze rekordu sejfu — sprawdzane przy wejściu w rolkę.
+  const [audioRekordu, setAudioRekordu] = useState<string | null>(null);
+  const idAktywnego = aktywny?.id;
+  useEffect(() => {
+    setAudioRekordu(null);
+    if (!idAktywnego) return;
+    api.audioRekordu(idAktywnego).then((r) => setAudioRekordu(r.audio)).catch(() => setAudioRekordu(null));
+  }, [idAktywnego]);
+
   const brakLektora = aktywny?.sceny.some((s) => !audioAktualne(s)) ?? true;
+  const maNagranie = aktywny?.sceny.some((s) => s.audio?.zrodlo === "nagranie") ?? false;
+
+  // Własne nagranie: z pliku wskazanego w dashboardzie albo leżącego obok rekordu w sejfie.
+  const pocnij = (co: () => Promise<{ projekt: Scenariusz; raport: string }>) => {
+    let raport = "";
+    return wykonaj(async () => {
+      const w = await co();
+      raport = w.raport;
+      return w.projekt;
+    }, () => raport);
+  };
   const czas = aktywny ? czasCalosci(aktywny) : 0;
   const zaDlugo = aktywny ? czas > aktywny.docelowaDlugosc * 1.15 : false;
 
@@ -351,9 +371,42 @@ export const App: React.FC = () => {
                 <button className="btn" disabled={zajete || pisanie?.stan === "pisze" || !aktywny.zrodlo?.trim()} onClick={() => napisz("nowy")} title={!aktywny.zrodlo?.trim() ? "Najpierw wpisz link albo pomysł w polu Źródło" : ""}>
                   <Sparkles {...I} /> {aktywny.sceny.length ? "Napisz od nowa" : "Napisz scenariusz"}
                 </button>
-                <button className="btn" disabled={zajete || !aktywny.sceny.length} onClick={() => wykonaj(() => api.lektorWszystkich(aktywny.id), "Lektor wygenerowany.")}>
-                  {brakLektora ? <Mic {...I} /> : <Check {...I} />} {brakLektora ? "Generuj lektora" : "Lektor aktualny"}
-                </button>
+                {maNagranie ? (
+                  <button
+                    className="btn"
+                    disabled={zajete}
+                    title="Rolka ma Twoje nagranie. Ten przycisk zastąpi je głosem z ElevenLabs we wszystkich scenach."
+                    onClick={() => {
+                      if (!confirm("Zastąpić Twoje nagranie głosem z ElevenLabs we wszystkich scenach?")) return;
+                      void wykonaj(() => api.lektorWszystkich(aktywny.id, true), "Lektor z ElevenLabs wygenerowany.");
+                    }}
+                  >
+                    <Mic {...I} /> Wróć do ElevenLabs
+                  </button>
+                ) : (
+                  <button className="btn" disabled={zajete || !aktywny.sceny.length} onClick={() => wykonaj(() => api.lektorWszystkich(aktywny.id), "Lektor wygenerowany.")}>
+                    {brakLektora ? <Mic {...I} /> : <Check {...I} />} {brakLektora ? "Generuj lektora" : "Lektor aktualny"}
+                  </button>
+                )}
+                <label className={`btn ${zajete || !aktywny.sceny.length ? "wylaczony" : ""}`} title="Wgraj plik z Twoim głosem (m4a, mp3, wav). Maszynka potnie go na sceny.">
+                  <Upload {...I} /> {maNagranie ? "Wgraj nagranie ponownie" : "Wgraj nagranie"}
+                  <input
+                    type="file"
+                    accept="audio/*,.m4a,.mp3,.wav,.aac,.caf,.flac,.ogg,.opus"
+                    hidden
+                    disabled={zajete || !aktywny.sceny.length}
+                    onChange={(e) => {
+                      const plik = e.target.files?.[0];
+                      e.target.value = "";
+                      if (plik) void pocnij(() => api.wgrajNagranie(aktywny.id, plik));
+                    }}
+                  />
+                </label>
+                {audioRekordu && (
+                  <button className="btn" disabled={zajete || !aktywny.sceny.length} title={`Nagranie z folderu rekordu w sejfie: ${audioRekordu}`} onClick={() => void pocnij(() => api.nagranieZRekordu(aktywny.id))}>
+                    <AudioLines {...I} /> Głos z rekordu
+                  </button>
+                )}
                 <button className="btn glowny" disabled={zajete || !aktywny.sceny.length || (render && render.stan !== "gotowe" && render.stan !== "blad") || false} onClick={startRenderu} title={brakLektora ? "Możesz renderować bez lektora, ale sceny będą miały szacowaną długość" : ""}>
                   <Clapperboard {...I} /> Renderuj MP4
                 </button>
@@ -508,8 +561,8 @@ export const App: React.FC = () => {
       {pokazNowa && (
         <NowaRolka
           onZamknij={() => setPokazNowa(false)}
-          onUtworz={async (tytul, zrodlo, dl) => {
-            const p = await api.nowyProjekt(tytul, zrodlo, dl);
+          onUtworz={async (tytul, zrodlo, dl, rekord) => {
+            const p = await api.nowyProjekt(tytul, zrodlo, dl, rekord);
             setPokazNowa(false);
             setWidok("edycja");
             await odswiezListe();
@@ -557,7 +610,7 @@ const PanelKontroli: React.FC<{ kontrola: Kontrola | null; onPokazScene: (id: st
   );
 };
 
-const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zrodlo: string, dl: number) => Promise<void> }> = ({ onZamknij, onUtworz }) => {
+const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zrodlo: string, dl: number, rekord?: string) => Promise<void> }> = ({ onZamknij, onUtworz }) => {
   const [tytul, setTytul] = useState("");
   const [zrodlo, setZrodlo] = useState("");
   const [dl, setDl] = useState(45);
@@ -597,7 +650,7 @@ const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zro
                 >
                   <span className="plan-tytul">{p.tytul.replace(/\s*\(rolka\)\s*$/i, "")}</span>
                   <span className="plan-meta">
-                    {[p.filar, p.status, p.dlugosc ? `${p.dlugosc} s` : null].filter(Boolean).join(" · ")}
+                    {[p.filar, p.status, p.dlugosc ? `${p.dlugosc} s` : null, p.audio ? "🎙 nagranie w rekordzie" : null].filter(Boolean).join(" · ")}
                   </span>
                 </button>
               ))}
@@ -629,7 +682,7 @@ const NowaRolka: React.FC<{ onZamknij: () => void; onUtworz: (tytul: string, zro
         </div>
         <div className="stopka">
           <button className="btn" onClick={onZamknij}>Anuluj</button>
-          <button className="btn glowny" disabled={!tytul.trim() || dl < 5} onClick={() => onUtworz(tytul.trim(), zrodlo.trim(), dl)}>
+          <button className="btn glowny" disabled={!tytul.trim() || dl < 5} onClick={() => onUtworz(tytul.trim(), zrodlo.trim(), dl, wybrana ?? undefined)}>
             {zrodlo.trim() ? <><Sparkles {...I} /> Utwórz i napisz scenariusz</> : "Utwórz pustą rolkę"}
           </button>
         </div>

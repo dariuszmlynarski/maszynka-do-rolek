@@ -20,7 +20,27 @@ export type PozycjaPlanu = {
   /** Treść pliku bez frontmatteru — idzie do scenarzysty jako źródło. */
   tresc: string;
   sciezka: string;
+  /** Nagranie głosu leżące obok rekordu, jeśli jest. */
+  audio?: string;
 };
+
+const ROZSZERZENIA_AUDIO = /\.(m4a|mp3|wav|aac|caf|flac|ogg|opus)$/i;
+
+/**
+ * Nagranie głosu w folderze rekordu: plik audio obok `.md`, osadzony w notatce
+ * jako `![[…]]`, żeby Obsidian pokazał odtwarzacz. Przy kilku bierzemy najnowszy.
+ */
+export function audioRekordu(rekord: string): string | undefined {
+  const plik = path.resolve(FOLDER_POSTOW, `${rekord}.md`);
+  if (!plik.startsWith(FOLDER_POSTOW + path.sep) || !fs.existsSync(plik)) return undefined;
+  const katalog = path.dirname(plik);
+  const kandydaci = fs
+    .readdirSync(katalog)
+    .filter((f) => ROZSZERZENIA_AUDIO.test(f))
+    .map((f) => ({ f, t: fs.statSync(path.join(katalog, f)).mtimeMs }))
+    .sort((a, b) => b.t - a.t);
+  return kandydaci[0] ? path.join(katalog, kandydaci[0].f) : undefined;
+}
 
 /** Minimalny czytnik frontmatteru: pary `klucz: wartość`, listy pomijamy. */
 function rozbij(plik: string): { pola: Record<string, string>; tresc: string } {
@@ -70,8 +90,10 @@ export function rolkiDoNagrania(): PozycjaPlanu[] {
     const { pola, tresc } = rozbij(surowy);
     if ((pola.rolka || "").toLowerCase() !== "do nagrania") continue;
     const sekundy = (pola.format || "").match(/~?\s*(\d{1,3})\s*s\b/);
+    const id = path.relative(FOLDER_POSTOW, sciezka).replace(/\.md$/, "");
+    const audio = audioRekordu(id);
     wynik.push({
-      id: path.relative(FOLDER_POSTOW, sciezka).replace(/\.md$/, ""),
+      id,
       tytul: pola.title || path.basename(sciezka, ".md"),
       filar: pola.filar,
       format: pola.format,
@@ -80,6 +102,7 @@ export function rolkiDoNagrania(): PozycjaPlanu[] {
       dlugosc: sekundy ? Number(sekundy[1]) : undefined,
       tresc: tresc.trim(),
       sciezka,
+      audio: audio ? path.basename(audio) : undefined,
     });
   }
   return wynik.sort((a, b) => (b.data || "").localeCompare(a.data || ""));

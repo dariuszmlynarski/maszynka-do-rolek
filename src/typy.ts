@@ -11,6 +11,8 @@ export type AudioSceny = {
   czas: number; // długość w sekundach
   slowa: Slowo[];
   hash: string; // skrót tekstu lektora, dla którego wygenerowano audio
+  /** Skąd głos: własne nagranie Dariusza pocięte na sceny. Brak pola = ElevenLabs. */
+  zrodlo?: "nagranie";
 };
 
 export type EfektAudio = {
@@ -151,6 +153,8 @@ export type Scenariusz = {
   id: string;
   tytul: string;
   zrodlo?: string; // link lub opis pomysłu
+  /** Rekord planu social media, z którego powstała rolka (ścieżka względem folderu postów, bez .md). */
+  rekord?: string;
   docelowaDlugosc: number; // sekundy
   status: StatusProjektu;
   utworzono: string;

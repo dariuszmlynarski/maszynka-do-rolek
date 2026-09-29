@@ -64,7 +64,10 @@ export type PozycjaPlanu = {
   dlugosc?: number;
   tresc: string;
   sciezka: string;
+  audio?: string;
 };
+
+export type WynikNagrania = { projekt: Scenariusz; raport: string };
 
 export const api = {
   status: () => zapytaj<Status>("/api/status"),
@@ -76,8 +79,8 @@ export const api = {
 
   projekty: () => zapytaj<Scenariusz[]>("/api/projekty"),
   projekt: (id: string) => zapytaj<Scenariusz>(`/api/projekty/${id}`),
-  nowyProjekt: (tytul: string, zrodlo?: string, docelowaDlugosc?: number) =>
-    zapytaj<Scenariusz>("/api/projekty", { method: "POST", body: JSON.stringify({ tytul, zrodlo, docelowaDlugosc }) }),
+  nowyProjekt: (tytul: string, zrodlo?: string, docelowaDlugosc?: number, rekord?: string) =>
+    zapytaj<Scenariusz>("/api/projekty", { method: "POST", body: JSON.stringify({ tytul, zrodlo, docelowaDlugosc, rekord }) }),
   zapiszProjekt: (s: Scenariusz) => zapytaj<Scenariusz>(`/api/projekty/${s.id}`, { method: "PUT", body: JSON.stringify(s) }),
   usunProjekt: (id: string) => zapytaj<{ ok: true }>(`/api/projekty/${id}`, { method: "DELETE" }),
   otworzFolder: (id: string) => zapytaj<{ ok: true }>(`/api/projekty/${id}/otworz-folder`, { method: "POST" }),
@@ -85,6 +88,14 @@ export const api = {
   lektorSceny: (id: string, scenaId: string) => zapytaj<Scenariusz>(`/api/projekty/${id}/lektor/${scenaId}`, { method: "POST" }),
   lektorWszystkich: (id: string, wszystkie = false) =>
     zapytaj<Scenariusz>(`/api/projekty/${id}/lektor`, { method: "POST", body: JSON.stringify({ wszystkie }) }),
+  wgrajNagranie: (id: string, plik: File) =>
+    zapytaj<WynikNagrania>(`/api/projekty/${id}/nagranie`, {
+      method: "POST",
+      body: plik,
+      headers: { "Content-Type": plik.type || "application/octet-stream", "X-Nazwa-Pliku": encodeURIComponent(plik.name) },
+    }),
+  audioRekordu: (id: string) => zapytaj<{ rekord: string | null; audio: string | null }>(`/api/projekty/${id}/rekord`),
+  nagranieZRekordu: (id: string) => zapytaj<WynikNagrania>(`/api/projekty/${id}/nagranie-z-rekordu`, { method: "POST", body: "{}" }),
   efektSceny: (id: string, scenaId: string) => zapytaj<Scenariusz>(`/api/projekty/${id}/efekt/${scenaId}`, { method: "POST", body: "{}" }),
 
   napiszScenariusz: (id: string, tryb: "nowy" | "poprawki") =>

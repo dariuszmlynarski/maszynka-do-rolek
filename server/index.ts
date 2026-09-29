@@ -23,10 +23,11 @@ import {
 } from "./magazyn";
 import { generujEfekt, generujLektora, listaGlosow } from "./elevenlabs";
 import { dlugoscAudio, wyrownajGlosnosc } from "./audio";
+import { wgrajNagranie } from "./nagranie";
 import { odswiezPaczke, renderuj, stanRenderu, trwaRender } from "./render";
 import { napiszScenariusz, poprawScene, stanPisania, trwaPisanie } from "./scenarzysta";
 import { podsumowanie } from "./kontrola";
-import { rolkiDoNagrania, sejfDostepny } from "./plan";
+import { audioRekordu, rolkiDoNagrania, sejfDostepny } from "./plan";
 
 const PORT = Number(process.env.PORT ?? 4545);
 const app = express();
@@ -99,9 +100,9 @@ app.get("/api/plan", (_req, res) => {
 app.get("/api/projekty", (_req, res) => res.json(listaProjektow()));
 
 app.post("/api/projekty", (req, res) => {
-  const { tytul, zrodlo, docelowaDlugosc } = req.body ?? {};
+  const { tytul, zrodlo, docelowaDlugosc, rekord } = req.body ?? {};
   if (!tytul || typeof tytul !== "string") return blad(res, new Error("Podaj tytuł rolki."), 400);
-  res.json(utworzProjekt(tytul, zrodlo, Number(docelowaDlugosc) || 45));
+  res.json(utworzProjekt(tytul, zrodlo, Number(docelowaDlugosc) || 45, typeof rekord === "string" && rekord ? rekord : undefined));
 });
 
 app.get("/api/projekty/:id", (req, res) => {
@@ -119,7 +120,9 @@ app.put("/api/projekty/:id", (req, res) => {
   // Zachowaj audio ze starego projektu, jeśli tekst się nie zmienił, a klient go nie przysłał.
   for (const scena of nowy.sceny) {
     const staraScena = stary.sceny.find((s) => s.id === scena.id);
-    if (staraScena?.audio && !scena.audio && staraScena.audio.hash === hashTekstu(scena.lektor)) scena.audio = staraScena.audio;
+    if (staraScena?.audio && !scena.audio && (staraScena.audio.hash === hashTekstu(scena.lektor) || staraScena.audio.zrodlo === "nagranie")) {
+      scena.audio = staraScena.audio;
+    }
   }
   res.json(zapiszProjekt(nowy));
 });
@@ -205,13 +208,22 @@ app.delete("/api/projekty/:id/rolki/:plik", (req, res) => {
 });
 
 // ---- Lektor ----
-async function lektorDlaSceny(projekt: Scenariusz, scenaId: string) {
+const maNagranie = (p: Scenariusz) => p.sceny.some((s) => s.audio?.zrodlo === "nagranie");
+
+/**
+ * `wymus` przełącza rolkę z własnego nagrania z powrotem na ElevenLabs. Bez niego
+ * serwer nie dorobi syntetycznego głosu jednej sceny w środku Twojego nagrania.
+ */
+async function lektorDlaSceny(projekt: Scenariusz, scenaId: string, wymus = false) {
   const klucz = kluczApi();
   const u = wczytajUstawienia();
   if (!klucz) throw new Error("Brak klucza API ElevenLabs. Wpisz go w ustawieniach.");
   if (!u.voiceId) throw new Error("Nie wybrano głosu. Wybierz głos w ustawieniach.");
   const scena = projekt.sceny.find((s) => s.id === scenaId);
   if (!scena) throw new Error(`Nie ma sceny ${scenaId}.`);
+  if (!wymus && maNagranie(projekt)) {
+    throw new Error("Ta rolka ma Twoje nagranie. Wgraj je ponownie albo wróć do ElevenLabs dla całej rolki — pojedyncza scena innym głosem zgrzyta.");
+  }
   if (!scena.lektor.trim()) {
     scena.audio = undefined;
     return;
@@ -253,7 +265,7 @@ app.post("/api/projekty/:id/lektor", async (req, res) => {
   for (const s of p.sceny) {
     if (audioAktualne(s) && !req.body?.wszystkie) continue;
     try {
-      await lektorDlaSceny(p, s.id);
+      await lektorDlaSceny(p, s.id, !!req.body?.wszystkie);
       zapiszProjekt(p);
     } catch (e) {
       bledy.push(`${s.id}: ${e instanceof Error ? e.message : e}`);
@@ -263,6 +275,50 @@ app.post("/api/projekty/:id/lektor", async (req, res) => {
   const zapisany = zapiszProjekt(p);
   if (bledy.length) return res.status(500).json({ blad: bledy.join("\n"), projekt: zapisany });
   res.json(zapisany);
+});
+
+// ---- Własne nagranie ----
+async function pocnijNagranie(res: Odp, id: string, dane: Buffer, nazwaPliku: string) {
+  const p = wczytajProjekt(id);
+  if (!p) return blad(res, new Error("Nie ma takiego projektu."), 404);
+  if (trwaRender(p.id)) return blad(res, new Error("Trwa render tego projektu, spróbuj za chwilę."), 409);
+  const klucz = kluczApi() || undefined;
+  if (!dane.length) return blad(res, new Error("Nie dotarł żaden plik audio."), 400);
+  if (!p.sceny.some((s) => s.lektor.trim())) return blad(res, new Error("Scenariusz nie ma tekstu lektora, nie ma do czego dopasować nagrania."), 400);
+  try {
+    const { raport } = await wgrajNagranie({
+      projekt: p,
+      katalog: katalogProjektu(p.id),
+      dane,
+      rozszerzenie: path.extname(nazwaPliku).slice(1),
+      klucz,
+    });
+    res.json({ projekt: zapiszProjekt(p), raport });
+  } catch (e) {
+    blad(res, e);
+  }
+}
+
+// Surowy plik w ciele żądania (m4a z Dyktafonu, wav, mp3), nazwa w nagłówku.
+app.post("/api/projekty/:id/nagranie", express.raw({ type: () => true, limit: "300mb" }), async (req, res) => {
+  const dane = Buffer.isBuffer(req.body) ? req.body : Buffer.alloc(0);
+  await pocnijNagranie(res, req.params.id, dane, decodeURIComponent(String(req.get("x-nazwa-pliku") ?? "")));
+});
+
+// Nagranie leżące obok rekordu w sejfie — ten sam przebieg, tylko plik bierzemy z folderu rekordu.
+app.get("/api/projekty/:id/rekord", (req, res) => {
+  const p = wczytajProjekt(req.params.id);
+  if (!p) return blad(res, new Error("Nie ma takiego projektu."), 404);
+  const audio = p.rekord ? audioRekordu(p.rekord) : undefined;
+  res.json({ rekord: p.rekord ?? null, audio: audio ? path.basename(audio) : null });
+});
+
+app.post("/api/projekty/:id/nagranie-z-rekordu", async (req, res) => {
+  const p = wczytajProjekt(req.params.id);
+  if (!p) return blad(res, new Error("Nie ma takiego projektu."), 404);
+  const audio = p.rekord ? audioRekordu(p.rekord) : undefined;
+  if (!audio) return blad(res, new Error("W folderze rekordu nie ma pliku audio. Przeciągnij nagranie do notatki rekordu w Obsidianie."), 404);
+  await pocnijNagranie(res, p.id, fs.readFileSync(audio), audio);
 });
 
 // ---- Efekty dźwiękowe ----

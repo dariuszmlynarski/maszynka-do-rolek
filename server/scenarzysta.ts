@@ -250,10 +250,12 @@ export async function napiszScenariusz(
     const odpowiedz = await uruchomClaude(prompt);
     const { tytul, sceny, naprawione } = sprawdzSceny(wyciagnijJson(odpowiedz));
 
-    // Zachowaj audio dla scen, których lektor się nie zmienił.
+    // Zachowaj audio dla scen, których lektor się nie zmienił. Własne nagranie
+    // zostaje też wtedy, gdy tekst w scenariuszu był poprawiany już po nim, ale Claude go nie ruszył.
     for (const s of sceny) {
       const stara = projekt.sceny.find((x) => x.id === s.id);
-      if (stara?.audio && stara.audio.hash === hashTekstu(s.lektor)) s.audio = stara.audio;
+      const tenSamTekst = stara?.lektor.trim() === s.lektor.trim();
+      if (stara?.audio && (stara.audio.hash === hashTekstu(s.lektor) || (stara.audio.zrodlo === "nagranie" && tenSamTekst))) s.audio = stara.audio;
       if (stara?.efektAudio && stara.efekt === s.efekt) s.efektAudio = stara.efektAudio;
     }
     projekt.sceny = sceny;

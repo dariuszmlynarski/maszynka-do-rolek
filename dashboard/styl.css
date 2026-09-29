@@ -65,7 +65,7 @@ h2 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
   white-space: nowrap;
 }
 .btn:hover { border-color: #b9b3a5; background: #fffdf9; }
-.btn:disabled { opacity: 0.45; cursor: default; }
+.btn:disabled, .btn.wylaczony { opacity: 0.45; cursor: default; pointer-events: none; }
 .btn:disabled:hover { border-color: var(--line-strong); background: var(--card); }
 .btn.glowny { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 .btn.glowny:hover { background: var(--accent-dark); border-color: var(--accent-dark); }

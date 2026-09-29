@@ -1,9 +1,9 @@
 // Zapis i odczyt projektów oraz ustawień na dysku.
 import fs from "node:fs";
 import path from "node:path";
-import type { Scenariusz, Scena } from "../src/typy";
-import { hashTekstu } from "../src/hash";
-export { hashTekstu };
+import type { Scenariusz } from "../src/typy";
+import { audioAktualne, hashTekstu } from "../src/hash";
+export { audioAktualne, hashTekstu };
 
 export const KATALOG_GLOWNY = path.resolve(import.meta.dirname, "..");
 export const KATALOG_PROJEKTOW = path.join(KATALOG_GLOWNY, "projekty");
@@ -131,7 +131,7 @@ export function zapiszProjekt(s: Scenariusz): Scenariusz {
   return s;
 }
 
-export function utworzProjekt(tytul: string, zrodlo?: string, docelowaDlugosc = 45): Scenariusz {
+export function utworzProjekt(tytul: string, zrodlo?: string, docelowaDlugosc = 45, rekord?: string): Scenariusz {
   let id = slug(tytul);
   let n = 2;
   while (fs.existsSync(katalogProjektu(id))) id = `${slug(tytul)}-${n++}`;
@@ -140,6 +140,7 @@ export function utworzProjekt(tytul: string, zrodlo?: string, docelowaDlugosc = 
     id,
     tytul,
     zrodlo,
+    rekord,
     docelowaDlugosc,
     status: "scenariusz",
     utworzono: teraz,
@@ -147,10 +148,6 @@ export function utworzProjekt(tytul: string, zrodlo?: string, docelowaDlugosc = 
     napisy: true,
     sceny: [],
   });
-}
-
-export function audioAktualne(scena: Scena): boolean {
-  return !!scena.audio && scena.audio.hash === hashTekstu(scena.lektor);
 }
 
 /** Najnowszy plik rolka*.mp4 w folderze projektu (każdy render tworzy osobny plik). */

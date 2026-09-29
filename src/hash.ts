@@ -1,3 +1,5 @@
+import type { Scena } from "./typy";
+
 /** Prosty skrót tekstu — ten sam po stronie serwera i dashboardu (do sprawdzania, czy audio jest aktualne). */
 export function hashTekstu(tekst: string): string {
   const t = tekst.trim();
@@ -9,4 +11,14 @@ export function hashTekstu(tekst: string): string {
     h2 = (h2 * 33) ^ c;
   }
   return ((h1 >>> 0).toString(16) + (h2 >>> 0).toString(16)).padStart(16, "0");
+}
+
+/**
+ * Czy audio sceny pasuje do jej tekstu. Własne nagranie jest zawsze aktualne:
+ * to ono jest prawdą, a tekst lektora w scenariuszu tylko je opisuje —
+ * poprawka przecinka nie może wyrzucić nagrania.
+ */
+export function audioAktualne(scena: Scena): boolean {
+  if (!scena.audio) return false;
+  return scena.audio.zrodlo === "nagranie" || scena.audio.hash === hashTekstu(scena.lektor);
 }
