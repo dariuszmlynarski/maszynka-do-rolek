@@ -302,7 +302,7 @@ const Awatar: React.FC<{ src: string }> = ({ src }) => {
   );
 };
 
-export const Explainer: React.FC<{ zAwatarem?: boolean }> = ({ zAwatarem }) => {
+export const Explainer: React.FC<{ zAwatarem?: boolean; bezNapisow?: boolean }> = ({ zAwatarem, bezNapisow }) => {
   const awatar = zAwatarem ? staticFile("lejki-explainer/awatar.mp4") : "";
   return (
     <AbsoluteFill style={{ background: K.bg }}>
@@ -332,7 +332,7 @@ export const Explainer: React.FC<{ zAwatarem?: boolean }> = ({ zAwatarem }) => {
         <Naglowek eyebrow="Twój ruch" tytul="Jeden link dziś. Jednej osobie." />
         <Final />
       </Scena>
-      <Napisy />
+      {bezNapisow ? null : <Napisy />}
       {awatar ? <Awatar src={awatar} /> : null}
     </AbsoluteFill>
   );
