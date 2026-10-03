@@ -159,7 +159,7 @@ const KARTY_S2 = [
 const KROKI = [
   { ikona: MessageCircle, tytul: "Zaproszenie", opis: "wiadomość, post, relacja", slowo: "zaproszenie" },
   { ikona: Link2, tytul: "Link", opis: "z Twoim kodem", slowo: "klika" },
-  { ikona: Smartphone, tytul: "Strona pod jedną sprawę", opis: "np. quiz", slowo: "stronę" },
+  { ikona: Smartphone, tytul: "Strona w jednym celu", opis: "np. quiz", slowo: "stronę" },
   { ikona: Mail, tytul: "Imię i e-mail", opis: "zostawia kontakt", slowo: "zostawia" },
   { ikona: Gift, tytul: "Wartość w zamian", opis: "wynik, plan, prezentacja", slowo: "zamian" },
 ];

@@ -6,3 +6,8 @@ projekty/
 .env
 .DS_Store
 public/lejki-explainer/
+public/film-dashboard/
+public/film-lejki/
+public/film-longevity/
+public/film-kontakty/
+public/film-zadania/

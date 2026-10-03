@@ -1,0 +1,1651 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "nagranie/s1.wav",
+   "czas": 13.12,
+   "slowa": [
+    {
+     "tekst": "Zobaczmy",
+     "start": 0.12,
+     "koniec": 0.66
+    },
+    {
+     "tekst": "lejek",
+     "start": 1.0,
+     "koniec": 1.28
+    },
+    {
+     "tekst": "marketingowy",
+     "start": 1.32,
+     "koniec": 2.02
+    },
+    {
+     "tekst": "na",
+     "start": 2.08,
+     "koniec": 2.14
+    },
+    {
+     "tekst": "naszej",
+     "start": 2.2,
+     "koniec": 2.48
+    },
+    {
+     "tekst": "platformie",
+     "start": 2.52,
+     "koniec": 3.02
+    },
+    {
+     "tekst": "od",
+     "start": 3.06,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "środka",
+     "start": 3.24,
+     "koniec": 3.7
+    },
+    {
+     "tekst": "na",
+     "start": 4.16,
+     "koniec": 4.24
+    },
+    {
+     "tekst": "przykładzie",
+     "start": 4.28,
+     "koniec": 4.94
+    },
+    {
+     "tekst": "quizu",
+     "start": 5.02,
+     "koniec": 5.68
+    },
+    {
+     "tekst": "Longevity.",
+     "start": 5.74,
+     "koniec": 6.38
+    },
+    {
+     "tekst": "Po",
+     "start": 7.32,
+     "koniec": 7.4
+    },
+    {
+     "tekst": "lewej",
+     "start": 7.44,
+     "koniec": 7.88
+    },
+    {
+     "tekst": "to,",
+     "start": 7.96,
+     "koniec": 8.18
+    },
+    {
+     "tekst": "co",
+     "start": 8.34,
+     "koniec": 8.46
+    },
+    {
+     "tekst": "widzi",
+     "start": 8.5,
+     "koniec": 8.7
+    },
+    {
+     "tekst": "Twój",
+     "start": 8.76,
+     "koniec": 8.96
+    },
+    {
+     "tekst": "gość.",
+     "start": 9.02,
+     "koniec": 9.36
+    },
+    {
+     "tekst": "Po",
+     "start": 9.94,
+     "koniec": 10.04
+    },
+    {
+     "tekst": "prawej",
+     "start": 10.08,
+     "koniec": 10.48
+    },
+    {
+     "tekst": "to,",
+     "start": 10.56,
+     "koniec": 10.76
+    },
+    {
+     "tekst": "co",
+     "start": 10.98,
+     "koniec": 11.08
+    },
+    {
+     "tekst": "w",
+     "start": 11.12,
+     "koniec": 11.16
+    },
+    {
+     "tekst": "tym",
+     "start": 11.2,
+     "koniec": 11.36
+    },
+    {
+     "tekst": "samym",
+     "start": 11.4,
+     "koniec": 11.66
+    },
+    {
+     "tekst": "czasie",
+     "start": 11.7,
+     "koniec": 12.0
+    },
+    {
+     "tekst": "dzieje",
+     "start": 12.04,
+     "koniec": 12.26
+    },
+    {
+     "tekst": "się",
+     "start": 12.3,
+     "koniec": 12.4
+    },
+    {
+     "tekst": "u",
+     "start": 12.44,
+     "koniec": 12.52
+    },
+    {
+     "tekst": "Ciebie.",
+     "start": 12.58,
+     "koniec": 12.9
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 14.12,
+   "audio": "nagranie/s2.wav",
+   "czas": 9.24,
+   "slowa": [
+    {
+     "tekst": "Wysyłasz",
+     "start": 0.12,
+     "koniec": 0.56
+    },
+    {
+     "tekst": "zaproszenie.",
+     "start": 0.6,
+     "koniec": 1.2
+    },
+    {
+     "tekst": "Ania",
+     "start": 2.02,
+     "koniec": 2.36
+    },
+    {
+     "tekst": "klika",
+     "start": 2.42,
+     "koniec": 2.74
+    },
+    {
+     "tekst": "link",
+     "start": 2.8,
+     "koniec": 3.02
+    },
+    {
+     "tekst": "z",
+     "start": 3.06,
+     "koniec": 3.1
+    },
+    {
+     "tekst": "Twoim",
+     "start": 3.14,
+     "koniec": 3.46
+    },
+    {
+     "tekst": "kodem",
+     "start": 3.52,
+     "koniec": 4.0
+    },
+    {
+     "tekst": "i",
+     "start": 4.06,
+     "koniec": 4.14
+    },
+    {
+     "tekst": "trafia",
+     "start": 4.2,
+     "koniec": 4.56
+    },
+    {
+     "tekst": "na",
+     "start": 4.62,
+     "koniec": 4.76
+    },
+    {
+     "tekst": "quiz.",
+     "start": 4.82,
+     "koniec": 5.14
+    },
+    {
+     "tekst": "Od",
+     "start": 6.06,
+     "koniec": 6.18
+    },
+    {
+     "tekst": "tej",
+     "start": 6.24,
+     "koniec": 6.36
+    },
+    {
+     "tekst": "chwili",
+     "start": 6.38,
+     "koniec": 7.0
+    },
+    {
+     "tekst": "strona",
+     "start": 7.1,
+     "koniec": 7.48
+    },
+    {
+     "tekst": "wie,",
+     "start": 7.54,
+     "koniec": 7.78
+    },
+    {
+     "tekst": "że",
+     "start": 8.04,
+     "koniec": 8.12
+    },
+    {
+     "tekst": "to",
+     "start": 8.16,
+     "koniec": 8.26
+    },
+    {
+     "tekst": "Twój",
+     "start": 8.32,
+     "koniec": 8.56
+    },
+    {
+     "tekst": "gość.",
+     "start": 8.62,
+     "koniec": 9.02
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 23.96,
+   "audio": "nagranie/s3.wav",
+   "czas": 6.7,
+   "slowa": [
+    {
+     "tekst": "Siedem",
+     "start": 0.12,
+     "koniec": 0.38
+    },
+    {
+     "tekst": "krótkich",
+     "start": 0.42,
+     "koniec": 0.76
+    },
+    {
+     "tekst": "pytań",
+     "start": 0.82,
+     "koniec": 1.12
+    },
+    {
+     "tekst": "o",
+     "start": 1.16,
+     "koniec": 1.22
+    },
+    {
+     "tekst": "ruch,",
+     "start": 1.28,
+     "koniec": 1.46
+    },
+    {
+     "tekst": "tempo",
+     "start": 1.58,
+     "koniec": 1.98
+    },
+    {
+     "tekst": "dnia,",
+     "start": 2.06,
+     "koniec": 2.36
+    },
+    {
+     "tekst": "poranki",
+     "start": 2.94,
+     "koniec": 3.42
+    },
+    {
+     "tekst": "i",
+     "start": 3.5,
+     "koniec": 3.56
+    },
+    {
+     "tekst": "o",
+     "start": 3.62,
+     "koniec": 3.66
+    },
+    {
+     "tekst": "to,",
+     "start": 3.7,
+     "koniec": 3.78
+    },
+    {
+     "tekst": "co",
+     "start": 3.86,
+     "koniec": 3.92
+    },
+    {
+     "tekst": "ją",
+     "start": 3.96,
+     "koniec": 4.06
+    },
+    {
+     "tekst": "na",
+     "start": 4.1,
+     "koniec": 4.18
+    },
+    {
+     "tekst": "co",
+     "start": 4.22,
+     "koniec": 4.32
+    },
+    {
+     "tekst": "dzień",
+     "start": 4.34,
+     "koniec": 4.479
+    },
+    {
+     "tekst": "uwiera.",
+     "start": 4.54,
+     "koniec": 4.84
+    },
+    {
+     "tekst": "Zajmuje",
+     "start": 5.18,
+     "koniec": 5.54
+    },
+    {
+     "tekst": "to",
+     "start": 5.6,
+     "koniec": 5.66
+    },
+    {
+     "tekst": "około",
+     "start": 5.72,
+     "koniec": 5.98
+    },
+    {
+     "tekst": "minuty.",
+     "start": 6.04,
+     "koniec": 6.48
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 31.26,
+   "audio": "nagranie/s4.wav",
+   "czas": 9.58,
+   "slowa": [
+    {
+     "tekst": "Żeby",
+     "start": 0.12,
+     "koniec": 0.32
+    },
+    {
+     "tekst": "zobaczyć",
+     "start": 0.38,
+     "koniec": 0.82
+    },
+    {
+     "tekst": "wynik",
+     "start": 0.88,
+     "koniec": 1.36
+    },
+    {
+     "tekst": "Ania",
+     "start": 1.48,
+     "koniec": 1.88
+    },
+    {
+     "tekst": "zostawia",
+     "start": 1.98,
+     "koniec": 2.54
+    },
+    {
+     "tekst": "imię",
+     "start": 2.64,
+     "koniec": 3.08
+    },
+    {
+     "tekst": "oraz",
+     "start": 3.16,
+     "koniec": 3.42
+    },
+    {
+     "tekst": "adres",
+     "start": 3.52,
+     "koniec": 3.82
+    },
+    {
+     "tekst": "e-mail.",
+     "start": 3.9,
+     "koniec": 4.24
+    },
+    {
+     "tekst": "Może",
+     "start": 4.9,
+     "koniec": 5.28
+    },
+    {
+     "tekst": "zaznaczyć",
+     "start": 5.34,
+     "koniec": 5.78
+    },
+    {
+     "tekst": "zgodę",
+     "start": 5.84,
+     "koniec": 6.14
+    },
+    {
+     "tekst": "na",
+     "start": 6.18,
+     "koniec": 6.28
+    },
+    {
+     "tekst": "darmową",
+     "start": 6.34,
+     "koniec": 6.72
+    },
+    {
+     "tekst": "analizę",
+     "start": 6.78,
+     "koniec": 7.18
+    },
+    {
+     "tekst": "swoich",
+     "start": 7.24,
+     "koniec": 7.5
+    },
+    {
+     "tekst": "wypowiedzi.",
+     "start": 7.52,
+     "koniec": 8.06
+    },
+    {
+     "tekst": "Telefon",
+     "start": 8.14,
+     "koniec": 8.5
+    },
+    {
+     "tekst": "jest",
+     "start": 8.52,
+     "koniec": 8.64
+    },
+    {
+     "tekst": "opcjonalny.",
+     "start": 8.7,
+     "koniec": 9.36
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 41.44,
+   "audio": "nagranie/s5.wav",
+   "czas": 14.54,
+   "slowa": [
+    {
+     "tekst": "Ania",
+     "start": 0.12,
+     "koniec": 0.28
+    },
+    {
+     "tekst": "dostaje",
+     "start": 0.32,
+     "koniec": 0.78
+    },
+    {
+     "tekst": "swój",
+     "start": 0.84,
+     "koniec": 1.06
+    },
+    {
+     "tekst": "profil",
+     "start": 1.1,
+     "koniec": 1.48
+    },
+    {
+     "tekst": "Longevity,",
+     "start": 1.52,
+     "koniec": 2.14
+    },
+    {
+     "tekst": "indeks",
+     "start": 2.54,
+     "koniec": 3.12
+    },
+    {
+     "tekst": "i",
+     "start": 3.22,
+     "koniec": 3.38
+    },
+    {
+     "tekst": "plan",
+     "start": 3.44,
+     "koniec": 3.7
+    },
+    {
+     "tekst": "pięciu",
+     "start": 3.74,
+     "koniec": 4.04
+    },
+    {
+     "tekst": "produktów.",
+     "start": 4.08,
+     "koniec": 4.56
+    },
+    {
+     "tekst": "Od",
+     "start": 4.62,
+     "koniec": 4.72
+    },
+    {
+     "tekst": "czego",
+     "start": 4.76,
+     "koniec": 5.0
+    },
+    {
+     "tekst": "ma",
+     "start": 5.04,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "zacząć,",
+     "start": 5.18,
+     "koniec": 5.56
+    },
+    {
+     "tekst": "a",
+     "start": 6.1,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "co",
+     "start": 6.22,
+     "koniec": 6.3
+    },
+    {
+     "tekst": "dołożyć",
+     "start": 6.34,
+     "koniec": 6.72
+    },
+    {
+     "tekst": "później.",
+     "start": 6.78,
+     "koniec": 7.22
+    },
+    {
+     "tekst": "W",
+     "start": 8.04,
+     "koniec": 8.06
+    },
+    {
+     "tekst": "tej",
+     "start": 8.1,
+     "koniec": 8.22
+    },
+    {
+     "tekst": "samej",
+     "start": 8.26,
+     "koniec": 8.5
+    },
+    {
+     "tekst": "chwili",
+     "start": 8.52,
+     "koniec": 8.82
+    },
+    {
+     "tekst": "ląduje",
+     "start": 8.88,
+     "koniec": 9.26
+    },
+    {
+     "tekst": "na",
+     "start": 9.48,
+     "koniec": 9.56
+    },
+    {
+     "tekst": "Twojej",
+     "start": 9.62,
+     "koniec": 9.94
+    },
+    {
+     "tekst": "tablicy,",
+     "start": 10.0,
+     "koniec": 10.5
+    },
+    {
+     "tekst": "a",
+     "start": 10.88,
+     "koniec": 10.96
+    },
+    {
+     "tekst": "Ty",
+     "start": 11.02,
+     "koniec": 11.1
+    },
+    {
+     "tekst": "dostajesz",
+     "start": 11.14,
+     "koniec": 11.64
+    },
+    {
+     "tekst": "maila",
+     "start": 11.72,
+     "koniec": 12.2
+    },
+    {
+     "tekst": "z",
+     "start": 12.34,
+     "koniec": 12.36
+    },
+    {
+     "tekst": "jej",
+     "start": 12.42,
+     "koniec": 12.56
+    },
+    {
+     "tekst": "wynikiem",
+     "start": 12.62,
+     "koniec": 13.2
+    },
+    {
+     "tekst": "i",
+     "start": 13.28,
+     "koniec": 13.34
+    },
+    {
+     "tekst": "jej",
+     "start": 13.38,
+     "koniec": 13.52
+    },
+    {
+     "tekst": "odpowiedziami.",
+     "start": 13.58,
+     "koniec": 14.32
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 56.58,
+   "audio": "nagranie/s6.wav",
+   "czas": 5.72,
+   "slowa": [
+    {
+     "tekst": "Przyciski",
+     "start": 0.12,
+     "koniec": 0.72
+    },
+    {
+     "tekst": "przy",
+     "start": 0.76,
+     "koniec": 0.94
+    },
+    {
+     "tekst": "produktach",
+     "start": 0.98,
+     "koniec": 1.62
+    },
+    {
+     "tekst": "prowadzą",
+     "start": 1.66,
+     "koniec": 2.08
+    },
+    {
+     "tekst": "do",
+     "start": 2.12,
+     "koniec": 2.2
+    },
+    {
+     "tekst": "Twojego",
+     "start": 2.24,
+     "koniec": 2.6
+    },
+    {
+     "tekst": "sklepu,",
+     "start": 2.66,
+     "koniec": 3.02
+    },
+    {
+     "tekst": "więc",
+     "start": 3.16,
+     "koniec": 3.6
+    },
+    {
+     "tekst": "zakup",
+     "start": 3.68,
+     "koniec": 4.12
+    },
+    {
+     "tekst": "Ani",
+     "start": 4.24,
+     "koniec": 4.64
+    },
+    {
+     "tekst": "trafi",
+     "start": 4.7,
+     "koniec": 4.94
+    },
+    {
+     "tekst": "do",
+     "start": 4.98,
+     "koniec": 5.06
+    },
+    {
+     "tekst": "Ciebie.",
+     "start": 5.1,
+     "koniec": 5.5
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 62.9,
+   "audio": "nagranie/s7.wav",
+   "czas": 13.98,
+   "slowa": [
+    {
+     "tekst": "Jeśli",
+     "start": 0.12,
+     "koniec": 0.52
+    },
+    {
+     "tekst": "Ania",
+     "start": 0.64,
+     "koniec": 0.82
+    },
+    {
+     "tekst": "zgodziła",
+     "start": 0.88,
+     "koniec": 1.24
+    },
+    {
+     "tekst": "się",
+     "start": 1.28,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "na",
+     "start": 1.42,
+     "koniec": 1.5
+    },
+    {
+     "tekst": "analizę,",
+     "start": 1.54,
+     "koniec": 2.08
+    },
+    {
+     "tekst": "za",
+     "start": 2.74,
+     "koniec": 2.84
+    },
+    {
+     "tekst": "chwilę",
+     "start": 2.86,
+     "koniec": 3.14
+    },
+    {
+     "tekst": "dostaje",
+     "start": 3.18,
+     "koniec": 3.56
+    },
+    {
+     "tekst": "drugą",
+     "start": 3.64,
+     "koniec": 3.9
+    },
+    {
+     "tekst": "wiadomość.",
+     "start": 3.94,
+     "koniec": 4.5
+    },
+    {
+     "tekst": "Co",
+     "start": 4.84,
+     "koniec": 4.96
+    },
+    {
+     "tekst": "widać",
+     "start": 5.0,
+     "koniec": 5.3
+    },
+    {
+     "tekst": "w",
+     "start": 5.32,
+     "koniec": 5.34
+    },
+    {
+     "tekst": "jej",
+     "start": 5.36,
+     "koniec": 5.4
+    },
+    {
+     "tekst": "odpowiedziach",
+     "start": 5.46,
+     "koniec": 6.36
+    },
+    {
+     "tekst": "i",
+     "start": 6.44,
+     "koniec": 6.52
+    },
+    {
+     "tekst": "trzy",
+     "start": 6.56,
+     "koniec": 7.0
+    },
+    {
+     "tekst": "małe",
+     "start": 7.1,
+     "koniec": 7.3
+    },
+    {
+     "tekst": "nawyki",
+     "start": 7.34,
+     "koniec": 7.94
+    },
+    {
+     "tekst": "na",
+     "start": 8.02,
+     "koniec": 8.1
+    },
+    {
+     "tekst": "najbliższe",
+     "start": 8.14,
+     "koniec": 8.6
+    },
+    {
+     "tekst": "dwa",
+     "start": 8.66,
+     "koniec": 8.76
+    },
+    {
+     "tekst": "tygodnie.",
+     "start": 8.84,
+     "koniec": 9.34
+    },
+    {
+     "tekst": "Kopię",
+     "start": 10.08,
+     "koniec": 10.56
+    },
+    {
+     "tekst": "znajdziesz",
+     "start": 10.68,
+     "koniec": 11.08
+    },
+    {
+     "tekst": "w",
+     "start": 11.12,
+     "koniec": 11.16
+    },
+    {
+     "tekst": "notatkach",
+     "start": 11.2,
+     "koniec": 11.88
+    },
+    {
+     "tekst": "na",
+     "start": 11.96,
+     "koniec": 12.06
+    },
+    {
+     "tekst": "jej",
+     "start": 12.1,
+     "koniec": 12.28
+    },
+    {
+     "tekst": "karcie",
+     "start": 12.34,
+     "koniec": 12.78
+    },
+    {
+     "tekst": "na",
+     "start": 12.82,
+     "koniec": 12.92
+    },
+    {
+     "tekst": "Twojej",
+     "start": 12.98,
+     "koniec": 13.26
+    },
+    {
+     "tekst": "tablicy.",
+     "start": 13.32,
+     "koniec": 13.76
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 77.48,
+   "audio": "nagranie/s8.wav",
+   "czas": 11.06,
+   "slowa": [
+    {
+     "tekst": "Jeśli",
+     "start": 0.12,
+     "koniec": 0.48
+    },
+    {
+     "tekst": "kliknie",
+     "start": 0.54,
+     "koniec": 1.22
+    },
+    {
+     "tekst": "„Poproszę",
+     "start": 1.24,
+     "koniec": 1.7
+    },
+    {
+     "tekst": "o",
+     "start": 1.74,
+     "koniec": 1.82
+    },
+    {
+     "tekst": "kontakt",
+     "start": 1.88,
+     "koniec": 2.48
+    },
+    {
+     "tekst": "opiekuna”,",
+     "start": 2.56,
+     "koniec": 3.08
+    },
+    {
+     "tekst": "dostaniesz",
+     "start": 3.66,
+     "koniec": 4.16
+    },
+    {
+     "tekst": "maila",
+     "start": 4.24,
+     "koniec": 4.6
+    },
+    {
+     "tekst": "i",
+     "start": 4.66,
+     "koniec": 4.74
+    },
+    {
+     "tekst": "SMS-a,",
+     "start": 4.92,
+     "koniec": 5.36
+    },
+    {
+     "tekst": "a",
+     "start": 5.54,
+     "koniec": 5.6
+    },
+    {
+     "tekst": "w",
+     "start": 5.64,
+     "koniec": 5.66
+    },
+    {
+     "tekst": "jej",
+     "start": 5.68,
+     "koniec": 5.82
+    },
+    {
+     "tekst": "karcie",
+     "start": 5.88,
+     "koniec": 6.2
+    },
+    {
+     "tekst": "pojawia",
+     "start": 6.26,
+     "koniec": 6.6
+    },
+    {
+     "tekst": "się",
+     "start": 6.64,
+     "koniec": 6.74
+    },
+    {
+     "tekst": "przypięta",
+     "start": 6.78,
+     "koniec": 7.26
+    },
+    {
+     "tekst": "notatka.",
+     "start": 7.3,
+     "koniec": 7.82
+    },
+    {
+     "tekst": "To",
+     "start": 8.26,
+     "koniec": 8.36
+    },
+    {
+     "tekst": "jest",
+     "start": 8.38,
+     "koniec": 8.54
+    },
+    {
+     "tekst": "znak,",
+     "start": 8.62,
+     "koniec": 9.02
+    },
+    {
+     "tekst": "żeby",
+     "start": 9.08,
+     "koniec": 9.28
+    },
+    {
+     "tekst": "zadzwonić",
+     "start": 9.32,
+     "koniec": 10.02
+    },
+    {
+     "tekst": "jeszcze",
+     "start": 10.16,
+     "koniec": 10.42
+    },
+    {
+     "tekst": "dzisiaj.",
+     "start": 10.44,
+     "koniec": 10.84
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 89.14,
+   "audio": "nagranie/s9.wav",
+   "czas": 21.68,
+   "slowa": [
+    {
+     "tekst": "Potem",
+     "start": 0.12,
+     "koniec": 0.48
+    },
+    {
+     "tekst": "pracuje",
+     "start": 0.52,
+     "koniec": 1.14
+    },
+    {
+     "tekst": "seria",
+     "start": 1.24,
+     "koniec": 1.54
+    },
+    {
+     "tekst": "maili.",
+     "start": 1.62,
+     "koniec": 2.04
+    },
+    {
+     "tekst": "Pierwszego",
+     "start": 2.66,
+     "koniec": 3.06
+    },
+    {
+     "tekst": "dnia",
+     "start": 3.1,
+     "koniec": 3.28
+    },
+    {
+     "tekst": "plan",
+     "start": 3.34,
+     "koniec": 3.58
+    },
+    {
+     "tekst": "od",
+     "start": 3.62,
+     "koniec": 3.7
+    },
+    {
+     "tekst": "czego",
+     "start": 3.74,
+     "koniec": 3.98
+    },
+    {
+     "tekst": "zacząć.",
+     "start": 4.02,
+     "koniec": 4.44
+    },
+    {
+     "tekst": "Czwartego",
+     "start": 4.84,
+     "koniec": 5.62
+    },
+    {
+     "tekst": "trzy",
+     "start": 5.68,
+     "koniec": 5.9
+    },
+    {
+     "tekst": "drobiazgi",
+     "start": 5.96,
+     "koniec": 6.5
+    },
+    {
+     "tekst": "dla",
+     "start": 6.54,
+     "koniec": 6.68
+    },
+    {
+     "tekst": "jej",
+     "start": 6.72,
+     "koniec": 6.82
+    },
+    {
+     "tekst": "profilu.",
+     "start": 6.86,
+     "koniec": 7.28
+    },
+    {
+     "tekst": "Ósmego",
+     "start": 8.5,
+     "koniec": 9.04
+    },
+    {
+     "tekst": "to,",
+     "start": 9.5,
+     "koniec": 9.68
+    },
+    {
+     "tekst": "kto",
+     "start": 10.36,
+     "koniec": 10.58
+    },
+    {
+     "tekst": "stoi",
+     "start": 10.64,
+     "koniec": 10.94
+    },
+    {
+     "tekst": "za",
+     "start": 10.98,
+     "koniec": 11.08
+    },
+    {
+     "tekst": "produktami.",
+     "start": 11.12,
+     "koniec": 11.72
+    },
+    {
+     "tekst": "Czternastego",
+     "start": 12.2,
+     "koniec": 13.02
+    },
+    {
+     "tekst": "zaproszenie,",
+     "start": 13.32,
+     "koniec": 13.92
+    },
+    {
+     "tekst": "żeby",
+     "start": 14.1,
+     "koniec": 14.32
+    },
+    {
+     "tekst": "powtórzyć",
+     "start": 14.36,
+     "koniec": 14.88
+    },
+    {
+     "tekst": "quiz",
+     "start": 14.94,
+     "koniec": 15.2
+    },
+    {
+     "tekst": "i",
+     "start": 15.24,
+     "koniec": 15.3
+    },
+    {
+     "tekst": "sprawdzić,",
+     "start": 15.4,
+     "koniec": 15.78
+    },
+    {
+     "tekst": "czy",
+     "start": 15.84,
+     "koniec": 15.94
+    },
+    {
+     "tekst": "indeks",
+     "start": 16.04,
+     "koniec": 16.5
+    },
+    {
+     "tekst": "wzrósł.",
+     "start": 16.56,
+     "koniec": 17.16
+    },
+    {
+     "tekst": "W",
+     "start": 18.04,
+     "koniec": 18.08
+    },
+    {
+     "tekst": "każdym",
+     "start": 18.12,
+     "koniec": 18.44
+    },
+    {
+     "tekst": "mailu",
+     "start": 18.479,
+     "koniec": 18.74
+    },
+    {
+     "tekst": "jest",
+     "start": 18.78,
+     "koniec": 18.9
+    },
+    {
+     "tekst": "Twoja",
+     "start": 18.96,
+     "koniec": 19.24
+    },
+    {
+     "tekst": "wizytówka",
+     "start": 19.28,
+     "koniec": 20.08
+    },
+    {
+     "tekst": "ze",
+     "start": 20.18,
+     "koniec": 20.259
+    },
+    {
+     "tekst": "zdjęciem",
+     "start": 20.3,
+     "koniec": 20.699
+    },
+    {
+     "tekst": "i",
+     "start": 20.74,
+     "koniec": 20.78
+    },
+    {
+     "tekst": "telefonem.",
+     "start": 20.84,
+     "koniec": 21.46
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 111.42,
+   "audio": "nagranie/s10.wav",
+   "czas": 10.32,
+   "slowa": [
+    {
+     "tekst": "Ania",
+     "start": 0.12,
+     "koniec": 0.44
+    },
+    {
+     "tekst": "nie",
+     "start": 0.48,
+     "koniec": 0.56
+    },
+    {
+     "tekst": "dostaje",
+     "start": 0.6,
+     "koniec": 0.98
+    },
+    {
+     "tekst": "niczego,",
+     "start": 1.04,
+     "koniec": 1.4
+    },
+    {
+     "tekst": "na",
+     "start": 1.46,
+     "koniec": 1.54
+    },
+    {
+     "tekst": "co",
+     "start": 1.58,
+     "koniec": 1.66
+    },
+    {
+     "tekst": "się",
+     "start": 1.68,
+     "koniec": 1.78
+    },
+    {
+     "tekst": "nie",
+     "start": 1.82,
+     "koniec": 1.9
+    },
+    {
+     "tekst": "zgodziła.",
+     "start": 1.94,
+     "koniec": 2.46
+    },
+    {
+     "tekst": "Bez",
+     "start": 4.0,
+     "koniec": 4.28
+    },
+    {
+     "tekst": "zgody",
+     "start": 4.84,
+     "koniec": 5.28
+    },
+    {
+     "tekst": "przyjdzie",
+     "start": 5.84,
+     "koniec": 6.2
+    },
+    {
+     "tekst": "jej",
+     "start": 6.24,
+     "koniec": 6.44
+    },
+    {
+     "tekst": "tylko",
+     "start": 6.5,
+     "koniec": 6.82
+    },
+    {
+     "tekst": "mail",
+     "start": 6.88,
+     "koniec": 7.16
+    },
+    {
+     "tekst": "z",
+     "start": 7.2,
+     "koniec": 7.24
+    },
+    {
+     "tekst": "wynikiem.",
+     "start": 7.3,
+     "koniec": 7.86
+    },
+    {
+     "tekst": "Bez",
+     "start": 8.68,
+     "koniec": 8.82
+    },
+    {
+     "tekst": "analizy",
+     "start": 8.9,
+     "koniec": 9.46
+    },
+    {
+     "tekst": "i",
+     "start": 9.5,
+     "koniec": 9.56
+    },
+    {
+     "tekst": "bez",
+     "start": 9.6,
+     "koniec": 9.74
+    },
+    {
+     "tekst": "serii.",
+     "start": 9.8,
+     "koniec": 10.1
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 122.34,
+   "audio": "nagranie/s11.wav",
+   "czas": 12.28,
+   "slowa": [
+    {
+     "tekst": "Ty",
+     "start": 0.12,
+     "koniec": 0.22
+    },
+    {
+     "tekst": "prowadzisz",
+     "start": 0.24,
+     "koniec": 0.72
+    },
+    {
+     "tekst": "rozmowę",
+     "start": 0.74,
+     "koniec": 1.12
+    },
+    {
+     "tekst": "w",
+     "start": 1.16,
+     "koniec": 1.2
+    },
+    {
+     "tekst": "tempie",
+     "start": 1.26,
+     "koniec": 1.56
+    },
+    {
+     "tekst": "Ani.",
+     "start": 1.68,
+     "koniec": 1.88
+    },
+    {
+     "tekst": "Dzwonisz,",
+     "start": 2.4,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "gdy",
+     "start": 3.0,
+     "koniec": 3.12
+    },
+    {
+     "tekst": "o",
+     "start": 3.14,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "to",
+     "start": 3.24,
+     "koniec": 3.34
+    },
+    {
+     "tekst": "prosi,",
+     "start": 3.38,
+     "koniec": 3.74
+    },
+    {
+     "tekst": "a",
+     "start": 4.14,
+     "koniec": 4.2
+    },
+    {
+     "tekst": "gdy",
+     "start": 4.26,
+     "koniec": 4.38
+    },
+    {
+     "tekst": "odezwie",
+     "start": 4.44,
+     "koniec": 4.76
+    },
+    {
+     "tekst": "się",
+     "start": 4.8,
+     "koniec": 4.92
+    },
+    {
+     "tekst": "sama,",
+     "start": 5.0,
+     "koniec": 5.3
+    },
+    {
+     "tekst": "odpowiadasz.",
+     "start": 5.52,
+     "koniec": 6.14
+    },
+    {
+     "tekst": "Kartę",
+     "start": 7.06,
+     "koniec": 7.34
+    },
+    {
+     "tekst": "na",
+     "start": 7.38,
+     "koniec": 7.46
+    },
+    {
+     "tekst": "tablicy",
+     "start": 7.52,
+     "koniec": 7.94
+    },
+    {
+     "tekst": "przesuwasz",
+     "start": 7.98,
+     "koniec": 8.48
+    },
+    {
+     "tekst": "dalej,",
+     "start": 8.52,
+     "koniec": 8.82
+    },
+    {
+     "tekst": "a",
+     "start": 9.18,
+     "koniec": 9.24
+    },
+    {
+     "tekst": "przy",
+     "start": 9.28,
+     "koniec": 9.46
+    },
+    {
+     "tekst": "każdym",
+     "start": 9.52,
+     "koniec": 9.82
+    },
+    {
+     "tekst": "etapie",
+     "start": 9.88,
+     "koniec": 10.22
+    },
+    {
+     "tekst": "dostajesz",
+     "start": 10.26,
+     "koniec": 10.74
+    },
+    {
+     "tekst": "listę",
+     "start": 10.8,
+     "koniec": 11.1
+    },
+    {
+     "tekst": "kolejnych",
+     "start": 11.14,
+     "koniec": 11.6
+    },
+    {
+     "tekst": "kroków.",
+     "start": 11.66,
+     "koniec": 12.06
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 135.22,
+   "audio": "nagranie/s12.wav",
+   "czas": 6.22,
+   "slowa": [
+    {
+     "tekst": "Quiz",
+     "start": 0.12,
+     "koniec": 0.44
+    },
+    {
+     "tekst": "robi",
+     "start": 0.74,
+     "koniec": 0.94
+    },
+    {
+     "tekst": "za",
+     "start": 0.98,
+     "koniec": 1.08
+    },
+    {
+     "tekst": "Ciebie",
+     "start": 1.12,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "pierwszą",
+     "start": 1.44,
+     "koniec": 1.84
+    },
+    {
+     "tekst": "rozmowę.",
+     "start": 1.88,
+     "koniec": 2.38
+    },
+    {
+     "tekst": "Ty",
+     "start": 2.96,
+     "koniec": 3.02
+    },
+    {
+     "tekst": "rozmawiasz",
+     "start": 3.06,
+     "koniec": 3.54
+    },
+    {
+     "tekst": "z",
+     "start": 3.62,
+     "koniec": 3.66
+    },
+    {
+     "tekst": "kimś,",
+     "start": 3.72,
+     "koniec": 4.04
+    },
+    {
+     "tekst": "kto",
+     "start": 4.3,
+     "koniec": 4.5
+    },
+    {
+     "tekst": "już",
+     "start": 4.56,
+     "koniec": 4.8
+    },
+    {
+     "tekst": "wie,",
+     "start": 4.88,
+     "koniec": 5.1
+    },
+    {
+     "tekst": "czego",
+     "start": 5.38,
+     "koniec": 5.64
+    },
+    {
+     "tekst": "szuka.",
+     "start": 5.68,
+     "koniec": 6.0
+    }
+   ]
+  }
+ ],
+ "calosc": 143.24
+}

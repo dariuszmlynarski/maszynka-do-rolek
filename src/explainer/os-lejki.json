@@ -1,0 +1,904 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "nagranie/s1.wav",
+   "czas": 6.18,
+   "slowa": [
+    {
+     "tekst": "Na",
+     "start": 0.12,
+     "koniec": 0.34
+    },
+    {
+     "tekst": "stronie",
+     "start": 0.44,
+     "koniec": 0.76
+    },
+    {
+     "tekst": "Lejki",
+     "start": 0.84,
+     "koniec": 1.3
+    },
+    {
+     "tekst": "masz",
+     "start": 1.76,
+     "koniec": 2.12
+    },
+    {
+     "tekst": "wszystkie",
+     "start": 2.2,
+     "koniec": 2.7
+    },
+    {
+     "tekst": "gotowe",
+     "start": 2.94,
+     "koniec": 3.3
+    },
+    {
+     "tekst": "do",
+     "start": 3.34,
+     "koniec": 3.44
+    },
+    {
+     "tekst": "użycia",
+     "start": 3.52,
+     "koniec": 3.9
+    },
+    {
+     "tekst": "lejki",
+     "start": 4.0,
+     "koniec": 4.3
+    },
+    {
+     "tekst": "marketingowe",
+     "start": 4.36,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "w",
+     "start": 5.14,
+     "koniec": 5.18
+    },
+    {
+     "tekst": "jednym",
+     "start": 5.22,
+     "koniec": 5.5
+    },
+    {
+     "tekst": "miejscu.",
+     "start": 5.54,
+     "koniec": 5.96
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 7.18,
+   "audio": "nagranie/s2.wav",
+   "czas": 15.68,
+   "slowa": [
+    {
+     "tekst": "Każdy",
+     "start": 0.12,
+     "koniec": 0.86
+    },
+    {
+     "tekst": "zaczyna",
+     "start": 0.94,
+     "koniec": 1.32
+    },
+    {
+     "tekst": "się",
+     "start": 1.36,
+     "koniec": 1.44
+    },
+    {
+     "tekst": "od",
+     "start": 1.48,
+     "koniec": 1.58
+    },
+    {
+     "tekst": "krótkiego",
+     "start": 1.64,
+     "koniec": 2.06
+    },
+    {
+     "tekst": "opisu,",
+     "start": 2.14,
+     "koniec": 2.54
+    },
+    {
+     "tekst": "dla",
+     "start": 3.02,
+     "koniec": 3.16
+    },
+    {
+     "tekst": "kogo",
+     "start": 3.22,
+     "koniec": 3.44
+    },
+    {
+     "tekst": "jest",
+     "start": 3.479,
+     "koniec": 3.6
+    },
+    {
+     "tekst": "przeznaczony,",
+     "start": 3.639,
+     "koniec": 4.26
+    },
+    {
+     "tekst": "co",
+     "start": 5.0,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "się",
+     "start": 5.16,
+     "koniec": 5.28
+    },
+    {
+     "tekst": "stanie",
+     "start": 5.36,
+     "koniec": 5.64
+    },
+    {
+     "tekst": "po",
+     "start": 5.68,
+     "koniec": 5.76
+    },
+    {
+     "tekst": "wejściu",
+     "start": 5.82,
+     "koniec": 6.28
+    },
+    {
+     "tekst": "i",
+     "start": 6.98,
+     "koniec": 7.1
+    },
+    {
+     "tekst": "dlaczego",
+     "start": 7.14,
+     "koniec": 7.52
+    },
+    {
+     "tekst": "to",
+     "start": 7.56,
+     "koniec": 7.66
+    },
+    {
+     "tekst": "działa.",
+     "start": 7.68,
+     "koniec": 8.08
+    },
+    {
+     "tekst": "Przeczytaj",
+     "start": 8.76,
+     "koniec": 9.26
+    },
+    {
+     "tekst": "ten",
+     "start": 9.3,
+     "koniec": 9.42
+    },
+    {
+     "tekst": "opis,",
+     "start": 9.5,
+     "koniec": 9.8
+    },
+    {
+     "tekst": "zanim",
+     "start": 10.06,
+     "koniec": 10.32
+    },
+    {
+     "tekst": "komukolwiek",
+     "start": 10.36,
+     "koniec": 10.94
+    },
+    {
+     "tekst": "wyślesz",
+     "start": 10.98,
+     "koniec": 11.34
+    },
+    {
+     "tekst": "link.",
+     "start": 11.42,
+     "koniec": 11.72
+    },
+    {
+     "tekst": "Wtedy",
+     "start": 12.0,
+     "koniec": 12.22
+    },
+    {
+     "tekst": "będziesz",
+     "start": 12.28,
+     "koniec": 12.6
+    },
+    {
+     "tekst": "wiedzieć,",
+     "start": 12.66,
+     "koniec": 13.08
+    },
+    {
+     "tekst": "komu",
+     "start": 13.36,
+     "koniec": 13.98
+    },
+    {
+     "tekst": "wysłać",
+     "start": 14.1,
+     "koniec": 14.7
+    },
+    {
+     "tekst": "jaką",
+     "start": 14.78,
+     "koniec": 15.04
+    },
+    {
+     "tekst": "treść.",
+     "start": 15.1,
+     "koniec": 15.46
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 23.46,
+   "audio": "nagranie/s3.wav",
+   "czas": 15.22,
+   "slowa": [
+    {
+     "tekst": "Pod",
+     "start": 0.12,
+     "koniec": 0.32
+    },
+    {
+     "tekst": "opisem",
+     "start": 0.4,
+     "koniec": 1.06
+    },
+    {
+     "tekst": "są",
+     "start": 1.14,
+     "koniec": 1.3
+    },
+    {
+     "tekst": "trzy",
+     "start": 1.34,
+     "koniec": 1.52
+    },
+    {
+     "tekst": "zakładki.",
+     "start": 1.56,
+     "koniec": 2.1
+    },
+    {
+     "tekst": "Pierwsza",
+     "start": 2.68,
+     "koniec": 3.28
+    },
+    {
+     "tekst": "to",
+     "start": 3.34,
+     "koniec": 3.46
+    },
+    {
+     "tekst": "strony",
+     "start": 3.54,
+     "koniec": 3.82
+    },
+    {
+     "tekst": "lądowania,",
+     "start": 3.86,
+     "koniec": 4.46
+    },
+    {
+     "tekst": "czyli",
+     "start": 4.82,
+     "koniec": 5.08
+    },
+    {
+     "tekst": "linki",
+     "start": 5.14,
+     "koniec": 5.42
+    },
+    {
+     "tekst": "z",
+     "start": 5.46,
+     "koniec": 5.48
+    },
+    {
+     "tekst": "Twoim",
+     "start": 5.54,
+     "koniec": 5.86
+    },
+    {
+     "tekst": "kodem.",
+     "start": 5.92,
+     "koniec": 6.44
+    },
+    {
+     "tekst": "Kliknij",
+     "start": 8.74,
+     "koniec": 9.34
+    },
+    {
+     "tekst": "„Kopiuj",
+     "start": 9.36,
+     "koniec": 9.74
+    },
+    {
+     "tekst": "link”",
+     "start": 9.78,
+     "koniec": 10.0
+    },
+    {
+     "tekst": "i",
+     "start": 10.26,
+     "koniec": 10.3
+    },
+    {
+     "tekst": "masz",
+     "start": 10.54,
+     "koniec": 10.74
+    },
+    {
+     "tekst": "go",
+     "start": 10.78,
+     "koniec": 10.84
+    },
+    {
+     "tekst": "w",
+     "start": 10.88,
+     "koniec": 10.92
+    },
+    {
+     "tekst": "schowku.",
+     "start": 10.96,
+     "koniec": 11.36
+    },
+    {
+     "tekst": "Możesz",
+     "start": 11.62,
+     "koniec": 11.92
+    },
+    {
+     "tekst": "go",
+     "start": 11.96,
+     "koniec": 12.04
+    },
+    {
+     "tekst": "wkleić",
+     "start": 12.1,
+     "koniec": 12.7
+    },
+    {
+     "tekst": "gdziekolwiek",
+     "start": 12.78,
+     "koniec": 13.46
+    },
+    {
+     "tekst": "w",
+     "start": 13.5,
+     "koniec": 13.52
+    },
+    {
+     "tekst": "jakimkolwiek",
+     "start": 13.56,
+     "koniec": 14.2
+    },
+    {
+     "tekst": "polu",
+     "start": 14.24,
+     "koniec": 14.44
+    },
+    {
+     "tekst": "tekstowym.",
+     "start": 14.48,
+     "koniec": 15.0
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 39.28,
+   "audio": "nagranie/s4.wav",
+   "czas": 10.46,
+   "slowa": [
+    {
+     "tekst": "Druga",
+     "start": 0.12,
+     "koniec": 0.8
+    },
+    {
+     "tekst": "to",
+     "start": 0.88,
+     "koniec": 1.26
+    },
+    {
+     "tekst": "grafiki",
+     "start": 1.34,
+     "koniec": 2.16
+    },
+    {
+     "tekst": "i",
+     "start": 2.24,
+     "koniec": 2.3
+    },
+    {
+     "tekst": "kreacje.",
+     "start": 2.36,
+     "koniec": 2.96
+    },
+    {
+     "tekst": "Pobierasz",
+     "start": 3.4,
+     "koniec": 3.82
+    },
+    {
+     "tekst": "obrazek",
+     "start": 3.88,
+     "koniec": 4.3
+    },
+    {
+     "tekst": "na",
+     "start": 4.34,
+     "koniec": 4.44
+    },
+    {
+     "tekst": "post",
+     "start": 4.5,
+     "koniec": 4.84
+    },
+    {
+     "tekst": "albo",
+     "start": 4.94,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "relację,",
+     "start": 5.14,
+     "koniec": 5.64
+    },
+    {
+     "tekst": "a",
+     "start": 6.22,
+     "koniec": 6.46
+    },
+    {
+     "tekst": "„Kopiuj",
+     "start": 6.48,
+     "koniec": 6.92
+    },
+    {
+     "tekst": "opis”",
+     "start": 7.04,
+     "koniec": 7.36
+    },
+    {
+     "tekst": "daje",
+     "start": 7.66,
+     "koniec": 7.86
+    },
+    {
+     "tekst": "Ci",
+     "start": 7.92,
+     "koniec": 8.02
+    },
+    {
+     "tekst": "gotowy",
+     "start": 8.08,
+     "koniec": 8.42
+    },
+    {
+     "tekst": "tekst",
+     "start": 8.48,
+     "koniec": 8.9
+    },
+    {
+     "tekst": "razem",
+     "start": 9.04,
+     "koniec": 9.3
+    },
+    {
+     "tekst": "z",
+     "start": 9.32,
+     "koniec": 9.36
+    },
+    {
+     "tekst": "Twoim",
+     "start": 9.4,
+     "koniec": 9.68
+    },
+    {
+     "tekst": "linkiem.",
+     "start": 9.72,
+     "koniec": 10.24
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 50.34,
+   "audio": "nagranie/s5.wav",
+   "czas": 9.26,
+   "slowa": [
+    {
+     "tekst": "Trzecia",
+     "start": 0.12,
+     "koniec": 0.74
+    },
+    {
+     "tekst": "to",
+     "start": 0.82,
+     "koniec": 1.04
+    },
+    {
+     "tekst": "gotowe",
+     "start": 1.12,
+     "koniec": 1.44
+    },
+    {
+     "tekst": "wiadomości",
+     "start": 1.48,
+     "koniec": 2.1
+    },
+    {
+     "tekst": "na",
+     "start": 2.16,
+     "koniec": 2.22
+    },
+    {
+     "tekst": "Messengera,",
+     "start": 2.28,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "WhatsAppa",
+     "start": 3.1,
+     "koniec": 3.62
+    },
+    {
+     "tekst": "albo",
+     "start": 4.14,
+     "koniec": 4.4
+    },
+    {
+     "tekst": "pod",
+     "start": 4.44,
+     "koniec": 4.68
+    },
+    {
+     "tekst": "post.",
+     "start": 4.74,
+     "koniec": 5.14
+    },
+    {
+     "tekst": "Skopiuj,",
+     "start": 5.66,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "dopisz",
+     "start": 6.64,
+     "koniec": 6.94
+    },
+    {
+     "tekst": "coś",
+     "start": 6.98,
+     "koniec": 7.14
+    },
+    {
+     "tekst": "od",
+     "start": 7.18,
+     "koniec": 7.3
+    },
+    {
+     "tekst": "siebie",
+     "start": 7.34,
+     "koniec": 8.06
+    },
+    {
+     "tekst": "i",
+     "start": 8.2,
+     "koniec": 8.44
+    },
+    {
+     "tekst": "wysyłaj.",
+     "start": 8.5,
+     "koniec": 9.04
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 60.2,
+   "audio": "nagranie/s6.wav",
+   "czas": 4.48,
+   "slowa": [
+    {
+     "tekst": "Otwarta",
+     "start": 0.12,
+     "koniec": 0.74
+    },
+    {
+     "tekst": "jest",
+     "start": 0.84,
+     "koniec": 0.98
+    },
+    {
+     "tekst": "zawsze",
+     "start": 1.04,
+     "koniec": 1.32
+    },
+    {
+     "tekst": "tylko",
+     "start": 1.36,
+     "koniec": 1.64
+    },
+    {
+     "tekst": "jedna",
+     "start": 1.68,
+     "koniec": 1.94
+    },
+    {
+     "tekst": "zakładka",
+     "start": 1.98,
+     "koniec": 2.44
+    },
+    {
+     "tekst": "na",
+     "start": 2.5,
+     "koniec": 2.58
+    },
+    {
+     "tekst": "raz,",
+     "start": 2.62,
+     "koniec": 2.86
+    },
+    {
+     "tekst": "żeby",
+     "start": 2.9,
+     "koniec": 3.08
+    },
+    {
+     "tekst": "Cię",
+     "start": 3.12,
+     "koniec": 3.22
+    },
+    {
+     "tekst": "nic",
+     "start": 3.26,
+     "koniec": 3.38
+    },
+    {
+     "tekst": "nie",
+     "start": 3.42,
+     "koniec": 3.5
+    },
+    {
+     "tekst": "rozpraszało.",
+     "start": 3.52,
+     "koniec": 4.26
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 65.28,
+   "audio": "nagranie/s7.wav",
+   "czas": 9.66,
+   "slowa": [
+    {
+     "tekst": "Każdy",
+     "start": 0.12,
+     "koniec": 0.5
+    },
+    {
+     "tekst": "link",
+     "start": 0.56,
+     "koniec": 0.8
+    },
+    {
+     "tekst": "pamięta,",
+     "start": 0.84,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "że",
+     "start": 1.7,
+     "koniec": 1.8
+    },
+    {
+     "tekst": "to",
+     "start": 1.86,
+     "koniec": 1.96
+    },
+    {
+     "tekst": "Ty",
+     "start": 2.14,
+     "koniec": 2.38
+    },
+    {
+     "tekst": "zaprosiłeś.",
+     "start": 2.44,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "Kto",
+     "start": 3.86,
+     "koniec": 4.06
+    },
+    {
+     "tekst": "się",
+     "start": 4.12,
+     "koniec": 4.22
+    },
+    {
+     "tekst": "zapisze,",
+     "start": 4.26,
+     "koniec": 4.88
+    },
+    {
+     "tekst": "trafi",
+     "start": 4.96,
+     "koniec": 5.22
+    },
+    {
+     "tekst": "do",
+     "start": 5.26,
+     "koniec": 5.36
+    },
+    {
+     "tekst": "Twoich",
+     "start": 5.4,
+     "koniec": 5.74
+    },
+    {
+     "tekst": "kontaktów,",
+     "start": 5.8,
+     "koniec": 6.38
+    },
+    {
+     "tekst": "a",
+     "start": 6.92,
+     "koniec": 7.14
+    },
+    {
+     "tekst": "zakupy",
+     "start": 7.3,
+     "koniec": 8.02
+    },
+    {
+     "tekst": "pójdą",
+     "start": 8.08,
+     "koniec": 8.36
+    },
+    {
+     "tekst": "do",
+     "start": 8.4,
+     "koniec": 8.5
+    },
+    {
+     "tekst": "Twojego",
+     "start": 8.54,
+     "koniec": 8.94
+    },
+    {
+     "tekst": "sklepu.",
+     "start": 9.0,
+     "koniec": 9.44
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 75.54,
+   "audio": "nagranie/s8.wav",
+   "czas": 8.3,
+   "slowa": [
+    {
+     "tekst": "Dobierz",
+     "start": 0.12,
+     "koniec": 0.5
+    },
+    {
+     "tekst": "lejek",
+     "start": 0.6,
+     "koniec": 0.94
+    },
+    {
+     "tekst": "do",
+     "start": 0.98,
+     "koniec": 1.08
+    },
+    {
+     "tekst": "osoby,",
+     "start": 1.16,
+     "koniec": 1.58
+    },
+    {
+     "tekst": "a",
+     "start": 1.96,
+     "koniec": 2.02
+    },
+    {
+     "tekst": "nie",
+     "start": 2.1,
+     "koniec": 2.34
+    },
+    {
+     "tekst": "osobę",
+     "start": 2.44,
+     "koniec": 2.74
+    },
+    {
+     "tekst": "do",
+     "start": 2.8,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "lejka",
+     "start": 2.92,
+     "koniec": 3.56
+    },
+    {
+     "tekst": "i",
+     "start": 3.7,
+     "koniec": 3.78
+    },
+    {
+     "tekst": "wysyłaj",
+     "start": 4.24,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "jeszcze",
+     "start": 5.28,
+     "koniec": 5.58
+    },
+    {
+     "tekst": "dzisiaj",
+     "start": 5.62,
+     "koniec": 6.2
+    },
+    {
+     "tekst": "co",
+     "start": 6.28,
+     "koniec": 6.38
+    },
+    {
+     "tekst": "najmniej",
+     "start": 6.42,
+     "koniec": 6.76
+    },
+    {
+     "tekst": "do",
+     "start": 6.82,
+     "koniec": 6.9
+    },
+    {
+     "tekst": "jednej",
+     "start": 6.94,
+     "koniec": 7.24
+    },
+    {
+     "tekst": "osoby",
+     "start": 7.32,
+     "koniec": 7.6
+    },
+    {
+     "tekst": "dziennie.",
+     "start": 7.64,
+     "koniec": 8.08
+    }
+   ]
+  }
+ ],
+ "calosc": 85.64
+}

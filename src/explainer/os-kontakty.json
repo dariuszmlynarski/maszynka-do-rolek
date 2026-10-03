@@ -1,0 +1,777 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "nagranie/s1.wav",
+   "czas": 13.06,
+   "slowa": [
+    {
+     "tekst": "Kontakty",
+     "start": 0.12,
+     "koniec": 0.86
+    },
+    {
+     "tekst": "na",
+     "start": 1.12,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "CzasNaWellU",
+     "start": 1.4,
+     "koniec": 1.62
+    },
+    {
+     "tekst": "to",
+     "start": 2.44,
+     "koniec": 2.54
+    },
+    {
+     "tekst": "Twoja",
+     "start": 2.6,
+     "koniec": 3.0
+    },
+    {
+     "tekst": "tablica,",
+     "start": 3.24,
+     "koniec": 3.72
+    },
+    {
+     "tekst": "Twój",
+     "start": 3.94,
+     "koniec": 4.24
+    },
+    {
+     "tekst": "proces,",
+     "start": 4.28,
+     "koniec": 4.74
+    },
+    {
+     "tekst": "Twoje",
+     "start": 4.92,
+     "koniec": 5.2
+    },
+    {
+     "tekst": "centrum",
+     "start": 5.26,
+     "koniec": 5.58
+    },
+    {
+     "tekst": "dowodzenia.",
+     "start": 5.64,
+     "koniec": 6.12
+    },
+    {
+     "tekst": "Każda",
+     "start": 7.04,
+     "koniec": 7.44
+    },
+    {
+     "tekst": "karta",
+     "start": 7.5,
+     "koniec": 7.94
+    },
+    {
+     "tekst": "to",
+     "start": 8.2,
+     "koniec": 8.3
+    },
+    {
+     "tekst": "jedna",
+     "start": 8.34,
+     "koniec": 8.6
+    },
+    {
+     "tekst": "osoba,",
+     "start": 8.68,
+     "koniec": 9.02
+    },
+    {
+     "tekst": "a",
+     "start": 9.64,
+     "koniec": 9.76
+    },
+    {
+     "tekst": "kolumna",
+     "start": 9.82,
+     "koniec": 10.32
+    },
+    {
+     "tekst": "pokazuje,",
+     "start": 10.38,
+     "koniec": 10.96
+    },
+    {
+     "tekst": "na",
+     "start": 11.1,
+     "koniec": 11.219
+    },
+    {
+     "tekst": "jakim",
+     "start": 11.28,
+     "koniec": 11.54
+    },
+    {
+     "tekst": "etapie",
+     "start": 11.62,
+     "koniec": 12.0
+    },
+    {
+     "tekst": "jest",
+     "start": 12.02,
+     "koniec": 12.12
+    },
+    {
+     "tekst": "wasza",
+     "start": 12.18,
+     "koniec": 12.38
+    },
+    {
+     "tekst": "rozmowa.",
+     "start": 12.42,
+     "koniec": 12.84
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 14.06,
+   "audio": "nagranie/s2.wav",
+   "czas": 10.48,
+   "slowa": [
+    {
+     "tekst": "Nowy",
+     "start": 0.12,
+     "koniec": 0.32
+    },
+    {
+     "tekst": "kontakt.",
+     "start": 0.38,
+     "koniec": 0.88
+    },
+    {
+     "tekst": "Zaproszenie.",
+     "start": 1.26,
+     "koniec": 1.9
+    },
+    {
+     "tekst": "Follow",
+     "start": 2.3,
+     "koniec": 2.56
+    },
+    {
+     "tekst": "up.",
+     "start": 2.66,
+     "koniec": 2.9
+    },
+    {
+     "tekst": "I",
+     "start": 3.34,
+     "koniec": 3.4
+    },
+    {
+     "tekst": "tak",
+     "start": 3.44,
+     "koniec": 3.92
+    },
+    {
+     "tekst": "trzy",
+     "start": 4.0,
+     "koniec": 4.2
+    },
+    {
+     "tekst": "etapy",
+     "start": 4.28,
+     "koniec": 4.58
+    },
+    {
+     "tekst": "końcowe.",
+     "start": 4.62,
+     "koniec": 5.08
+    },
+    {
+     "tekst": "Tak,",
+     "start": 5.34,
+     "koniec": 5.6
+    },
+    {
+     "tekst": "partner.",
+     "start": 6.38,
+     "koniec": 7.0
+    },
+    {
+     "tekst": "Tak,",
+     "start": 7.8,
+     "koniec": 8.2
+    },
+    {
+     "tekst": "klient",
+     "start": 8.28,
+     "koniec": 8.8
+    },
+    {
+     "tekst": "albo",
+     "start": 9.56,
+     "koniec": 9.8
+    },
+    {
+     "tekst": "nie.",
+     "start": 9.88,
+     "koniec": 10.26
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 25.14,
+   "audio": "nagranie/s3.wav",
+   "czas": 6.04,
+   "slowa": [
+    {
+     "tekst": "Kartę",
+     "start": 0.12,
+     "koniec": 0.38
+    },
+    {
+     "tekst": "przeciągasz",
+     "start": 0.42,
+     "koniec": 0.94
+    },
+    {
+     "tekst": "dalej,",
+     "start": 1.0,
+     "koniec": 1.3
+    },
+    {
+     "tekst": "gdy",
+     "start": 1.38,
+     "koniec": 1.48
+    },
+    {
+     "tekst": "rozmowa",
+     "start": 1.52,
+     "koniec": 1.92
+    },
+    {
+     "tekst": "idzie",
+     "start": 1.98,
+     "koniec": 2.12
+    },
+    {
+     "tekst": "do",
+     "start": 2.16,
+     "koniec": 2.24
+    },
+    {
+     "tekst": "przodu.",
+     "start": 2.28,
+     "koniec": 2.64
+    },
+    {
+     "tekst": "Tablica",
+     "start": 3.2,
+     "koniec": 3.88
+    },
+    {
+     "tekst": "zapamiętuje,",
+     "start": 4.06,
+     "koniec": 4.82
+    },
+    {
+     "tekst": "kiedy",
+     "start": 4.94,
+     "koniec": 5.14
+    },
+    {
+     "tekst": "to",
+     "start": 5.18,
+     "koniec": 5.26
+    },
+    {
+     "tekst": "zrobiłeś.",
+     "start": 5.3,
+     "koniec": 5.82
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 31.78,
+   "audio": "nagranie/s4.wav",
+   "czas": 5.7,
+   "slowa": [
+    {
+     "tekst": "Kliknij",
+     "start": 0.12,
+     "koniec": 0.52
+    },
+    {
+     "tekst": "kartę,",
+     "start": 0.58,
+     "koniec": 1.02
+    },
+    {
+     "tekst": "a",
+     "start": 1.1,
+     "koniec": 1.16
+    },
+    {
+     "tekst": "zobaczysz",
+     "start": 1.22,
+     "koniec": 1.64
+    },
+    {
+     "tekst": "szczegóły",
+     "start": 1.64,
+     "koniec": 2.34
+    },
+    {
+     "tekst": "kim",
+     "start": 2.42,
+     "koniec": 2.56
+    },
+    {
+     "tekst": "jest",
+     "start": 2.6,
+     "koniec": 2.72
+    },
+    {
+     "tekst": "ta",
+     "start": 2.78,
+     "koniec": 2.86
+    },
+    {
+     "tekst": "osoba,",
+     "start": 2.92,
+     "koniec": 3.36
+    },
+    {
+     "tekst": "skąd",
+     "start": 3.5,
+     "koniec": 3.74
+    },
+    {
+     "tekst": "przyszła",
+     "start": 3.8,
+     "koniec": 4.38
+    },
+    {
+     "tekst": "i",
+     "start": 4.44,
+     "koniec": 4.5
+    },
+    {
+     "tekst": "z",
+     "start": 4.54,
+     "koniec": 4.56
+    },
+    {
+     "tekst": "jakim",
+     "start": 4.62,
+     "koniec": 4.88
+    },
+    {
+     "tekst": "wynikiem.",
+     "start": 4.92,
+     "koniec": 5.48
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 38.08,
+   "audio": "nagranie/s5.wav",
+   "czas": 5.66,
+   "slowa": [
+    {
+     "tekst": "W",
+     "start": 0.12,
+     "koniec": 0.16
+    },
+    {
+     "tekst": "notatkach",
+     "start": 0.2,
+     "koniec": 0.98
+    },
+    {
+     "tekst": "zapisujesz",
+     "start": 1.04,
+     "koniec": 1.62
+    },
+    {
+     "tekst": "ustalenia",
+     "start": 1.7,
+     "koniec": 2.2
+    },
+    {
+     "tekst": "po",
+     "start": 2.24,
+     "koniec": 2.32
+    },
+    {
+     "tekst": "każdej",
+     "start": 2.38,
+     "koniec": 2.64
+    },
+    {
+     "tekst": "rozmowie.",
+     "start": 2.68,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "Najważniejszą",
+     "start": 3.6,
+     "koniec": 4.38
+    },
+    {
+     "tekst": "przypinasz",
+     "start": 4.44,
+     "koniec": 4.9
+    },
+    {
+     "tekst": "na",
+     "start": 4.94,
+     "koniec": 5.02
+    },
+    {
+     "tekst": "górze.",
+     "start": 5.08,
+     "koniec": 5.44
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 44.34,
+   "audio": "nagranie/s6.wav",
+   "czas": 5.58,
+   "slowa": [
+    {
+     "tekst": "W",
+     "start": 0.12,
+     "koniec": 0.16
+    },
+    {
+     "tekst": "kolejnych",
+     "start": 0.2,
+     "koniec": 0.62
+    },
+    {
+     "tekst": "krokach",
+     "start": 0.68,
+     "koniec": 1.22
+    },
+    {
+     "tekst": "masz",
+     "start": 1.3,
+     "koniec": 1.56
+    },
+    {
+     "tekst": "podpowiedź,",
+     "start": 1.62,
+     "koniec": 2.22
+    },
+    {
+     "tekst": "co",
+     "start": 2.42,
+     "koniec": 2.56
+    },
+    {
+     "tekst": "zrobić",
+     "start": 2.6,
+     "koniec": 2.96
+    },
+    {
+     "tekst": "na",
+     "start": 3.0,
+     "koniec": 3.08
+    },
+    {
+     "tekst": "tym",
+     "start": 3.14,
+     "koniec": 3.24
+    },
+    {
+     "tekst": "etapie.",
+     "start": 3.3,
+     "koniec": 3.72
+    },
+    {
+     "tekst": "Odhaczasz",
+     "start": 3.98,
+     "koniec": 4.58
+    },
+    {
+     "tekst": "i",
+     "start": 4.66,
+     "koniec": 4.7
+    },
+    {
+     "tekst": "jedziesz",
+     "start": 4.74,
+     "koniec": 5.0
+    },
+    {
+     "tekst": "dalej.",
+     "start": 5.04,
+     "koniec": 5.36
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 50.52,
+   "audio": "nagranie/s7.wav",
+   "czas": 5.24,
+   "slowa": [
+    {
+     "tekst": "Znajomych,",
+     "start": 0.12,
+     "koniec": 0.7
+    },
+    {
+     "tekst": "z",
+     "start": 0.84,
+     "koniec": 0.86
+    },
+    {
+     "tekst": "którymi",
+     "start": 0.94,
+     "koniec": 1.42
+    },
+    {
+     "tekst": "już",
+     "start": 1.52,
+     "koniec": 1.68
+    },
+    {
+     "tekst": "rozmawiasz,",
+     "start": 1.72,
+     "koniec": 2.3
+    },
+    {
+     "tekst": "dodajesz",
+     "start": 2.62,
+     "koniec": 3.06
+    },
+    {
+     "tekst": "ręcznie",
+     "start": 3.12,
+     "koniec": 3.5
+    },
+    {
+     "tekst": "przyciskiem",
+     "start": 3.54,
+     "koniec": 4.08
+    },
+    {
+     "tekst": "„Dodaj",
+     "start": 4.12,
+     "koniec": 4.36
+    },
+    {
+     "tekst": "kontakt”.",
+     "start": 4.42,
+     "koniec": 5.02
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 56.36,
+   "audio": "nagranie/s8.wav",
+   "czas": 8.5,
+   "slowa": [
+    {
+     "tekst": "Statystyki",
+     "start": 0.12,
+     "koniec": 0.84
+    },
+    {
+     "tekst": "Postęp",
+     "start": 1.14,
+     "koniec": 1.74
+    },
+    {
+     "tekst": "i",
+     "start": 1.86,
+     "koniec": 2.0
+    },
+    {
+     "tekst": "ja",
+     "start": 2.28,
+     "koniec": 2.46
+    },
+    {
+     "tekst": "versus",
+     "start": 2.5,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "grupa",
+     "start": 2.94,
+     "koniec": 3.62
+    },
+    {
+     "tekst": "pokazują",
+     "start": 3.68,
+     "koniec": 4.2
+    },
+    {
+     "tekst": "Ci,",
+     "start": 4.26,
+     "koniec": 4.38
+    },
+    {
+     "tekst": "jak",
+     "start": 4.46,
+     "koniec": 4.64
+    },
+    {
+     "tekst": "Ci",
+     "start": 4.68,
+     "koniec": 4.8
+    },
+    {
+     "tekst": "idzie",
+     "start": 4.88,
+     "koniec": 5.04
+    },
+    {
+     "tekst": "w",
+     "start": 5.08,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "tym",
+     "start": 5.18,
+     "koniec": 5.3
+    },
+    {
+     "tekst": "miesiącu,",
+     "start": 5.34,
+     "koniec": 5.78
+    },
+    {
+     "tekst": "jak",
+     "start": 5.84,
+     "koniec": 5.96
+    },
+    {
+     "tekst": "wypadasz",
+     "start": 6.0,
+     "koniec": 6.42
+    },
+    {
+     "tekst": "na",
+     "start": 6.46,
+     "koniec": 6.52
+    },
+    {
+     "tekst": "tle",
+     "start": 6.56,
+     "koniec": 6.68
+    },
+    {
+     "tekst": "zespołu.",
+     "start": 6.72,
+     "koniec": 7.26
+    },
+    {
+     "tekst": "Anonimowo.",
+     "start": 7.62,
+     "koniec": 8.28
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 65.46,
+   "audio": "nagranie/s9.wav",
+   "czas": 7.12,
+   "slowa": [
+    {
+     "tekst": "Tablica",
+     "start": 0.12,
+     "koniec": 0.56
+    },
+    {
+     "tekst": "pomaga",
+     "start": 0.6,
+     "koniec": 1.02
+    },
+    {
+     "tekst": "tylko",
+     "start": 1.08,
+     "koniec": 1.34
+    },
+    {
+     "tekst": "wtedy,",
+     "start": 1.4,
+     "koniec": 1.78
+    },
+    {
+     "tekst": "kiedy",
+     "start": 1.84,
+     "koniec": 2.04
+    },
+    {
+     "tekst": "ją",
+     "start": 2.08,
+     "koniec": 2.22
+    },
+    {
+     "tekst": "ruszasz",
+     "start": 2.26,
+     "koniec": 2.64
+    },
+    {
+     "tekst": "pięć",
+     "start": 3.48,
+     "koniec": 3.7
+    },
+    {
+     "tekst": "minut",
+     "start": 3.74,
+     "koniec": 4.0
+    },
+    {
+     "tekst": "dziennie",
+     "start": 4.04,
+     "koniec": 4.7
+    },
+    {
+     "tekst": "i",
+     "start": 4.82,
+     "koniec": 5.14
+    },
+    {
+     "tekst": "żadna",
+     "start": 5.22,
+     "koniec": 5.5
+    },
+    {
+     "tekst": "rozmowa",
+     "start": 5.54,
+     "koniec": 5.98
+    },
+    {
+     "tekst": "Ci",
+     "start": 6.04,
+     "koniec": 6.14
+    },
+    {
+     "tekst": "nie",
+     "start": 6.2,
+     "koniec": 6.32
+    },
+    {
+     "tekst": "ucieknie.",
+     "start": 6.38,
+     "koniec": 6.9
+    }
+   ]
+  }
+ ],
+ "calosc": 74.38
+}
