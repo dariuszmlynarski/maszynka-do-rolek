@@ -1,0 +1,1006 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "nagranie/s1.wav",
+   "czas": 9.66,
+   "slowa": [
+    {
+     "tekst": "Przez",
+     "start": 0.12,
+     "koniec": 0.32
+    },
+    {
+     "tekst": "ostatnie",
+     "start": 0.38,
+     "koniec": 0.82
+    },
+    {
+     "tekst": "kilka",
+     "start": 0.86,
+     "koniec": 1.16
+    },
+    {
+     "tekst": "dni",
+     "start": 1.22,
+     "koniec": 1.48
+    },
+    {
+     "tekst": "platforma",
+     "start": 1.52,
+     "koniec": 2.12
+    },
+    {
+     "tekst": "CzasNaWellU",
+     "start": 2.16,
+     "koniec": 2.36
+    },
+    {
+     "tekst": "przeszła",
+     "start": 2.94,
+     "koniec": 3.42
+    },
+    {
+     "tekst": "dużą",
+     "start": 3.82,
+     "koniec": 4.12
+    },
+    {
+     "tekst": "metamorfozę.",
+     "start": 4.16,
+     "koniec": 4.88
+    },
+    {
+     "tekst": "W",
+     "start": 5.56,
+     "koniec": 5.6
+    },
+    {
+     "tekst": "kilka",
+     "start": 5.64,
+     "koniec": 5.92
+    },
+    {
+     "tekst": "minut",
+     "start": 5.96,
+     "koniec": 6.22
+    },
+    {
+     "tekst": "pokażę",
+     "start": 6.279,
+     "koniec": 6.64
+    },
+    {
+     "tekst": "Ci,",
+     "start": 6.7,
+     "koniec": 6.82
+    },
+    {
+     "tekst": "co",
+     "start": 6.9,
+     "koniec": 7.02
+    },
+    {
+     "tekst": "się",
+     "start": 7.04,
+     "koniec": 7.16
+    },
+    {
+     "tekst": "zmieniło",
+     "start": 7.2,
+     "koniec": 7.84
+    },
+    {
+     "tekst": "i",
+     "start": 7.96,
+     "koniec": 8.16
+    },
+    {
+     "tekst": "co",
+     "start": 8.26,
+     "koniec": 8.38
+    },
+    {
+     "tekst": "z",
+     "start": 8.44,
+     "koniec": 8.46
+    },
+    {
+     "tekst": "tego",
+     "start": 8.52,
+     "koniec": 8.74
+    },
+    {
+     "tekst": "będziesz",
+     "start": 8.78,
+     "koniec": 9.12
+    },
+    {
+     "tekst": "mieć.",
+     "start": 9.18,
+     "koniec": 9.44
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 10.66,
+   "audio": "nagranie/s2.wav",
+   "czas": 10.54,
+   "slowa": [
+    {
+     "tekst": "Zacznijmy",
+     "start": 0.12,
+     "koniec": 0.58
+    },
+    {
+     "tekst": "od",
+     "start": 0.6,
+     "koniec": 0.7
+    },
+    {
+     "tekst": "tego,",
+     "start": 0.76,
+     "koniec": 0.96
+    },
+    {
+     "tekst": "co",
+     "start": 1.08,
+     "koniec": 1.2
+    },
+    {
+     "tekst": "widzą",
+     "start": 1.24,
+     "koniec": 1.54
+    },
+    {
+     "tekst": "Twoi",
+     "start": 1.58,
+     "koniec": 1.84
+    },
+    {
+     "tekst": "goście.",
+     "start": 1.92,
+     "koniec": 2.3
+    },
+    {
+     "tekst": "Strona",
+     "start": 2.98,
+     "koniec": 3.32
+    },
+    {
+     "tekst": "główna",
+     "start": 3.38,
+     "koniec": 3.919
+    },
+    {
+     "tekst": "jest",
+     "start": 4.0,
+     "koniec": 4.14
+    },
+    {
+     "tekst": "zupełnie",
+     "start": 4.18,
+     "koniec": 4.6
+    },
+    {
+     "tekst": "nowa",
+     "start": 4.64,
+     "koniec": 5.22
+    },
+    {
+     "tekst": "i",
+     "start": 5.3,
+     "koniec": 5.36
+    },
+    {
+     "tekst": "prowadzi",
+     "start": 5.4,
+     "koniec": 5.8
+    },
+    {
+     "tekst": "w",
+     "start": 5.84,
+     "koniec": 5.86
+    },
+    {
+     "tekst": "tej",
+     "start": 5.92,
+     "koniec": 6.06
+    },
+    {
+     "tekst": "chwili",
+     "start": 6.1,
+     "koniec": 6.38
+    },
+    {
+     "tekst": "prosto",
+     "start": 6.44,
+     "koniec": 6.94
+    },
+    {
+     "tekst": "do",
+     "start": 7.48,
+     "koniec": 7.76
+    },
+    {
+     "tekst": "zaproszenia",
+     "start": 7.9,
+     "koniec": 8.7
+    },
+    {
+     "tekst": "do",
+     "start": 8.78,
+     "koniec": 8.84
+    },
+    {
+     "tekst": "obejrzenia",
+     "start": 8.88,
+     "koniec": 9.3
+    },
+    {
+     "tekst": "prezentacji",
+     "start": 9.34,
+     "koniec": 9.96
+    },
+    {
+     "tekst": "WellU.",
+     "start": 10.0,
+     "koniec": 10.32
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 21.8,
+   "audio": "nagranie/s3.wav",
+   "czas": 22.86,
+   "slowa": [
+    {
+     "tekst": "Pod",
+     "start": 0.12,
+     "koniec": 0.26
+    },
+    {
+     "tekst": "każdym",
+     "start": 0.32,
+     "koniec": 0.62
+    },
+    {
+     "tekst": "wpisem",
+     "start": 0.68,
+     "koniec": 1.06
+    },
+    {
+     "tekst": "na",
+     "start": 1.12,
+     "koniec": 1.2
+    },
+    {
+     "tekst": "blogu",
+     "start": 1.26,
+     "koniec": 1.98
+    },
+    {
+     "tekst": "jest",
+     "start": 2.12,
+     "koniec": 2.3
+    },
+    {
+     "tekst": "teraz",
+     "start": 2.36,
+     "koniec": 2.94
+    },
+    {
+     "tekst": "zapis",
+     "start": 3.04,
+     "koniec": 3.36
+    },
+    {
+     "tekst": "na",
+     "start": 3.42,
+     "koniec": 3.48
+    },
+    {
+     "tekst": "tę",
+     "start": 3.54,
+     "koniec": 3.66
+    },
+    {
+     "tekst": "prezentację,",
+     "start": 3.7,
+     "koniec": 4.36
+    },
+    {
+     "tekst": "a",
+     "start": 5.4,
+     "koniec": 5.48
+    },
+    {
+     "tekst": "produkty,",
+     "start": 5.54,
+     "koniec": 6.02
+    },
+    {
+     "tekst": "o",
+     "start": 6.08,
+     "koniec": 6.14
+    },
+    {
+     "tekst": "których",
+     "start": 6.2,
+     "koniec": 6.54
+    },
+    {
+     "tekst": "mowa",
+     "start": 6.62,
+     "koniec": 7.08
+    },
+    {
+     "tekst": "we",
+     "start": 7.14,
+     "koniec": 7.22
+    },
+    {
+     "tekst": "wpisie,",
+     "start": 7.28,
+     "koniec": 7.68
+    },
+    {
+     "tekst": "pokazują",
+     "start": 7.819,
+     "koniec": 8.38
+    },
+    {
+     "tekst": "się",
+     "start": 8.42,
+     "koniec": 8.54
+    },
+    {
+     "tekst": "same",
+     "start": 8.62,
+     "koniec": 8.84
+    },
+    {
+     "tekst": "z",
+     "start": 8.88,
+     "koniec": 8.9
+    },
+    {
+     "tekst": "automatu",
+     "start": 8.96,
+     "koniec": 9.52
+    },
+    {
+     "tekst": "z",
+     "start": 10.16,
+     "koniec": 10.2
+    },
+    {
+     "tekst": "linkiem",
+     "start": 10.26,
+     "koniec": 10.62
+    },
+    {
+     "tekst": "do",
+     "start": 10.66,
+     "koniec": 10.74
+    },
+    {
+     "tekst": "sklepu",
+     "start": 10.8,
+     "koniec": 11.24
+    },
+    {
+     "tekst": "z",
+     "start": 12.06,
+     "koniec": 12.08
+    },
+    {
+     "tekst": "zachowaniem",
+     "start": 12.14,
+     "koniec": 12.7
+    },
+    {
+     "tekst": "Twojego",
+     "start": 12.76,
+     "koniec": 13.22
+    },
+    {
+     "tekst": "polecenia.",
+     "start": 13.28,
+     "koniec": 13.84
+    },
+    {
+     "tekst": "Blog",
+     "start": 16.58,
+     "koniec": 16.84
+    },
+    {
+     "tekst": "stał",
+     "start": 16.92,
+     "koniec": 17.14
+    },
+    {
+     "tekst": "się",
+     "start": 17.18,
+     "koniec": 17.28
+    },
+    {
+     "tekst": "tym",
+     "start": 17.34,
+     "koniec": 17.48
+    },
+    {
+     "tekst": "samym",
+     "start": 17.54,
+     "koniec": 17.86
+    },
+    {
+     "tekst": "kolejnym",
+     "start": 17.92,
+     "koniec": 18.4
+    },
+    {
+     "tekst": "bardzo",
+     "start": 18.94,
+     "koniec": 19.36
+    },
+    {
+     "tekst": "silnym",
+     "start": 19.92,
+     "koniec": 20.56
+    },
+    {
+     "tekst": "wejściem",
+     "start": 20.64,
+     "koniec": 21.24
+    },
+    {
+     "tekst": "do",
+     "start": 21.32,
+     "koniec": 21.42
+    },
+    {
+     "tekst": "lejka",
+     "start": 21.46,
+     "koniec": 21.74
+    },
+    {
+     "tekst": "marketingowego.",
+     "start": 21.78,
+     "koniec": 22.64
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 45.26,
+   "audio": "nagranie/s4.wav",
+   "czas": 6.38,
+   "slowa": [
+    {
+     "tekst": "Po",
+     "start": 0.12,
+     "koniec": 0.22
+    },
+    {
+     "tekst": "zalogowaniu",
+     "start": 0.26,
+     "koniec": 1.18
+    },
+    {
+     "tekst": "wita",
+     "start": 1.24,
+     "koniec": 1.48
+    },
+    {
+     "tekst": "Cię",
+     "start": 1.52,
+     "koniec": 1.64
+    },
+    {
+     "tekst": "nowy",
+     "start": 1.68,
+     "koniec": 1.88
+    },
+    {
+     "tekst": "dashboard.",
+     "start": 1.92,
+     "koniec": 2.5
+    },
+    {
+     "tekst": "Prowadzi",
+     "start": 2.84,
+     "koniec": 3.22
+    },
+    {
+     "tekst": "Cię",
+     "start": 3.26,
+     "koniec": 3.38
+    },
+    {
+     "tekst": "krok",
+     "start": 3.44,
+     "koniec": 3.64
+    },
+    {
+     "tekst": "po",
+     "start": 3.68,
+     "koniec": 3.78
+    },
+    {
+     "tekst": "kroku",
+     "start": 3.84,
+     "koniec": 4.12
+    },
+    {
+     "tekst": "przez",
+     "start": 4.16,
+     "koniec": 4.34
+    },
+    {
+     "tekst": "start",
+     "start": 4.44,
+     "koniec": 4.78
+    },
+    {
+     "tekst": "i",
+     "start": 4.84,
+     "koniec": 4.9
+    },
+    {
+     "tekst": "pokazuje",
+     "start": 4.94,
+     "koniec": 5.44
+    },
+    {
+     "tekst": "Twoje",
+     "start": 5.48,
+     "koniec": 5.76
+    },
+    {
+     "tekst": "liczby.",
+     "start": 5.8,
+     "koniec": 6.16
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 52.24,
+   "audio": "nagranie/s5.wav",
+   "czas": 12.78,
+   "slowa": [
+    {
+     "tekst": "Na",
+     "start": 0.12,
+     "koniec": 0.22
+    },
+    {
+     "tekst": "stronie",
+     "start": 0.3,
+     "koniec": 0.66
+    },
+    {
+     "tekst": "Lejki",
+     "start": 1.12,
+     "koniec": 1.58
+    },
+    {
+     "tekst": "masz",
+     "start": 2.04,
+     "koniec": 2.42
+    },
+    {
+     "tekst": "gotowe",
+     "start": 2.48,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "lejki",
+     "start": 2.94,
+     "koniec": 3.24
+    },
+    {
+     "tekst": "marketingowe,",
+     "start": 3.3,
+     "koniec": 4.0
+    },
+    {
+     "tekst": "linki",
+     "start": 4.46,
+     "koniec": 4.76
+    },
+    {
+     "tekst": "z",
+     "start": 4.8,
+     "koniec": 4.82
+    },
+    {
+     "tekst": "Twoim",
+     "start": 4.88,
+     "koniec": 5.18
+    },
+    {
+     "tekst": "kodem",
+     "start": 5.22,
+     "koniec": 5.48
+    },
+    {
+     "tekst": "polecającym,",
+     "start": 5.52,
+     "koniec": 6.28
+    },
+    {
+     "tekst": "grafiki,",
+     "start": 6.66,
+     "koniec": 7.18
+    },
+    {
+     "tekst": "gotowe",
+     "start": 7.58,
+     "koniec": 7.899
+    },
+    {
+     "tekst": "wiadomości.",
+     "start": 7.92,
+     "koniec": 8.64
+    },
+    {
+     "tekst": "Kontakty",
+     "start": 9.86,
+     "koniec": 10.36
+    },
+    {
+     "tekst": "i",
+     "start": 10.38,
+     "koniec": 10.44
+    },
+    {
+     "tekst": "zadania",
+     "start": 10.5,
+     "koniec": 11.2
+    },
+    {
+     "tekst": "dostały",
+     "start": 11.26,
+     "koniec": 11.66
+    },
+    {
+     "tekst": "też",
+     "start": 11.72,
+     "koniec": 11.86
+    },
+    {
+     "tekst": "nowy",
+     "start": 11.92,
+     "koniec": 12.14
+    },
+    {
+     "tekst": "wygląd.",
+     "start": 12.18,
+     "koniec": 12.56
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 65.62,
+   "audio": "nagranie/s6.wav",
+   "czas": 13.82,
+   "slowa": [
+    {
+     "tekst": "Przy",
+     "start": 0.12,
+     "koniec": 0.3
+    },
+    {
+     "tekst": "każdym",
+     "start": 0.36,
+     "koniec": 0.7
+    },
+    {
+     "tekst": "z",
+     "start": 0.74,
+     "koniec": 0.76
+    },
+    {
+     "tekst": "tych",
+     "start": 0.82,
+     "koniec": 0.94
+    },
+    {
+     "tekst": "narzędzi",
+     "start": 0.98,
+     "koniec": 1.44
+    },
+    {
+     "tekst": "czeka",
+     "start": 1.46,
+     "koniec": 1.72
+    },
+    {
+     "tekst": "krótki",
+     "start": 1.78,
+     "koniec": 2.14
+    },
+    {
+     "tekst": "film,",
+     "start": 2.28,
+     "koniec": 2.52
+    },
+    {
+     "tekst": "który",
+     "start": 2.58,
+     "koniec": 2.82
+    },
+    {
+     "tekst": "pokazuje",
+     "start": 2.86,
+     "koniec": 3.58
+    },
+    {
+     "tekst": "jak",
+     "start": 3.74,
+     "koniec": 3.92
+    },
+    {
+     "tekst": "z",
+     "start": 3.96,
+     "koniec": 3.98
+    },
+    {
+     "tekst": "niego",
+     "start": 4.02,
+     "koniec": 4.26
+    },
+    {
+     "tekst": "korzystać.",
+     "start": 4.3,
+     "koniec": 4.96
+    },
+    {
+     "tekst": "Obejrzyj",
+     "start": 5.66,
+     "koniec": 6.1
+    },
+    {
+     "tekst": "całe",
+     "start": 6.14,
+     "koniec": 6.38
+    },
+    {
+     "tekst": "serie.",
+     "start": 6.44,
+     "koniec": 6.96
+    },
+    {
+     "tekst": "To",
+     "start": 7.6,
+     "koniec": 7.68
+    },
+    {
+     "tekst": "niecałe",
+     "start": 7.72,
+     "koniec": 8.08
+    },
+    {
+     "tekst": "dziesięć",
+     "start": 8.1,
+     "koniec": 8.46
+    },
+    {
+     "tekst": "minut,",
+     "start": 8.5,
+     "koniec": 8.82
+    },
+    {
+     "tekst": "a",
+     "start": 9.08,
+     "koniec": 9.4
+    },
+    {
+     "tekst": "odświeżysz",
+     "start": 9.48,
+     "koniec": 10.08
+    },
+    {
+     "tekst": "sobie",
+     "start": 10.14,
+     "koniec": 10.48
+    },
+    {
+     "tekst": "korzystanie",
+     "start": 11.04,
+     "koniec": 11.54
+    },
+    {
+     "tekst": "z",
+     "start": 11.58,
+     "koniec": 11.62
+    },
+    {
+     "tekst": "platformy",
+     "start": 11.66,
+     "koniec": 12.26
+    },
+    {
+     "tekst": "bardzo",
+     "start": 12.74,
+     "koniec": 12.98
+    },
+    {
+     "tekst": "dokładnie.",
+     "start": 13.02,
+     "koniec": 13.6
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 80.04,
+   "audio": "nagranie/s7.wav",
+   "czas": 13.66,
+   "slowa": [
+    {
+     "tekst": "A",
+     "start": 0.12,
+     "koniec": 0.16
+    },
+    {
+     "tekst": "potem",
+     "start": 0.2,
+     "koniec": 0.42
+    },
+    {
+     "tekst": "testuj.",
+     "start": 0.48,
+     "koniec": 0.96
+    },
+    {
+     "tekst": "Wyślij",
+     "start": 1.98,
+     "koniec": 2.26
+    },
+    {
+     "tekst": "pierwszy",
+     "start": 2.32,
+     "koniec": 2.64
+    },
+    {
+     "tekst": "lejek,",
+     "start": 2.7,
+     "koniec": 3.0
+    },
+    {
+     "tekst": "zajrzyj",
+     "start": 3.82,
+     "koniec": 4.18
+    },
+    {
+     "tekst": "do",
+     "start": 4.22,
+     "koniec": 4.3
+    },
+    {
+     "tekst": "dashboardu",
+     "start": 4.34,
+     "koniec": 4.98
+    },
+    {
+     "tekst": "i",
+     "start": 5.02,
+     "koniec": 5.08
+    },
+    {
+     "tekst": "daj",
+     "start": 5.12,
+     "koniec": 5.28
+    },
+    {
+     "tekst": "znać",
+     "start": 5.32,
+     "koniec": 5.58
+    },
+    {
+     "tekst": "co",
+     "start": 5.64,
+     "koniec": 5.74
+    },
+    {
+     "tekst": "działa,",
+     "start": 5.76,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "a",
+     "start": 6.24,
+     "koniec": 6.32
+    },
+    {
+     "tekst": "co",
+     "start": 6.4,
+     "koniec": 6.54
+    },
+    {
+     "tekst": "warto",
+     "start": 6.58,
+     "koniec": 7.34
+    },
+    {
+     "tekst": "poprawić.",
+     "start": 7.4,
+     "koniec": 8.06
+    },
+    {
+     "tekst": "Pamiętaj,",
+     "start": 9.4,
+     "koniec": 9.8
+    },
+    {
+     "tekst": "że",
+     "start": 9.84,
+     "koniec": 9.94
+    },
+    {
+     "tekst": "ta",
+     "start": 9.98,
+     "koniec": 10.08
+    },
+    {
+     "tekst": "platforma",
+     "start": 10.12,
+     "koniec": 10.6
+    },
+    {
+     "tekst": "jest",
+     "start": 10.64,
+     "koniec": 10.78
+    },
+    {
+     "tekst": "dla",
+     "start": 10.82,
+     "koniec": 10.94
+    },
+    {
+     "tekst": "Ciebie",
+     "start": 10.98,
+     "koniec": 11.66
+    },
+    {
+     "tekst": "i",
+     "start": 11.72,
+     "koniec": 11.76
+    },
+    {
+     "tekst": "tworzymy",
+     "start": 11.8,
+     "koniec": 12.26
+    },
+    {
+     "tekst": "ją",
+     "start": 12.3,
+     "koniec": 12.48
+    },
+    {
+     "tekst": "pod",
+     "start": 12.52,
+     "koniec": 12.64
+    },
+    {
+     "tekst": "nasze",
+     "start": 12.68,
+     "koniec": 12.92
+    },
+    {
+     "tekst": "potrzeby.",
+     "start": 12.96,
+     "koniec": 13.44
+    }
+   ]
+  }
+ ],
+ "calosc": 95.5
+}
