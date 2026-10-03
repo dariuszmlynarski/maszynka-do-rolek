@@ -1,0 +1,723 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "audio/s1-c.mp3",
+   "czas": 4.159,
+   "slowa": [
+    {
+     "tekst": "Pusta",
+     "start": 0,
+     "koniec": 0.348
+    },
+    {
+     "tekst": "tablica",
+     "start": 0.395,
+     "koniec": 0.778
+    },
+    {
+     "tekst": "kontaktów?",
+     "start": 0.836,
+     "koniec": 1.509
+    },
+    {
+     "tekst": "Nic",
+     "start": 1.567,
+     "koniec": 1.776
+    },
+    {
+     "tekst": "dziwnego,",
+     "start": 1.8,
+     "koniec": 2.264
+    },
+    {
+     "tekst": "skoro",
+     "start": 2.287,
+     "koniec": 2.601
+    },
+    {
+     "tekst": "nic",
+     "start": 2.67,
+     "koniec": 2.844
+    },
+    {
+     "tekst": "jej",
+     "start": 2.961,
+     "koniec": 3.053
+    },
+    {
+     "tekst": "jeszcze",
+     "start": 3.123,
+     "koniec": 3.39
+    },
+    {
+     "tekst": "nie",
+     "start": 3.425,
+     "koniec": 3.518
+    },
+    {
+     "tekst": "zasila.",
+     "start": 3.564,
+     "koniec": 4.159
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 5.159,
+   "audio": "audio/s2-c.mp3",
+   "czas": 7.24,
+   "slowa": [
+    {
+     "tekst": "Lejek",
+     "start": 0,
+     "koniec": 0.36
+    },
+    {
+     "tekst": "marketingowy",
+     "start": 0.418,
+     "koniec": 1.126
+    },
+    {
+     "tekst": "ma",
+     "start": 1.184,
+     "koniec": 1.277
+    },
+    {
+     "tekst": "jedno",
+     "start": 1.335,
+     "koniec": 1.579
+    },
+    {
+     "tekst": "zadanie:",
+     "start": 1.637,
+     "koniec": 2.101
+    },
+    {
+     "tekst": "dostarczać",
+     "start": 2.125,
+     "koniec": 2.682
+    },
+    {
+     "tekst": "na",
+     "start": 2.74,
+     "koniec": 2.81
+    },
+    {
+     "tekst": "Twoją",
+     "start": 2.856,
+     "koniec": 3.146
+    },
+    {
+     "tekst": "tablicę",
+     "start": 3.204,
+     "koniec": 3.669
+    },
+    {
+     "tekst": "nowe",
+     "start": 3.75,
+     "koniec": 3.971
+    },
+    {
+     "tekst": "kontakty.",
+     "start": 4.029,
+     "koniec": 4.737
+    },
+    {
+     "tekst": "Codziennie,",
+     "start": 5.016,
+     "koniec": 5.747
+    },
+    {
+     "tekst": "także",
+     "start": 5.77,
+     "koniec": 6.06
+    },
+    {
+     "tekst": "wtedy,",
+     "start": 6.107,
+     "koniec": 6.444
+    },
+    {
+     "tekst": "kiedy",
+     "start": 6.467,
+     "koniec": 6.676
+    },
+    {
+     "tekst": "śpisz.",
+     "start": 6.722,
+     "koniec": 7.24
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 12.999,
+   "audio": "audio/s3-c.mp3",
+   "czas": 21.94,
+   "slowa": [
+    {
+     "tekst": "Jak",
+     "start": 0,
+     "koniec": 0.244
+    },
+    {
+     "tekst": "to",
+     "start": 0.302,
+     "koniec": 0.383
+    },
+    {
+     "tekst": "działa?",
+     "start": 0.418,
+     "koniec": 0.929
+    },
+    {
+     "tekst": "Ktoś",
+     "start": 1.37,
+     "koniec": 1.695
+    },
+    {
+     "tekst": "dostaje",
+     "start": 1.765,
+     "koniec": 2.136
+    },
+    {
+     "tekst": "od",
+     "start": 2.159,
+     "koniec": 2.241
+    },
+    {
+     "tekst": "Ciebie",
+     "start": 2.287,
+     "koniec": 2.531
+    },
+    {
+     "tekst": "zaproszenie:",
+     "start": 2.566,
+     "koniec": 3.471
+    },
+    {
+     "tekst": "wiadomość,",
+     "start": 3.855,
+     "koniec": 4.528
+    },
+    {
+     "tekst": "post",
+     "start": 4.563,
+     "koniec": 4.957
+    },
+    {
+     "tekst": "albo",
+     "start": 5.132,
+     "koniec": 5.561
+    },
+    {
+     "tekst": "relację.",
+     "start": 5.689,
+     "koniec": 6.548
+    },
+    {
+     "tekst": "Klika",
+     "start": 7.245,
+     "koniec": 7.57
+    },
+    {
+     "tekst": "link",
+     "start": 7.628,
+     "koniec": 7.941
+    },
+    {
+     "tekst": "i",
+     "start": 8.324,
+     "koniec": 8.603
+    },
+    {
+     "tekst": "trafia",
+     "start": 8.754,
+     "koniec": 9.3
+    },
+    {
+     "tekst": "na",
+     "start": 9.451,
+     "koniec": 9.613
+    },
+    {
+     "tekst": "stronę",
+     "start": 9.66,
+     "koniec": 10.217
+    },
+    {
+     "tekst": "zrobioną",
+     "start": 10.542,
+     "koniec": 11.053
+    },
+    {
+     "tekst": "pod",
+     "start": 11.122,
+     "koniec": 11.262
+    },
+    {
+     "tekst": "jedną",
+     "start": 11.308,
+     "koniec": 11.529
+    },
+    {
+     "tekst": "sprawę,",
+     "start": 11.575,
+     "koniec": 11.981
+    },
+    {
+     "tekst": "na",
+     "start": 12.005,
+     "koniec": 12.074
+    },
+    {
+     "tekst": "przykład",
+     "start": 12.109,
+     "koniec": 12.469
+    },
+    {
+     "tekst": "quiz.",
+     "start": 12.527,
+     "koniec": 12.968
+    },
+    {
+     "tekst": "Odpowiada",
+     "start": 13.351,
+     "koniec": 13.978
+    },
+    {
+     "tekst": "na",
+     "start": 14.025,
+     "koniec": 14.095
+    },
+    {
+     "tekst": "kilka",
+     "start": 14.141,
+     "koniec": 14.443
+    },
+    {
+     "tekst": "pytań,",
+     "start": 14.489,
+     "koniec": 14.93
+    },
+    {
+     "tekst": "zostawia",
+     "start": 14.954,
+     "koniec": 15.418
+    },
+    {
+     "tekst": "imię",
+     "start": 15.499,
+     "koniec": 15.79
+    },
+    {
+     "tekst": "i",
+     "start": 15.94,
+     "koniec": 16.115
+    },
+    {
+     "tekst": "e-mail,",
+     "start": 16.161,
+     "koniec": 16.8
+    },
+    {
+     "tekst": "a",
+     "start": 17.125,
+     "koniec": 17.194
+    },
+    {
+     "tekst": "w",
+     "start": 17.252,
+     "koniec": 17.276
+    },
+    {
+     "tekst": "zamian",
+     "start": 17.345,
+     "koniec": 17.845
+    },
+    {
+     "tekst": "dostaje",
+     "start": 18.17,
+     "koniec": 18.692
+    },
+    {
+     "tekst": "coś",
+     "start": 18.738,
+     "koniec": 18.924
+    },
+    {
+     "tekst": "dla",
+     "start": 18.982,
+     "koniec": 19.098
+    },
+    {
+     "tekst": "siebie:",
+     "start": 19.156,
+     "koniec": 19.54
+    },
+    {
+     "tekst": "swój",
+     "start": 19.586,
+     "koniec": 19.899
+    },
+    {
+     "tekst": "wynik,",
+     "start": 19.934,
+     "koniec": 20.376
+    },
+    {
+     "tekst": "plan",
+     "start": 20.457,
+     "koniec": 20.77
+    },
+    {
+     "tekst": "albo",
+     "start": 20.852,
+     "koniec": 21.072
+    },
+    {
+     "tekst": "prezentację.",
+     "start": 21.119,
+     "koniec": 21.94
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 35.539,
+   "audio": "audio/s4-c.mp3",
+   "czas": 8.28,
+   "slowa": [
+    {
+     "tekst": "W",
+     "start": 0,
+     "koniec": 0.104
+    },
+    {
+     "tekst": "tej",
+     "start": 0.163,
+     "koniec": 0.267
+    },
+    {
+     "tekst": "samej",
+     "start": 0.325,
+     "koniec": 0.615
+    },
+    {
+     "tekst": "chwili",
+     "start": 0.65,
+     "koniec": 0.987
+    },
+    {
+     "tekst": "jej",
+     "start": 1.01,
+     "koniec": 1.115
+    },
+    {
+     "tekst": "kontakt",
+     "start": 1.173,
+     "koniec": 1.567
+    },
+    {
+     "tekst": "ląduje",
+     "start": 1.625,
+     "koniec": 1.997
+    },
+    {
+     "tekst": "na",
+     "start": 2.032,
+     "koniec": 2.113
+    },
+    {
+     "tekst": "Twojej",
+     "start": 2.148,
+     "koniec": 2.45
+    },
+    {
+     "tekst": "tablicy.",
+     "start": 2.496,
+     "koniec": 3.146
+    },
+    {
+     "tekst": "Z",
+     "start": 3.425,
+     "koniec": 3.495
+    },
+    {
+     "tekst": "informacją,",
+     "start": 3.553,
+     "koniec": 4.435
+    },
+    {
+     "tekst": "skąd",
+     "start": 4.609,
+     "koniec": 4.946
+    },
+    {
+     "tekst": "przyszła",
+     "start": 4.969,
+     "koniec": 5.48
+    },
+    {
+     "tekst": "i",
+     "start": 5.573,
+     "koniec": 5.642
+    },
+    {
+     "tekst": "czego",
+     "start": 5.7,
+     "koniec": 5.944
+    },
+    {
+     "tekst": "szuka.",
+     "start": 5.991,
+     "koniec": 6.49
+    },
+    {
+     "tekst": "Dzwonisz",
+     "start": 6.815,
+     "koniec": 7.303
+    },
+    {
+     "tekst": "już",
+     "start": 7.326,
+     "koniec": 7.465
+    },
+    {
+     "tekst": "z",
+     "start": 7.488,
+     "koniec": 7.512
+    },
+    {
+     "tekst": "konkretem.",
+     "start": 7.581,
+     "koniec": 8.28
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 44.419,
+   "audio": "audio/s5-c.mp3",
+   "czas": 10.6,
+   "slowa": [
+    {
+     "tekst": "Masz",
+     "start": 0,
+     "koniec": 0.279
+    },
+    {
+     "tekst": "do",
+     "start": 0.313,
+     "koniec": 0.395
+    },
+    {
+     "tekst": "dyspozycji",
+     "start": 0.453,
+     "koniec": 1.138
+    },
+    {
+     "tekst": "kilka",
+     "start": 1.207,
+     "koniec": 1.521
+    },
+    {
+     "tekst": "gotowych",
+     "start": 1.579,
+     "koniec": 2.02
+    },
+    {
+     "tekst": "lejków:",
+     "start": 2.101,
+     "koniec": 2.566
+    },
+    {
+     "tekst": "quiz",
+     "start": 2.601,
+     "koniec": 2.949
+    },
+    {
+     "tekst": "doboru",
+     "start": 3.019,
+     "koniec": 3.344
+    },
+    {
+     "tekst": "produktów,",
+     "start": 3.379,
+     "koniec": 4.18
+    },
+    {
+     "tekst": "quiz",
+     "start": 4.505,
+     "koniec": 4.83
+    },
+    {
+     "tekst": "Longevity",
+     "start": 4.923,
+     "koniec": 5.631
+    },
+    {
+     "tekst": "i",
+     "start": 5.956,
+     "koniec": 6.13
+    },
+    {
+     "tekst": "zaproszenie",
+     "start": 6.258,
+     "koniec": 6.815
+    },
+    {
+     "tekst": "do",
+     "start": 6.873,
+     "koniec": 6.943
+    },
+    {
+     "tekst": "WellU.",
+     "start": 6.989,
+     "koniec": 7.535
+    },
+    {
+     "tekst": "Każdy",
+     "start": 7.918,
+     "koniec": 8.336
+    },
+    {
+     "tekst": "z",
+     "start": 8.371,
+     "koniec": 8.394
+    },
+    {
+     "tekst": "gotowymi",
+     "start": 8.452,
+     "koniec": 8.916
+    },
+    {
+     "tekst": "wiadomościami",
+     "start": 8.963,
+     "koniec": 9.718
+    },
+    {
+     "tekst": "i",
+     "start": 9.752,
+     "koniec": 9.776
+    },
+    {
+     "tekst": "grafikami.",
+     "start": 9.834,
+     "koniec": 10.6
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 55.619,
+   "audio": "audio/s6-c.mp3",
+   "czas": 7.86,
+   "slowa": [
+    {
+     "tekst": "Wybierz",
+     "start": 0,
+     "koniec": 0.383
+    },
+    {
+     "tekst": "jeden,",
+     "start": 0.499,
+     "koniec": 0.929
+    },
+    {
+     "tekst": "skopiuj",
+     "start": 1.057,
+     "koniec": 1.533
+    },
+    {
+     "tekst": "link",
+     "start": 1.591,
+     "koniec": 1.881
+    },
+    {
+     "tekst": "i",
+     "start": 2.032,
+     "koniec": 2.113
+    },
+    {
+     "tekst": "wyślij",
+     "start": 2.194,
+     "koniec": 2.566
+    },
+    {
+     "tekst": "go",
+     "start": 2.635,
+     "koniec": 2.763
+    },
+    {
+     "tekst": "dziś",
+     "start": 2.81,
+     "koniec": 3.077
+    },
+    {
+     "tekst": "jednej",
+     "start": 3.286,
+     "koniec": 3.611
+    },
+    {
+     "tekst": "osobie.",
+     "start": 3.669,
+     "koniec": 4.098
+    },
+    {
+     "tekst": "Jeden",
+     "start": 4.122,
+     "koniec": 4.4
+    },
+    {
+     "tekst": "link",
+     "start": 4.458,
+     "koniec": 4.667
+    },
+    {
+     "tekst": "dziennie",
+     "start": 4.69,
+     "koniec": 5.224
+    },
+    {
+     "tekst": "i",
+     "start": 5.55,
+     "koniec": 5.666
+    },
+    {
+     "tekst": "kula",
+     "start": 5.747,
+     "koniec": 6.026
+    },
+    {
+     "tekst": "śnieżna",
+     "start": 6.072,
+     "koniec": 6.467
+    },
+    {
+     "tekst": "sama",
+     "start": 6.525,
+     "koniec": 6.745
+    },
+    {
+     "tekst": "zaczyna",
+     "start": 6.792,
+     "koniec": 7.14
+    },
+    {
+     "tekst": "się",
+     "start": 7.187,
+     "koniec": 7.279
+    },
+    {
+     "tekst": "toczyć.",
+     "start": 7.338,
+     "koniec": 7.86
+    }
+   ]
+  }
+ ],
+ "calosc": 65.279
+}

@@ -25,6 +25,7 @@ const SLOWNIK: [RegExp, string][] = [
   [/\bHeyGen\b/gi, "Hej Dżen"],
   [/\bElevenLabs\b/gi, "Ilewen Labs"],
   [/\bBrevo\b/gi, "Brewo"],
+  [/\bLongevity\b/gi, "londżewiti"],
   [/\bHostinger\b/gi, "Hostinger"],
   [/\bMake\b/g, "Mejk"],
   [/\bZapier\b/gi, "Zapjer"],

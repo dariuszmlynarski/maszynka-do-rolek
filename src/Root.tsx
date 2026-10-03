@@ -5,9 +5,11 @@ import { PRZYKLAD } from "./przyklad";
 import { klatkiCalosci, FPS } from "./czas";
 import { SZEROKOSC, WYSOKOSC } from "./marka";
 import type { PropsRolki } from "./typy";
+import { Explainer, EX_FPS, EX_SZER, EX_WYS, exKlatki } from "./explainer/Explainer";
 
 export const RemotionRoot: React.FC = () => {
   return (
+    <>
     <Composition
       id="Short"
       component={Short}
@@ -20,5 +22,8 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames: klatkiCalosci(props.scenariusz),
       })}
     />
+    {/* Film „Czym jest lejek” do strefy partnera CNW (16:9, osobny od rolek). */}
+    <Composition id="Lejki16x9" component={Explainer} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={exKlatki()} defaultProps={{ zAwatarem: false }} />
+    </>
   );
 };
