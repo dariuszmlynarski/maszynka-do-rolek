@@ -12,6 +12,7 @@ import { LongevityFilm, longevityKlatki } from "./explainer/Longevity";
 import { KontaktyFilm, kontaktyKlatki } from "./explainer/Kontakty";
 import { ZadaniaFilm, zadaniaKlatki } from "./explainer/Zadania";
 import { ZapowiedzFilm, zapowiedzKlatki } from "./explainer/Zapowiedz";
+import { WynikiFilm, wynikiKlatki } from "./explainer/Wyniki";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="Longevity16x9" component={LongevityFilm} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={longevityKlatki} defaultProps={{ zAwatarem: false }} />
     <Composition id="Kontakty16x9" component={KontaktyFilm} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={kontaktyKlatki} defaultProps={{ zAwatarem: false }} />
     <Composition id="Zadania16x9" component={ZadaniaFilm} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={zadaniaKlatki} defaultProps={{ zAwatarem: false }} />
+    <Composition id="Wyniki16x9" component={WynikiFilm} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={wynikiKlatki} defaultProps={{ zAwatarem: false }} />
     <Composition id="Zapowiedz16x9" component={ZapowiedzFilm} fps={EX_FPS} width={EX_SZER} height={EX_WYS} durationInFrames={zapowiedzKlatki} defaultProps={{ zAwatarem: false }} />
     </>
   );

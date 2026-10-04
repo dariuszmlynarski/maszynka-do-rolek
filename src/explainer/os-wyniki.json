@@ -1,0 +1,975 @@
+{
+ "sceny": [
+  {
+   "id": "s1",
+   "start": 0.4,
+   "audio": "nagranie/s1.wav",
+   "czas": 7.14,
+   "slowa": [
+    {
+     "tekst": "Kontakty",
+     "start": 0.12,
+     "koniec": 0.8
+    },
+    {
+     "tekst": "są",
+     "start": 1.08,
+     "koniec": 1.24
+    },
+    {
+     "tekst": "do",
+     "start": 1.26,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "pracy,",
+     "start": 1.42,
+     "koniec": 1.8
+    },
+    {
+     "tekst": "a",
+     "start": 2.46,
+     "koniec": 2.5
+    },
+    {
+     "tekst": "tutaj",
+     "start": 2.8,
+     "koniec": 3.34
+    },
+    {
+     "tekst": "na",
+     "start": 3.4,
+     "koniec": 3.5
+    },
+    {
+     "tekst": "stronie",
+     "start": 3.58,
+     "koniec": 3.92
+    },
+    {
+     "tekst": "z",
+     "start": 4.0,
+     "koniec": 4.06
+    },
+    {
+     "tekst": "wynikami",
+     "start": 4.12,
+     "koniec": 4.72
+    },
+    {
+     "tekst": "sprawdzasz,",
+     "start": 5.06,
+     "koniec": 5.64
+    },
+    {
+     "tekst": "co",
+     "start": 6.0,
+     "koniec": 6.1
+    },
+    {
+     "tekst": "ta",
+     "start": 6.14,
+     "koniec": 6.26
+    },
+    {
+     "tekst": "praca",
+     "start": 6.28,
+     "koniec": 6.58
+    },
+    {
+     "tekst": "daje.",
+     "start": 6.64,
+     "koniec": 6.92
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 8.14,
+   "audio": "nagranie/s2.wav",
+   "czas": 8.22,
+   "slowa": [
+    {
+     "tekst": "Na",
+     "start": 0.12,
+     "koniec": 0.24
+    },
+    {
+     "tekst": "górze",
+     "start": 0.3,
+     "koniec": 0.66
+    },
+    {
+     "tekst": "masz",
+     "start": 1.0,
+     "koniec": 1.18
+    },
+    {
+     "tekst": "całość.",
+     "start": 1.24,
+     "koniec": 1.76
+    },
+    {
+     "tekst": "Ile",
+     "start": 2.14,
+     "koniec": 2.28
+    },
+    {
+     "tekst": "masz",
+     "start": 2.34,
+     "koniec": 2.48
+    },
+    {
+     "tekst": "kontaktów,",
+     "start": 2.54,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "ile",
+     "start": 3.44,
+     "koniec": 3.58
+    },
+    {
+     "tekst": "rozmów",
+     "start": 3.64,
+     "koniec": 3.96
+    },
+    {
+     "tekst": "jeszcze",
+     "start": 4.02,
+     "koniec": 4.28
+    },
+    {
+     "tekst": "trwa,",
+     "start": 4.34,
+     "koniec": 4.64
+    },
+    {
+     "tekst": "a",
+     "start": 5.06,
+     "koniec": 5.16
+    },
+    {
+     "tekst": "ile",
+     "start": 5.24,
+     "koniec": 5.38
+    },
+    {
+     "tekst": "skończyło",
+     "start": 5.44,
+     "koniec": 5.94
+    },
+    {
+     "tekst": "się",
+     "start": 6.0,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "na",
+     "start": 6.2,
+     "koniec": 6.36
+    },
+    {
+     "tekst": "tak",
+     "start": 6.44,
+     "koniec": 6.78
+    },
+    {
+     "tekst": "albo",
+     "start": 7.3,
+     "koniec": 7.5
+    },
+    {
+     "tekst": "na",
+     "start": 7.54,
+     "koniec": 7.64
+    },
+    {
+     "tekst": "nie.",
+     "start": 7.68,
+     "koniec": 8.0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 16.96,
+   "audio": "nagranie/s3.wav",
+   "czas": 10.52,
+   "slowa": [
+    {
+     "tekst": "Poniżej",
+     "start": 0.12,
+     "koniec": 0.54
+    },
+    {
+     "tekst": "najważniejsze",
+     "start": 0.56,
+     "koniec": 1.18
+    },
+    {
+     "tekst": "pytanie:",
+     "start": 1.24,
+     "koniec": 1.82
+    },
+    {
+     "tekst": "skąd",
+     "start": 1.92,
+     "koniec": 2.28
+    },
+    {
+     "tekst": "masz",
+     "start": 2.34,
+     "koniec": 2.56
+    },
+    {
+     "tekst": "ludzi",
+     "start": 2.62,
+     "koniec": 2.84
+    },
+    {
+     "tekst": "na",
+     "start": 2.88,
+     "koniec": 2.96
+    },
+    {
+     "tekst": "tablicy?",
+     "start": 3.0,
+     "koniec": 3.52
+    },
+    {
+     "tekst": "Z",
+     "start": 4.08,
+     "koniec": 4.12
+    },
+    {
+     "tekst": "internetu,",
+     "start": 4.18,
+     "koniec": 4.78
+    },
+    {
+     "tekst": "czyli",
+     "start": 4.82,
+     "koniec": 5.04
+    },
+    {
+     "tekst": "z",
+     "start": 5.06,
+     "koniec": 5.1
+    },
+    {
+     "tekst": "Twojego",
+     "start": 5.16,
+     "koniec": 5.54
+    },
+    {
+     "tekst": "linku,",
+     "start": 5.6,
+     "koniec": 5.98
+    },
+    {
+     "tekst": "albo",
+     "start": 6.74,
+     "koniec": 7.2
+    },
+    {
+     "tekst": "dodanych",
+     "start": 7.26,
+     "koniec": 7.68
+    },
+    {
+     "tekst": "ręcznie,",
+     "start": 7.74,
+     "koniec": 8.16
+    },
+    {
+     "tekst": "czyli",
+     "start": 8.3,
+     "koniec": 8.5
+    },
+    {
+     "tekst": "znajomych,",
+     "start": 8.56,
+     "koniec": 9.02
+    },
+    {
+     "tekst": "których",
+     "start": 9.06,
+     "koniec": 9.4
+    },
+    {
+     "tekst": "wpisałeś",
+     "start": 9.42,
+     "koniec": 9.84
+    },
+    {
+     "tekst": "sam.",
+     "start": 9.92,
+     "koniec": 10.299
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 28.08,
+   "audio": "nagranie/s4.wav",
+   "czas": 9.18,
+   "slowa": [
+    {
+     "tekst": "Przy",
+     "start": 0.12,
+     "koniec": 0.28
+    },
+    {
+     "tekst": "każdym",
+     "start": 0.32,
+     "koniec": 0.68
+    },
+    {
+     "tekst": "widzisz",
+     "start": 0.72,
+     "koniec": 1.02
+    },
+    {
+     "tekst": "skuteczność,",
+     "start": 1.06,
+     "koniec": 1.74
+    },
+    {
+     "tekst": "czyli",
+     "start": 1.84,
+     "koniec": 2.2
+    },
+    {
+     "tekst": "ile",
+     "start": 2.3,
+     "koniec": 2.44
+    },
+    {
+     "tekst": "kontaktów",
+     "start": 2.5,
+     "koniec": 3.0
+    },
+    {
+     "tekst": "skończyło",
+     "start": 3.04,
+     "koniec": 3.48
+    },
+    {
+     "tekst": "się",
+     "start": 3.54,
+     "koniec": 3.64
+    },
+    {
+     "tekst": "na",
+     "start": 3.68,
+     "koniec": 3.78
+    },
+    {
+     "tekst": "tak.",
+     "start": 3.84,
+     "koniec": 4.2
+    },
+    {
+     "tekst": "Od",
+     "start": 5.38,
+     "koniec": 5.46
+    },
+    {
+     "tekst": "razu",
+     "start": 5.52,
+     "koniec": 5.76
+    },
+    {
+     "tekst": "wiesz,",
+     "start": 5.82,
+     "koniec": 6.12
+    },
+    {
+     "tekst": "która",
+     "start": 6.38,
+     "koniec": 6.9
+    },
+    {
+     "tekst": "robota",
+     "start": 7.0,
+     "koniec": 7.56
+    },
+    {
+     "tekst": "daje",
+     "start": 7.62,
+     "koniec": 7.84
+    },
+    {
+     "tekst": "Ci",
+     "start": 7.9,
+     "koniec": 8.02
+    },
+    {
+     "tekst": "więcej",
+     "start": 8.08,
+     "koniec": 8.44
+    },
+    {
+     "tekst": "efektu.",
+     "start": 8.5,
+     "koniec": 8.96
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 37.86,
+   "audio": "nagranie/s5.wav",
+   "czas": 6.34,
+   "slowa": [
+    {
+     "tekst": "Wykres",
+     "start": 0.12,
+     "koniec": 0.48
+    },
+    {
+     "tekst": "pokazuje",
+     "start": 0.52,
+     "koniec": 1.02
+    },
+    {
+     "tekst": "każdy",
+     "start": 1.08,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "lejek",
+     "start": 1.42,
+     "koniec": 1.68
+    },
+    {
+     "tekst": "osobno.",
+     "start": 1.74,
+     "koniec": 2.26
+    },
+    {
+     "tekst": "Kolory",
+     "start": 2.62,
+     "koniec": 3.0
+    },
+    {
+     "tekst": "to",
+     "start": 3.06,
+     "koniec": 3.18
+    },
+    {
+     "tekst": "etap",
+     "start": 3.26,
+     "koniec": 3.48
+    },
+    {
+     "tekst": "z",
+     "start": 3.52,
+     "koniec": 3.54
+    },
+    {
+     "tekst": "tablicy,",
+     "start": 3.6,
+     "koniec": 4.08
+    },
+    {
+     "tekst": "więc",
+     "start": 4.2,
+     "koniec": 4.42
+    },
+    {
+     "tekst": "widzisz,",
+     "start": 4.46,
+     "koniec": 4.96
+    },
+    {
+     "tekst": "na",
+     "start": 5.04,
+     "koniec": 5.14
+    },
+    {
+     "tekst": "czym",
+     "start": 5.18,
+     "koniec": 5.34
+    },
+    {
+     "tekst": "ludzie",
+     "start": 5.38,
+     "koniec": 5.6
+    },
+    {
+     "tekst": "stoją.",
+     "start": 5.68,
+     "koniec": 6.12
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 44.8,
+   "audio": "nagranie/s6.wav",
+   "czas": 7.06,
+   "slowa": [
+    {
+     "tekst": "Przełącznikiem",
+     "start": 0.12,
+     "koniec": 1.22
+    },
+    {
+     "tekst": "zostawiasz",
+     "start": 1.34,
+     "koniec": 2.04
+    },
+    {
+     "tekst": "same",
+     "start": 2.12,
+     "koniec": 2.34
+    },
+    {
+     "tekst": "kontakty",
+     "start": 2.38,
+     "koniec": 2.84
+    },
+    {
+     "tekst": "z",
+     "start": 2.86,
+     "koniec": 2.9
+    },
+    {
+     "tekst": "internetu",
+     "start": 2.96,
+     "koniec": 3.68
+    },
+    {
+     "tekst": "albo",
+     "start": 3.78,
+     "koniec": 4.0
+    },
+    {
+     "tekst": "same",
+     "start": 4.06,
+     "koniec": 4.26
+    },
+    {
+     "tekst": "ręczne,",
+     "start": 4.3,
+     "koniec": 4.72
+    },
+    {
+     "tekst": "albo",
+     "start": 5.16,
+     "koniec": 5.38
+    },
+    {
+     "tekst": "oglądasz",
+     "start": 5.44,
+     "koniec": 5.9
+    },
+    {
+     "tekst": "zbiorczo",
+     "start": 5.94,
+     "koniec": 6.34
+    },
+    {
+     "tekst": "wszystkie.",
+     "start": 6.38,
+     "koniec": 6.84
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 52.46,
+   "audio": "nagranie/s7.wav",
+   "czas": 11.36,
+   "slowa": [
+    {
+     "tekst": "W",
+     "start": 0.12,
+     "koniec": 0.16
+    },
+    {
+     "tekst": "tabeli",
+     "start": 0.2,
+     "koniec": 0.68
+    },
+    {
+     "tekst": "masz",
+     "start": 0.74,
+     "koniec": 1.12
+    },
+    {
+     "tekst": "wejścia,",
+     "start": 1.2,
+     "koniec": 1.62
+    },
+    {
+     "tekst": "czyli",
+     "start": 1.72,
+     "koniec": 1.98
+    },
+    {
+     "tekst": "ile",
+     "start": 2.06,
+     "koniec": 2.24
+    },
+    {
+     "tekst": "osób",
+     "start": 2.34,
+     "koniec": 2.66
+    },
+    {
+     "tekst": "otworzyło",
+     "start": 2.74,
+     "koniec": 3.54
+    },
+    {
+     "tekst": "lejek",
+     "start": 3.64,
+     "koniec": 3.9
+    },
+    {
+     "tekst": "z",
+     "start": 3.92,
+     "koniec": 3.94
+    },
+    {
+     "tekst": "Twojego",
+     "start": 4.0,
+     "koniec": 4.34
+    },
+    {
+     "tekst": "linku",
+     "start": 4.4,
+     "koniec": 4.8
+    },
+    {
+     "tekst": "i",
+     "start": 4.86,
+     "koniec": 4.96
+    },
+    {
+     "tekst": "ile",
+     "start": 5.04,
+     "koniec": 5.2
+    },
+    {
+     "tekst": "z",
+     "start": 5.24,
+     "koniec": 5.26
+    },
+    {
+     "tekst": "nich",
+     "start": 5.3,
+     "koniec": 5.42
+    },
+    {
+     "tekst": "się",
+     "start": 5.46,
+     "koniec": 5.54
+    },
+    {
+     "tekst": "zapisało.",
+     "start": 5.58,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "Dużo",
+     "start": 6.86,
+     "koniec": 7.12
+    },
+    {
+     "tekst": "wejść,",
+     "start": 7.18,
+     "koniec": 7.48
+    },
+    {
+     "tekst": "a",
+     "start": 7.54,
+     "koniec": 7.6
+    },
+    {
+     "tekst": "mało",
+     "start": 7.64,
+     "koniec": 7.86
+    },
+    {
+     "tekst": "zapisów?",
+     "start": 7.92,
+     "koniec": 8.5
+    },
+    {
+     "tekst": "Zmień",
+     "start": 9.06,
+     "koniec": 9.36
+    },
+    {
+     "tekst": "wiadomość,",
+     "start": 9.4,
+     "koniec": 9.88
+    },
+    {
+     "tekst": "z",
+     "start": 9.92,
+     "koniec": 9.94
+    },
+    {
+     "tekst": "którą",
+     "start": 9.98,
+     "koniec": 10.26
+    },
+    {
+     "tekst": "wysyłasz",
+     "start": 10.3,
+     "koniec": 10.72
+    },
+    {
+     "tekst": "link.",
+     "start": 10.78,
+     "koniec": 11.14
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 64.42,
+   "audio": "nagranie/s8.wav",
+   "czas": 5.54,
+   "slowa": [
+    {
+     "tekst": "W",
+     "start": 0.12,
+     "koniec": 0.16
+    },
+    {
+     "tekst": "zakładce",
+     "start": 0.22,
+     "koniec": 0.84
+    },
+    {
+     "tekst": "„Postęp”",
+     "start": 0.9,
+     "koniec": 1.56
+    },
+    {
+     "tekst": "porównujesz",
+     "start": 1.62,
+     "koniec": 2.42
+    },
+    {
+     "tekst": "bieżący",
+     "start": 2.56,
+     "koniec": 3.04
+    },
+    {
+     "tekst": "miesiąc",
+     "start": 3.1,
+     "koniec": 3.62
+    },
+    {
+     "tekst": "z",
+     "start": 3.68,
+     "koniec": 3.74
+    },
+    {
+     "tekst": "poprzednim",
+     "start": 3.78,
+     "koniec": 4.36
+    },
+    {
+     "tekst": "dzień",
+     "start": 4.6,
+     "koniec": 4.82
+    },
+    {
+     "tekst": "do",
+     "start": 4.86,
+     "koniec": 4.96
+    },
+    {
+     "tekst": "dnia.",
+     "start": 5.0,
+     "koniec": 5.32
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 70.56,
+   "audio": "nagranie/s9.wav",
+   "czas": 6.26,
+   "slowa": [
+    {
+     "tekst": "A",
+     "start": 0.12,
+     "koniec": 0.22
+    },
+    {
+     "tekst": "w",
+     "start": 0.26,
+     "koniec": 0.28
+    },
+    {
+     "tekst": "zakładce",
+     "start": 0.34,
+     "koniec": 0.96
+    },
+    {
+     "tekst": "„Ja",
+     "start": 1.4,
+     "koniec": 1.7
+    },
+    {
+     "tekst": "versus",
+     "start": 1.78,
+     "koniec": 2.18
+    },
+    {
+     "tekst": "grupa”",
+     "start": 2.24,
+     "koniec": 2.64
+    },
+    {
+     "tekst": "widzisz,",
+     "start": 2.9,
+     "koniec": 3.22
+    },
+    {
+     "tekst": "jak",
+     "start": 3.58,
+     "koniec": 3.78
+    },
+    {
+     "tekst": "wypadasz",
+     "start": 3.82,
+     "koniec": 4.28
+    },
+    {
+     "tekst": "na",
+     "start": 4.32,
+     "koniec": 4.4
+    },
+    {
+     "tekst": "tle",
+     "start": 4.44,
+     "koniec": 4.6
+    },
+    {
+     "tekst": "zespołu.",
+     "start": 4.64,
+     "koniec": 5.3
+    },
+    {
+     "tekst": "Anonimowo.",
+     "start": 5.4,
+     "koniec": 6.04
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 77.42,
+   "audio": "nagranie/s10.wav",
+   "czas": 8.16,
+   "slowa": [
+    {
+     "tekst": "Zaglądaj",
+     "start": 0.12,
+     "koniec": 0.62
+    },
+    {
+     "tekst": "tu",
+     "start": 0.68,
+     "koniec": 0.9
+    },
+    {
+     "tekst": "co",
+     "start": 0.98,
+     "koniec": 1.06
+    },
+    {
+     "tekst": "najmniej",
+     "start": 1.1,
+     "koniec": 1.38
+    },
+    {
+     "tekst": "raz",
+     "start": 1.42,
+     "koniec": 1.58
+    },
+    {
+     "tekst": "w",
+     "start": 1.62,
+     "koniec": 1.64
+    },
+    {
+     "tekst": "tygodniu.",
+     "start": 1.68,
+     "koniec": 2.12
+    },
+    {
+     "tekst": "Pięć",
+     "start": 2.38,
+     "koniec": 2.6
+    },
+    {
+     "tekst": "minut",
+     "start": 2.64,
+     "koniec": 2.88
+    },
+    {
+     "tekst": "wystarczy",
+     "start": 2.9,
+     "koniec": 3.38
+    },
+    {
+     "tekst": "na",
+     "start": 3.44,
+     "koniec": 3.5
+    },
+    {
+     "tekst": "analizę,",
+     "start": 3.54,
+     "koniec": 3.98
+    },
+    {
+     "tekst": "żeby",
+     "start": 4.48,
+     "koniec": 4.68
+    },
+    {
+     "tekst": "wiedzieć,",
+     "start": 4.72,
+     "koniec": 5.12
+    },
+    {
+     "tekst": "który",
+     "start": 5.38,
+     "koniec": 5.7
+    },
+    {
+     "tekst": "lejek",
+     "start": 5.74,
+     "koniec": 6.16
+    },
+    {
+     "tekst": "promować",
+     "start": 6.2,
+     "koniec": 6.68
+    },
+    {
+     "tekst": "bardziej",
+     "start": 6.76,
+     "koniec": 7.08
+    },
+    {
+     "tekst": "intensywnie.",
+     "start": 7.16,
+     "koniec": 7.94
+    }
+   ]
+  }
+ ],
+ "calosc": 87.38
+}
