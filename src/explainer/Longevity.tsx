@@ -1,5 +1,5 @@
 // Film 4 serii strefy partnera: „Lejek od środka: quiz Longevity” (16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 4 - Quiz Longevity od środka - scenariusz.md. Media (poza repo): public/film-longevity/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 4 - Quiz Longevity od środka - scenariusz.md. Media (poza repo): public/film-longevity/.
 // Kadr w dwóch kolumnach przez cały film: po lewej telefon gościa (Ania), po prawej „u Ciebie” (tablica, maile, SMS).
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";

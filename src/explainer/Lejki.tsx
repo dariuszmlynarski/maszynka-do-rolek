@@ -1,5 +1,5 @@
 // Film 3 serii strefy partnera: „Jak korzystać z lejków” (16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 3 - Strona z lejkami - scenariusz.md. Media (poza repo): public/film-lejki/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 3 - Strona z lejkami - scenariusz.md. Media (poza repo): public/film-lejki/.
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
 import { Check, Copy, Download, Image as ImageIcon, MessageCircle, Send, ShoppingCart, Smartphone } from "lucide-react";

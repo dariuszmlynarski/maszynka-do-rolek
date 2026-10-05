@@ -1,5 +1,5 @@
 // Film 7 serii strefy partnera: „Wyniki” (16:9, głos Dariusza z nagrania 04.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 7 - Wyniki - scenariusz.md. Media (poza repo): public/film-wyniki/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 7 - Wyniki - scenariusz.md. Media (poza repo): public/film-wyniki/.
 // Liczby fikcyjne, spójne między scenami (kafle = suma kanałów = suma wierszy wykresu i tabeli).
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";

@@ -1,5 +1,5 @@
 // Film 6 serii strefy partnera: „Zadania” (16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 6 - Zadania - scenariusz.md. Media (poza repo): public/film-zadania/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 6 - Zadania - scenariusz.md. Media (poza repo): public/film-zadania/.
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
 import { Check, Coffee } from "lucide-react";

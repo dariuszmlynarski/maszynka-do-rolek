@@ -1,5 +1,5 @@
 // Film 0 serii strefy partnera: „Co nowego na platformie” (zapowiedź, 16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 0 - Zapowiedź - scenariusz.md. Media (poza repo): public/film-zapowiedz/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 0 - Zapowiedź - scenariusz.md. Media (poza repo): public/film-zapowiedz/.
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
 import { Check, Copy, MessageCircle, ShoppingCart, Sparkles } from "lucide-react";

@@ -1,5 +1,5 @@
 // Film 2 serii strefy partnera: „Twój dashboard” (16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 2 - Dashboard - scenariusz.md. Media (poza repo):
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 2 - Dashboard - scenariusz.md. Media (poza repo):
 // public/film-dashboard/lektor.mp3 i awatar.mp4; robocze w projekty/film-dashboard/.
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";

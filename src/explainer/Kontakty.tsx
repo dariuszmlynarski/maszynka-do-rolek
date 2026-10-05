@@ -1,5 +1,5 @@
 // Film 5 serii strefy partnera: „Kontakty” (16:9, głos Dariusza z nagrania 03.10.2026).
-// Scenariusz: 4-CNW/Admin/Lejki/Filmy/Film 5 - Kontakty - scenariusz.md. Media (poza repo): public/film-kontakty/.
+// Scenariusz: 4-CNW/Admin/czasnawellu.pl/Strefa partnera/Filmy/Film 5 - Kontakty - scenariusz.md. Media (poza repo): public/film-kontakty/.
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile } from "remotion";
 import { Check, Pin, Plus } from "lucide-react";
