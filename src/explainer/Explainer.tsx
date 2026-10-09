@@ -11,6 +11,7 @@ import { AbsoluteFill, Audio, OffthreadVideo, interpolate, spring, staticFile, u
 import { Gift, Link2, Mail, MessageCircle, Moon, Smartphone, Sun, Check, Copy, Image as ImageIcon, MessageSquare } from "lucide-react";
 import { CZCIONKA } from "../marka";
 import OS from "./os.json";
+import { PlakietkaAI } from "./fabryka";
 
 export const EX_SZER = 1920;
 export const EX_WYS = 1080;
@@ -296,9 +297,12 @@ const Awatar: React.FC<{ src: string }> = ({ src }) => {
   const p = spring({ frame: f - 4, fps: EX_FPS, config: { damping: 200 } });
   const D = 360;
   return (
+    <>
+    <PlakietkaAI p={p} />
     <div style={{ position: "absolute", right: 90, bottom: 70, width: D, height: D, borderRadius: 999, overflow: "hidden", border: `8px solid ${K.card}`, boxShadow: `0 0 0 4px ${K.a}, 0 24px 60px rgba(14,36,18,.28)`, transform: `scale(${0.8 + 0.2 * p})`, opacity: p, background: K.dark }}>
       <OffthreadVideo src={src} muted style={{ position: "absolute", height: 520, left: "50%", top: -18, transform: "translateX(-50%)" }} />
     </div>
+    </>
   );
 };
 

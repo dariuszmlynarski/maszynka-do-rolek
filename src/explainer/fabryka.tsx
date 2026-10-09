@@ -112,15 +112,25 @@ export const Naglowek: React.FC<{ eyebrow: string; tytul: string }> = ({ eyebrow
   </div>
 );
 
+/** Plakietka disclosure nad kółkiem awatara (AI Act art. 50.4, `rules/content.md` § Oznaczanie AI) — przez cały film. */
+export const PlakietkaAI: React.FC<{ p: number }> = ({ p }) => (
+  <div style={{ position: "absolute", right: 90, bottom: 470, width: 376, display: "flex", justifyContent: "center", opacity: p }}>
+    <div style={{ fontFamily: CZCIONKA.tekst, fontWeight: 700, fontSize: 22, letterSpacing: "0.04em", color: K.card, background: K.dark, borderRadius: 999, padding: "8px 20px", boxShadow: "0 8px 24px rgba(14,36,18,.22)" }}>Cyfrowy awatar AI</div>
+  </div>
+);
+
 /** Awatar HeyGen w kółku w prawym dolnym rogu (kadr dopasowany do looku „Office Desk 1”). */
 export const Awatar: React.FC<{ src: string }> = ({ src }) => {
   const f = useCurrentFrame();
   const p = spring({ frame: f - 4, fps: FPS, config: { damping: 200 } });
   const D = 360;
   return (
+    <>
+    <PlakietkaAI p={p} />
     <div style={{ position: "absolute", right: 90, bottom: 70, width: D, height: D, borderRadius: 999, overflow: "hidden", border: `8px solid ${K.card}`, boxShadow: `0 0 0 4px ${K.a}, 0 24px 60px rgba(14,36,18,.28)`, transform: `scale(${0.8 + 0.2 * p})`, opacity: p, background: K.dark }}>
       <OffthreadVideo src={src} muted style={{ position: "absolute", height: 520, left: "50%", top: -18, transform: "translateX(-50%)" }} />
     </div>
+    </>
   );
 };
 
